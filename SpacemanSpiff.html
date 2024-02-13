@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html>
+<style> 
+*{box-sizing: border-box;}
+
+@font-face
+{
+	font-family: CHNormal;
+	src: url(fonts/CALVINN.TTF);
+}
+
+@font-face
+{
+	font-family: hockey;
+  src: url(fonts/hockey.ttf);
+}
+
+@font-face
+{
+	font-family: Hangy;
+  src: url(fonts/Hangyaboly.ttf);
+}
+
+body
+{
+  font-family: hockey;
+  background-image: url("media_CH/SpaceSpiffBG_Cut.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#CalvinTitle
+{
+  font-family: CHNormal;
+}
+
+nav {
+	height:auto;
+	background:lemonchiffon;
+  width:80%;
+  border: purple 1px solid;  
+}
+
+nav a 
+{
+    text-decoration:none;
+}
+
+nav ul
+{
+  margin-left: -4%;
+}
+
+nav ul li 
+{
+	list-style:none;
+	border-bottom:black 2px solid;
+	border-right:black 2px solid;
+  width: 100%;
+}
+
+nav ul li a:hover, nav ul li a:active
+{
+	display:block;
+  background:greenyellow;
+  color:black;
+}
+
+section
+{
+  display: flex;
+  flex-wrap: wrap;
+  overflow: visible;
+  width: 100%; 
+  margin: 1%;
+}
+
+#sectionL
+{
+  width: 30%;
+  margin-left: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  background-color: hotpink;
+  float: left;
+}
+
+#sectionR
+{
+  width: 10%;
+  height: auto;
+  /* height: 800px; */
+  /* margin-left: 10%; */
+  margin-right: 1.0%;
+  
+  background-color: hotpink;
+  float: right;
+
+}
+
+#navR {
+	background:lemonchiffon;
+  width:100%;
+  border: purple 1px solid;
+}
+
+#ulR
+{
+  margin-left: -20%;
+}
+
+img
+{
+	width:100%;
+}
+
+span 
+{
+  position: absolute;
+}
+
+.text-block 
+{
+  position: absolute;
+  overflow: auto;
+  height: 53%;
+  bottom: 39%;
+  background-color: black;
+  color: white;
+  margin-left: 16%;
+  margin-right: 27%;
+  z-index: 10; 
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+
+figure 
+{  
+  margin-left: 1.5%;
+  min-width: 300px;
+
+}
+
+#img:hover
+{
+  mix-blend-mode:multiply;
+  filter: grayscale() contrast(100%);
+}
+
+h2
+{
+  font-family: hangy;
+  font-size: 1.5vw;
+}
+
+#spaceBanner
+{
+  width: 80%; 
+  background:url('media_CH_SpacemanSpiff/SpaceBannerGraphic.jpg');
+  background-size: contain;
+  background-repeat: no-repeat; 
+  border: orangered 2px solid; 
+  position: relative;
+}
+
+.icon-menu 
+{
+  position: absolute;
+  width: 54%;
+  overflow: auto; 
+}
+
+.icon-menu a 
+{
+  float:right;
+  text-align: center;
+  margin-top: 1.2%;
+  margin-right: .5%;
+  width: 15%; 
+  color: black; 
+  font-size: 35px; 
+  border: black 2px solid;
+  background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0.2%, rgba(255, 255, 255, 1) 0.3%, rgba(255, 255, 255, 1) 99.7%, rgba(255, 255, 255, 0) 99.8%);
+}
+
+.icon-menu a:hover 
+{
+  background:yellow;
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 0 -2px black, 1.8px 1.8px black;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+.column
+{
+  float:left;
+  width: 25%;
+  margin-left: 1%;
+  margin-top: -1%;
+}
+/* .columnR
+{
+  float:right;
+  width: 25%;
+  margin-right: 25%;
+} */
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 150;
+  padding-top: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 62%;
+  /* max-width: 1200px; */
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* .mySlides {
+  display: none;
+} */
+
+.cursor {
+  cursor: pointer;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding-top: 1px ;
+  color: white;
+  font-size: 1.5vw;
+  margin-top: -2%;
+}
+
+.demo, .demo2, .demo3
+{
+  opacity: 0.6;
+}
+
+.active, .demo:hover, .demo2:hover, .demo3:hover
+{
+  opacity: 1;
+}
+
+#grow:hover
+{
+  animation: grow .1s;
+  animation-duration: .2s; 
+  animation-fill-mode:forwards;
+}
+@keyframes grow
+{
+  0% {transform:scale(1.0,1.0);}
+  100% {transform:scale(1.01,1.01);}
+}
+
+#colors
+{
+
+  animation: rainbow 3s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes rainbow
+{
+    0%  {background-color: red;}
+    25% {background-color: yellow;}
+    50% {background-color: blue;}
+    75% {background-color:orange}
+    100% {background-color: green;}
+}
+
+.banner{
+    z-index: 15; 
+    width: 79.7%; 
+    border: black 4px solid; 
+    margin-bottom: 1%; 
+    margin-left: 10%; 
+    position: relative;
+  }
+
+  .bannerTitle{
+    font-family: CHNormal; 
+    font-size:6vw; 
+    color: red; 
+    text-shadow: -2px 0 black, 0 2px black, 0 -2px black, 3px 3px black;              
+    margin-left:29%; 
+    margin-top: 5%;
+  }
+
+  .hrTop
+  {
+    z-index: 1; 
+    height: 4px; 
+    margin-bottom: -0.2%;  
+    margin-left: -0.5%; 
+    margin-right: -0.4%; 
+    border-style: double; 
+    border: black 1px double; 
+    background-color: orangered; 
+    position: relative;
+  }
+
+  .hrBottom
+  {
+    z-index: 1;
+    height: 4px; 
+    margin-top: -0.2%;  
+    margin-left: -0.5%; 
+    margin-right: -0.4%; 
+    border-style: double; 
+    border: black 1px double; 
+    background-color: orangered; 
+    position: relative;
+  }
+
+  .hrBG
+  {
+    z-index: 1; 
+    margin-left: -0.5%; 
+    margin-right: -0.4%; 
+    padding-top: 19%; 
+    background-color:orangered; 
+    opacity: .6;
+  }
+
+  .hrAll
+  {
+    margin-top: -24%; 
+    margin-bottom: 8%; 
+  }
+
+  .blurb{
+    z-index: 20; 
+    font-size: 1.3em; 
+    font-weight:900; 
+    width: 79.7%; 
+    margin-left: 10%; 
+    padding-left: 2%; 
+    padding-right: 2%; 
+    padding-top: 1%; 
+    padding-bottom: 1%; 
+    background-color:darkorange; 
+    border: black 2px solid;  
+    position: relative;
+  }
+
+  .figTitle{
+    margin-bottom: 0%; 
+    margin-top: 0.5%; 
+    padding-top: 4px; 
+    color: black; 
+    background:rgb(255, 255, 142); 
+    border:black 2px solid; 
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .bath{
+    width: 30%; 
+    border: black 4px solid; 
+    margin-left: 3.6%; 
+    margin-top: 0%; 
+    padding: .3%;  
+    background-color: orangered; 
+    text-align: center; 
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .school{
+    width: 30%; 
+    border: black 4px solid; 
+    margin-left: -1%; 
+    margin-top: 0%; 
+    padding: .3%;  
+    background-color: orangered; 
+    text-align: center; 
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .parent{
+    width: 30%; 
+    border: black 4px solid; 
+    margin-left: -1%; 
+    margin-top: 0%; 
+    padding: .3%;  
+    background-color: orangered; 
+    text-align: center; 
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+  }
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* For mobile phones: */
+@media only screen and (max-width: 430px) and (min-width:360px)
+{
+  .banner{
+    justify-content:center ;
+    z-index: 15; 
+    min-width: 100%; 
+    border: black 3px solid; 
+    margin-bottom: 1%; 
+    margin-left: 0%; 
+    position: relative;
+  }
+
+  .bannerTitle{
+    font-family: CHNormal; 
+    font-size:11vw; 
+    color: red; 
+    text-shadow: -1px 0 black, 0 1px black, 0 -1px black, 1px 1px black;              
+    margin-left:0%; 
+    margin-top: 4%;
+  }
+
+  .hrTop
+  {
+
+    height: 0px; 
+    margin-top: 0%;  
+    margin-left: 0%; 
+    margin-right: 0%; 
+    border-style: none; 
+    border:none;  
+    background-color:#ffffff00;
+  }
+
+  .hrBottom
+  {
+    z-index: 1; 
+    height: 0px; 
+    margin-top: 0%;  
+    margin-left: 0%; 
+    margin-right: 0%; 
+    border-style: none; 
+    border:none;  
+    background-color:#ffffff00;
+  }
+
+  .hrBG
+  {
+    z-index: 1; 
+    margin-left: 0%; 
+    margin-right: 0%; 
+    padding-top: 0%; 
+    background-color:#ffffff00;
+
+  }
+
+  .hrAll
+  {
+    margin-top: 0%; 
+    margin-bottom: 0%;
+    
+  }
+
+  .blurb{
+    z-index: 20; 
+    font-size: 1.3em; 
+    font-weight:900; 
+    min-width: 100%; 
+    margin-left: 0%; 
+    padding-left: 2%; 
+    padding-right: 2%; 
+    padding-top: 1%; 
+    padding-bottom: 1%; 
+    text-align: center;
+    background-color:darkorange; 
+    border: black 2px solid;  
+    position: relative;
+  }
+  .figTitle{
+    width: 100%;
+    height: auto;
+    font-size: 5vw;
+    justify-items: center;
+    margin-bottom: 0%;
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px; 
+    color: black; 
+    background:rgb(255, 255, 142); 
+    border:black 2px solid; 
+    border-radius: 10px 10px 0px 0px;
+  }
+
+figure > hr{
+  margin-bottom: 0%;
+}
+
+  .bath{
+    min-width: 100%; 
+    border: black 2px solid; 
+    margin-left: 0%; 
+    margin-top: 0%; 
+    padding: .5%;  
+    background-color: orangered; 
+    text-align: center;
+    justify-content: center; 
+    box-shadow: 0px 0px rgba(0, 0, 0, 0);
+  }
+
+  .school{
+    min-width: 100%; 
+    border: black 2px solid; 
+    margin-left: 0%; 
+    margin-top: 0%; 
+    padding: .5%;  
+    background-color: orangered; 
+    text-align: center; 
+    box-shadow: 0px 0px rgba(0, 0, 0, 0);
+  }
+
+  .parent{
+    min-width: 100%; 
+    border: black 2px solid; 
+    margin-left: 0%; 
+    margin-top: 0%; 
+    padding: .5%;  
+    background-color: orangered; 
+    text-align: center; 
+    box-shadow: 0px 0px rgba(0, 0, 0, 0);
+  }
+}
+</style>
+
+<head>
+<title>SpacemanSpiff</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <meta name="description" content="Dr Seuss quotes" />
+<meta name="keywords" content="quotations, Dr Seuss " /> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">	 -->
+<!-- <link rel="stylesheet" href="css/myscreen.css" media_CH_SpacemanSpiff="all"/> -->
+<link rel="stylesheet" href="css/myprint.css" media="print"/>	
+</head>
+<body>
+
+
+  <!-- margin-top: -.03%; margin-bottom: -0.35% -->
+  <section class="banner">       
+      <span class="bannerTitle">Spaceman Spiff</span>
+      <img alt="Snow" src="media_CH_SpacemanSpiff/SpaceBannerGraphic.jpg" >    
+  </section>
+
+  <div class="blurb">
+    Spaceman Spiff is another creation of Calvin's imagination and one of his most prominent alter egos.  He is a space explorer who often does 
+    battle with aliens, either on foot or in space. The events in his daydreaming are usually events that are happening outside of his imagination, 
+    such as his teacher talking or other kids persuading him to slide down a slide. The colorful, exotic planets and aliens are some of my favorites 
+    of the colored strips.  I especially enjoy the names of the aliens the adventurer encounters.
+  </div>
+
+  <div class="hrAll">
+    <hr class="hrTop">
+    <div class="hrBG"></div>
+    <hr class="hrBottom">
+  </div>
+
+    <br>
+
+  <Section style="display: flex; width: auto;">
+
+<!-- ---------------------- Perils of Bath Time ----------------------- -->
+
+      <figure class="bath"> 
+        <h2 class="figTitle">The Perils of Bath Time</h2>
+        <hr style="border-color: black;">
+
+        <div style="background: linear-gradient(to bottom,rgba(255, 0, 0, 0) 1.4%, rgb(255, 255, 142) 1.5%, rgb(255, 255, 142) 98.5%, rgba(255, 0, 0, 0) 98.6%);" id="grow">
+          <img alt="Snow" src="media_CH_SpacemanSpiff/SpaceSpiff_03.jpg" style="margin-top: 1%;" title="Click for larger image" onclick="openModal();currentSlide(1)" class="cursor" id="img">
+        </div>
+
+        <div style="background: linear-gradient(to bottom,rgba(255, 0, 0, 0) 1.4%, rgb(255, 255, 142) 1.5%, rgb(255, 255, 142) 98.5%, rgba(255, 0, 0, 0) 98.6%);" id="grow">
+          <img alt="Snow" src="media_CH_SpacemanSpiff/SpaceSpiff_01.jpg" style="margin-top: 1%;" title="Click for larger image" onclick="openModal();currentSlide(2)" class="cursor" id="img">
+        </div>
+
+        <div style="background: linear-gradient(to bottom,rgba(255, 0, 0, 0) 1.4%, rgb(255, 255, 142) 1.5%, rgb(255, 255, 142) 98.5%, rgba(255, 0, 0, 0) 98.6%);" id="grow">
+          <img alt="Snow" src="media_CH_SpacemanSpiff/SpaceSpiff_02.jpg" style="margin-top: 1%;" title="Click for larger image" onclick="openModal();currentSlide(3)" class="cursor" id="img">
+        </div>
+      </figure>
+  <!-- ------------------------------ modal ------------------------------ -->
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlides">
+            <img src="media_CH_SpacemanSpiff/SpaceSpiff_03.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <img src="media_CH_SpacemanSpiff/SpaceSpiff_01.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <img src="media_CH_SpacemanSpiff/SpaceSpiff_02.jpg" style="width:100%">
+          </div>
+
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <div style="margin-left: 17%;">
+            <div class="column">
+              <img class="demo cursor" src="media_CH_SpacemanSpiff/SpaceSpiff_03.jpg" style="width:100%" onclick="currentSlide(1)" alt="Spaceman Spiff: The Perils of Bath Time!">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="media_CH_SpacemanSpiff/SpaceSpiff_01.jpg" style="width:100%" onclick="currentSlide(2)" alt="Spaceman Spiff: The Perils of Bath Time!">
+            </div>
+
+            <div class="column">
+              <img class="demo cursor" src="media_CH_SpacemanSpiff/SpaceSpiff_02.jpg" style="width:100%" onclick="currentSlide(3)" alt="Spaceman Spiff: The Perils of Bath Time!">
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- ---------------------- Perils of School ----------------------- -->
+
+      <figure class="school"> 
+        <h2 class="figTitle">The Perils of School</h2>
+        <hr style="border-color: black;">
+        <div style="background: linear-gradient(to bottom,rgba(255, 0, 0, 0) 1.4%, rgb(255, 255, 142) 1.5%, rgb(255, 255, 142) 98.5%, rgba(255, 0, 0, 0) 98.6%);" id="grow">
+          <img alt="Snow" src="media_CH_SpacemanSpiff/SpaceSpiff_10.jpg" style="margin-top: 1%;" title="Click for larger image" onclick="openModal2();currentSlide2(1)" class="cursor" id="img">
+        </div>
+
+        <div style="background: linear-gradient(to bottom,rgba(255, 0, 0, 0) 1.4%, rgb(255, 255, 142) 1.5%, rgb(255, 255, 142) 98.5%, rgba(255, 0, 0, 0) 98.6%);" id="grow">
+          <img alt="Snow" src="media_CH_SpacemanSpiff/SpaceSpiff_11.jpg" style="margin-top: 1%;" title="Click for larger image" onclick="openModal2();currentSlide2(2)" class="cursor" id="img">
+        </div>
+
+        <div style="background: linear-gradient(to bottom,rgba(255, 0, 0, 0) 1.4%, rgb(255, 255, 142) 1.5%, rgb(255, 255, 142) 98.5%, rgba(255, 0, 0, 0) 98.6%);" id="grow">
+          <img alt="Snow" src="media_CH_SpacemanSpiff/SpaceSpiff_15.jpg" style="margin-top: 1%;" title="Click for larger image" onclick="openModal2();currentSlide2(3)" class="cursor" id="img">
+        </div>
+      </figure>
+  <!-- ------------------------------ modal ------------------------------ -->
+      <div id="myModal2" class="modal">
+        <span class="close cursor" onclick="closeModal2()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlides2">
+            <img src="media_CH_SpacemanSpiff/SpaceSpiff_10.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides2">
+            <img src="media_CH_SpacemanSpiff/SpaceSpiff_11.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides2">
+            <img src="media_CH_SpacemanSpiff/SpaceSpiff_15.jpg" style="width:100%">
+          </div>
+
+          <div class="caption-container">
+            <p id="caption2"></p>
+          </div>
+
+          <div style="margin-left: 17%;">
+            <div class="column">
+              <img class="demo2 cursor" src="media_CH_SpacemanSpiff/SpaceSpiff_10.jpg" style="width:100%" onclick="currentSlide2(1)" alt="Spaceman Spiff: The Perils of School!">
+            </div>
+            <div class="column">
+              <img class="demo2 cursor" src="media_CH_SpacemanSpiff/SpaceSpiff_11.jpg" style="width:100%" onclick="currentSlide2(2)" alt="Spaceman Spiff: The Perils of School!">
+            </div>
+
+            <div class="column">
+              <img class="demo2 cursor" src="media_CH_SpacemanSpiff/SpaceSpiff_15.jpg" style="width:100%" onclick="currentSlide2(3)" alt="Spaceman Spiff: The Perils of School!">
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- ---------------------- Perils of Being a Parent ----------------------- -->
+
+      <figure class="parent" > 
+        <h2 class="figTitle">The Perils of Being a Parent</h2>
+        <hr style="border-color: black;">
+        <div style="background: linear-gradient(to bottom,rgba(255, 0, 0, 0) 1.4%, rgb(255, 255, 142) 1.5%, rgb(255, 255, 142) 98.5%, rgba(255, 0, 0, 0) 98.6%);" id="grow">
+          <img alt="Snow" src="media_CH_SpacemanSpiff/SpaceSpiff_09.jpg" style="margin-top: 1%;" title="Click for larger image" onclick="openModal3();currentSlide3(1)" class="cursor" id="img">
+        </div>
+
+        <div style="background: linear-gradient(to bottom,rgba(255, 0, 0, 0) 1.4%, rgb(255, 255, 142) 1.5%, rgb(255, 255, 142) 98.5%, rgba(255, 0, 0, 0) 98.6%);" id="grow">
+          <img alt="Snow" src="media_CH_SpacemanSpiff/SpaceSpiff_19.jpg" style="margin-top: 1%;" title="Click for larger image" onclick="openModal3();currentSlide3(2)" class="cursor" id="img">
+        </div>
+
+        <div style="background: linear-gradient(to bottom,rgba(255, 0, 0, 0) 1.4%, rgb(255, 255, 142) 1.5%, rgb(255, 255, 142) 98.5%, rgba(255, 0, 0, 0) 98.6%);" id="grow">
+          <img alt="Snow" src="media_CH_SpacemanSpiff/SpaceSpiff_17.jpg" style="margin-top: 1%;" title="Click for larger image" onclick="openModal3();currentSlide3(3)" class="cursor" id="img">
+        </div>
+      </figure>
+  <!-- ------------------------------ modal ------------------------------ -->
+      <div id="myModal3" class="modal">
+        <span class="close cursor" onclick="closeModal3()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlides3">
+            <img src="media_CH_SpacemanSpiff/SpaceSpiff_09.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides3">
+            <img src="media_CH_SpacemanSpiff/SpaceSpiff_19.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides3">
+            <img src="media_CH_SpacemanSpiff/SpaceSpiff_17.jpg" style="width:100%">
+          </div>
+
+          <div class="caption-container">
+            <p id="caption3"></p>
+          </div>
+
+          <div style="margin-left: 17%;">
+            <div class="column">
+              <img class="demo3 cursor" src="media_CH_SpacemanSpiff/SpaceSpiff_09.jpg" style="width:100%" onclick="currentSlide3(1)" alt="Spaceman Spiff: The Perils of Being a Parent!">
+            </div>
+            <div class="column">
+              <img class="demo3 cursor" src="media_CH_SpacemanSpiff/SpaceSpiff_19.jpg" style="width:100%" onclick="currentSlide3(2)" alt="Spaceman Spiff: The Perils of Being a Parent!">
+            </div>
+
+            <div class="column">
+              <img class="demo3 cursor" src="media_CH_SpacemanSpiff/SpaceSpiff_17.jpg" style="width:100%" onclick="currentSlide3(3)" alt="Spaceman Spiff: The Perils of Being a Parent!">
+            </div>
+          </div>
+        </div>
+      </div>
+    </Section>
+
+    <br>
+  
+    <footer class="contact" style="z-index: 10; margin-left: 1%; margin-right: 1%; position: relative; ">
+      <div class="icon-menu"> 
+        <a href="FavoritesPage_work.html" style="text-decoration: none; padding-top: .5%; padding-bottom: .3%;">Back </a>
+      </div>
+
+      <hr style= "height: 4px; margin-left: -1.5%; margin-right: -1.45%; border-style: double; background-color: orangered;">
+      <cite><small><br>
+        <br>
+        <br>  
+        </small></cite>
+      <hr style= "height: 4px; margin-left: -1.5%; margin-right: -1.45%; border-style: double; background-color: orangered;">
+      <p id="colors" style="letter-spacing: 1px; font-weight: bold; width: 5.15%; background-color: white; border: black 1px solid; border-radius: 10px; color: black; margin-top: -0.1%; padding-left: 10px; padding-top: 3px;">&copy;Mike Tonder</p>
+    </footer>
+
+    <div style="z-index: 1; background-image: url(media_CH_SpacemanSpiff/SpaceBottomBanner.jpg); margin-top: -6.2%; margin-left: -0.5%; margin-right: -0.4%; padding-top: 3.8%;"></div>
+
+    <script>
+      // ----------------------------------------------------------[The Perils of Bath Time]-------------------------------------------------------------------------
+      function openModal() {
+        document.getElementById("myModal").style.display = "block";
+      }
+      
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+      }
+  
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) 
+      {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) 
+      {
+        showSlides(slideIndex = n);
+      }
+  
+      function showSlides(n) 
+      {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) 
+        {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) 
+        {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+  
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+  
+      // ----------------------------------------------------------------[The Perils of School]-------------------------------------------------------------------------------
+      function openModal2() {
+        document.getElementById("myModal2").style.display = "block";
+      }
+      
+      function closeModal2() {
+        document.getElementById("myModal2").style.display = "none";
+      }
+      
+      function currentSlide2(n) 
+      {
+        showSlides2(slideIndex2 = n);
+      }
+      
+      function showSlides2(n) 
+      {
+        var i;
+        var slides2 = document.getElementsByClassName("mySlides2");
+        var dots2 = document.getElementsByClassName("demo2");
+        var captionText2 = document.getElementById("caption2");
+        if (n > slides2.length) {slideIndex2 = 1}
+        if (n < 1) {slideIndex2 = slides2.length}
+        for (i = 0; i < slides2.length; i++) 
+        {
+            slides2[i].style.display = "none";
+        }
+        for (i = 0; i < dots2.length; i++) 
+        {
+            dots2[i].className = dots2[i].className.replace(" active", "");
+        }
+  
+        slides2[slideIndex2-1].style.display = "block";
+        dots2[slideIndex2-1].className += " active";
+        captionText2.innerHTML = dots2[slideIndex2-1].alt;
+      }
+  
+      // ------------------------------------------------------------------[The Perils of Being a Parent]--------------------------------------------------------------------------------
+      function openModal3() 
+      {
+        document.getElementById("myModal3").style.display = "block";
+      }
+      
+      function closeModal3() 
+      {
+        document.getElementById("myModal3").style.display = "none";
+      }
+      
+      function currentSlide3(n) 
+      {
+        showSlides3(slideIndex3 = n);
+      }
+      
+      function showSlides3(n) 
+      {
+        var i;
+        var slides3 = document.getElementsByClassName("mySlides3");
+        var dots3 = document.getElementsByClassName("demo3");
+        var captionText3 = document.getElementById("caption3");
+        if (n > slides3.length) {slideIndex3 = 1}
+        if (n < 1) {slideIndex3 = slides3.length}
+        for (i = 0; i < slides3.length; i++) 
+        {
+            slides3[i].style.display = "none";
+        }
+        for (i = 0; i < dots3.length; i++) 
+        {
+            dots3[i].className = dots3[i].className.replace(" active", "");
+        }
+  
+        slides3[slideIndex3-1].style.display = "block";
+        dots3[slideIndex3-1].className += " active";
+        captionText3.innerHTML = dots3[slideIndex3-1].alt;
+      }
+    </script>
+
+</body>
+</html>

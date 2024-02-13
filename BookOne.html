@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body
+{
+  background-image: url('media_ScaryStories/BookOneCover.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  width: 99%;
+}
+
+div
+{
+  text-align: center;
+}
+header
+{
+  text-align: center;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  border-top: black 2px Solid;
+}
+
+</style>
+
+<script src="jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#B1storyOne").click(function(){
+        $.get("BookOne_StoryOne.html", function(data,status){
+          if(status=="success"){  
+            $("#B1storyDisplay").html(data);
+           } 
+          else{
+            $("#B1storyDisplay").html("Error retrieving this story...");
+        }});
+    });
+
+    $("#B1storyTwo").click(function(){
+        $.get("BookOne_StoryTwo.html", function(data,status){
+          if(status=="success"){  
+            $("#B1storyDisplay").html(data);
+           } 
+          else{
+            $("#B1storyDisplay").html("Error retrieving this story...");
+        }});
+    });
+
+    $("#B1storyThree").click(function(){
+        $.get("BookOne_StoryThree.html", function(data,status){
+          if(status=="success"){  
+            $("#B1storyDisplay").html(data);
+           } 
+          else{
+            $("#B1storyDisplay").html("Error retrieving thie story...");
+        }});
+    });
+
+});
+</script>
+</head>
+
+<body>
+  <header id="B1storyDisplay">
+    <span style="font-size: 30px;">Book One</span><br>
+    <span style="font-size: 40px;">Scary Stories to Tell in the Dark</span>
+  </header>
+
+<div>
+  <hr style="border: black 2px solid;">
+  <button style="box-shadow: 2px 2px black;" id="B1storyOne">The Viper</button>
+  <button style="box-shadow: 2px 2px black;" id="B1storyTwo">The Hearse Song</button>
+  <button style="box-shadow: 2px 2px black;" id="B1storyThree">Room for One More</button>
+  <hr style="border: black 2px solid;">
+  
+</div>
+
+
+</body>
+</html>

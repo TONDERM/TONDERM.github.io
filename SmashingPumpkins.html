@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<style>
+@font-face 
+{
+    font-family: pumpkin;
+    src: url(fonts/MayflowerAntique.ttf);
+}
+
+body
+{
+    color:white;
+    text-shadow: 2px 2px black;
+    font-family: pumpkin;
+    background-image: url("media_WW2planesTallSP/SPbigBG.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div
+{
+    text-align: center; 
+    margin-left: 30.0%; 
+    background-color:rgba(47, 79, 79, 0.8);
+    width:40%; 
+    padding:1%;
+    border: 4px darkorange solid;
+    border-style: ridge;
+    border-radius: 10px;
+}
+    
+</style>
+
+<body style="display: flex; flex-wrap: wrap;">
+
+
+<div>
+    <span style="font-size: 35px; text-decoration: underline;">The Smashing Pumpkins</span><br>
+    <span style="font-size: 40px;">Mellon Collie and the Infinite Sadness</span>
+    <br>
+    <br>
+    <button style="box-shadow: 1px 1px black;" id="SideOne">Side One</button>
+    <button style="box-shadow: 1px 1px black;" id="SideTwo">Side Two</button>
+    <button style="box-shadow: 1px 1px black;" id="Bsides">B-sides</button>
+    <p style="text-align: center;" id="content"></p>
+</div>
+
+<script src="js/SmashingPumpkins.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body
+{
+  background-image: url('media_ScaryStories/BookTwoCover.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  width: 99%;
+}
+
+div
+{
+  text-align: center;
+}
+header
+{
+  text-align: center;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  border-top: black 2px Solid;
+}
+
+</style>
+
+
+
+<script src="jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#B2storyOne").click(function(){
+        $.get("BookTwo_StoryOne.html", function(data,status){
+          if(status=="success"){  
+            $("#B2storyDisplay").html(data);
+           } 
+          else{
+            $("#B2storyDisplay").html("Error retrieving this story...");
+        }});
+    });
+
+    $("#B2storyTwo").click(function(){
+        $.get("BookTwo_StoryTwo.html", function(data,status){
+          if(status=="success"){  
+            $("#B2storyDisplay").html(data);
+           } 
+          else{
+            $("#B2storyDisplay").html("Error retrieving this story...");
+        }});
+    });
+
+    $("#B2storyThree").click(function(){
+        $.get("BookTwo_StoryThree.html", function(data,status){
+          if(status=="success"){  
+            $("#B2storyDisplay").html(data);
+           } 
+          else{
+            $("#B2storyDisplay").html("Error retrieving thie story...");
+        }});
+    });
+
+});
+</script>
+</head>
+<body>
+<header id="B2storyDisplay">
+  <span style="font-size: 30px;">Book Two</span><br>
+  <span style="font-size: 40px;">More Scary Stories to Tell in the Dark</span>
+</header>
+
+<div>
+  <hr style="border: black 2px solid;">
+<button style="box-shadow: 2px 2px black;" id="B2storyOne">The Bed by the Window</button>
+<button style="box-shadow: 2px 2px black;" id="B2storyTwo">The Wreck</button>
+<button style="box-shadow: 2px 2px black;" id="B2storyThree">"Oh, Susannah!"</button>
+<hr style="border: black 2px solid;">
+</div>
+</body>
+</html>

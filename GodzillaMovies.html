@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 12: Filtering, Searching, and Sorting</title>
+    <link rel="stylesheet" href="css/c12.css" />
+  </head>
+<style>
+@font-face
+{
+    font-family: godzilla;   
+    src: url(fonts/DestroyEarthRoughBB.ttf);
+}
+
+@font-face
+{
+    font-family: movies;   
+    src: url(fonts/KismetNF.ttf);
+}
+</style>
+  <body>
+    <header>
+      <h1><span style="font-family: godzilla; letter-spacing: 3px;">Godzilla </span><span style="font-family: movies; letter-spacing: 3px;">at the Movies</span></h1>
+    </header>
+
+    <div class="about" style="color:white;">
+      <h2>Filmography</h2>
+    </div>
+
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th data-sort="nameJapan">Japanese Title</th>
+          <th data-sort="nameUS">US Title</th>
+          <th data-sort="releaseYear">Release Year</th>
+          <th data-sort="Director">Director(s)</th>
+          <th data-sort="era">era</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Godzilla</td>
+          <td>Godzilla, King Of The Monsters</td>
+          <td>1954</td>
+          <td>Ishiro Honda</td>
+          <td>Showa</td>
+        </tr>
+        <tr>
+          <td>Godzilla Raids Agian</td>
+          <td>Gigantis, The Fire Monster</td>
+          <td>1955</td>
+          <td>Motoyoshi Honda</td>
+          <td>Showa</td>
+        </tr>
+        <tr>
+          <td>King Kong vs Godzilla</td>
+          <td>King Kong vs Godzilla</td>
+          <td>1962</td>
+          <td>Ishiro Honda</td>
+          <td>Showa</td>
+        </tr>
+        <tr>
+          <td>Mothra vs Godzilla</td>
+          <td>Godzilla vs The Thing</td>
+          <td>1964</td>
+          <td>Ishiro Honda</td>
+          <td>Showa</td>
+        </tr>
+        <tr>
+          <td>Ghidorah, The Three-Headed Monster</td>
+          <td>Ghidra, The Three-Headed Monster</td>
+          <td>1964</td>
+          <td>Ishiro Honda</td>
+          <td>Showa</td>
+        </tr>
+        <tr>
+          <td>Invasion Of Astro-Monster</td>
+          <td>Monster Zero</td>
+          <td>1965</td>
+          <td>Ishiro Honda</td>
+          <td>Showa</td>
+        </tr>
+        <tr>
+          <td>Ebirah, Horror Of The Deep</td>
+          <td>Godzilla vs The Sea Monster</td>
+          <td>1966</td>
+          <td>Jun Fukuda</td>
+          <td>Showa</td>
+        </tr>
+        <tr>
+          <td>Monster Island's Decisive Battle: Godzilla's Son</td>
+          <td>Son Of Godzilla</td>
+          <td>1967</td>
+          <td>Jun Fukuda</td>
+          <td>Showa</td>
+        </tr>
+        <tr>
+          <td>Destroy All Monsters</td>
+          <td>Destroy All Monsters</td>
+          <td>1968</td>
+          <td>Ishiro Honda</td>
+          <td>Showa</td>
+        </tr>
+        <tr>
+          <td>Godzilla, Minilla, Gabara: All Monsters Attack</td>
+          <td>Godzilla's Revenge</td>
+          <td>1969</td>
+          <td>Ishiro Honda</td>
+          <td>Showa</td>
+        </tr>
+        <tr>
+          <td>Godzilla vs. Hedorah</td>
+          <td>Godzilla vs. The Smog Monster</td>
+          <td>1971</td>
+          <td>Yoshimitsu Banno</td>
+          <td>Showa</td>
+        </tr>
+        <tr>
+          <td>Godzilla vs. Gigan</td>
+          <td>Godzilla On Monster Island</td>
+          <td>1972</td>
+          <td>Jun Fukuda</td>
+          <td>Showa</td>
+        </tr>
+        <tr>
+          <td>Godzilla vs. Megalon</td>
+          <td>Godzilla vs. Megalon</td>
+          <td>1973</td>
+          <td>Jun Fukuda</td>
+          <td>Showa</td>
+        </tr>
+        <tr>
+          <td>Godzilla vs. Mecha-Godzilla</td>
+          <td>Godzilla vs. The Bionic Monster</td>
+          <td>1974</td>
+          <td>Jun Fukuda</td>
+          <td>Showa</td>
+        </tr>
+        <tr>
+          <td>Terror Of Mecha-Godzilla</td>
+          <td>Terror Of Godzilla</td>
+          <td>1975</td>
+          <td>Ishiro Honda</td>
+          <td>Showa</td>
+        </tr>
+        <tr>
+          <td>The Return Of Godzilla</td>
+          <td>Godzilla 1985</td>
+          <td>1984</td>
+          <td>Koji Hashimoto</td>
+          <td>Heisei</td>
+        </tr>
+        <tr>
+          <td>Godzilla vs. Biollante</td>
+          <td>Godzilla vs. Biollante</td>
+          <td>1989</td>
+          <td>Kazuki Omori</td>
+          <td>Heisei</td>
+        </tr>
+        <tr>
+          <td>Godzilla vs. King Ghidorah</td>
+          <td>N/A</td>
+          <td>1991</td>
+          <td>Kazuki Omori</td>
+          <td>Heisei</td>
+        </tr>
+        <tr>
+          <td>Godzilla vs. Mothra</td>
+          <td>Godzilla And Mothra: The Battle For Earth</td>
+          <td>1992</td>
+          <td>Takao Okawara</td>
+          <td>Heisei</td>
+        </tr>
+        <tr>
+          <td>Godzilla vs. Mecha-Godzilla</td>
+          <td>Godzilla vs. Mecha-Godzilla II</td>
+          <td>1993</td>
+          <td>Takao Okawara</td>
+          <td>Heisei</td>
+        </tr>
+        <tr>
+          <td>Godzilla vs. Space-Godzilla</td>
+          <td>N/A</td>
+          <td>1994</td>
+          <td>Kensho Yamashita</td>
+          <td>Heisei</td>
+        </tr>
+        <tr>
+          <td>Godzilla vs. Destoroyah</td>
+          <td>Godzilla vs. Destroyah</td>
+          <td>1995</td>
+          <td>Takao Okawara</td>
+          <td>Heisei</td>
+        </tr>
+        <tr>
+          <td>Gojira</td>
+          <td>Godzilla</td>
+          <td>1998</td>
+          <td>Roland Emmerich</td>
+          <td>Millennium</td>
+        </tr>
+        <tr>
+          <td>Godzilla 2000: Millennium</td>
+          <td>Godzilla 2000</td>
+          <td>1999</td>
+          <td>Takao Okawara</td>
+          <td>Millennium</td>
+        </tr>
+        <tr>
+          <td>Godzilla X Megaguirus: G Annihilation Strategy</td>
+          <td>Godzilla vs. Megaguirus</td>
+          <td>2000</td>
+          <td>Masaaki Tezuka</td>
+          <td>Millennium</td>
+        </tr>
+        <tr>
+          <td>Godzilla, Mothra And King Ghidorah: Giant Monsters All Out Attack</td>
+          <td>GMK</td>
+          <td>2001</td>
+          <td>Shusuke Kaneko</td>
+          <td>Millennium</td>
+        </tr>
+        <tr>
+          <td>Godzilla X Mecha-Godzilla</td>
+          <td>Godzilla Against Mecha-Godzilla</td>
+          <td>2002</td>
+          <td>Masaaki Tezuka</td>
+          <td>Millennium</td>
+        </tr>
+        <tr>
+          <td>Godzilla X Mothra X Mecha-Godzilla: Tokyo S.O.S</td>
+          <td>Godzilla: Tokyo SOS</td>
+          <td>2003</td>
+          <td>Masaaki Tezuka</td>
+          <td>Millennium</td>
+        </tr>
+        <tr>
+          <td>Godzilla: Final Wars</td>
+          <td>N/A</td>
+          <td>2004</td>
+          <td>Ryuhei Kitamura</td>
+          <td>Millennium</td>
+        </tr>
+        <tr>
+          <td>Gojira</td>
+          <td>Godzilla</td>
+          <td>2014</td>
+          <td>Gareth Edwards</td>
+          <td>Reiwa</td>
+        </tr>
+        <tr>
+          <td>Shin Godzilla</td>
+          <td>Godzilla Resurgence</td>
+          <td>2018</td>
+          <td>Hideaki Anno & Shinji Higuchi</td>
+          <td>Reiwa</td>
+        </tr>
+        <tr>
+          <td>Gojira: King Of Monsters</td>
+          <td>Godzilla: King Of The Monsters</td>
+          <td>2019</td>
+          <td>Micheal Dougherty</td>
+          <td>Reiwa</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/sort-table.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,606 @@
+﻿<!DOCTYPE html>
+<html>
+<style> 
+@font-face
+{
+	font-family: CHNormal;
+	src: url(fonts/CALVINN.TTF);
+}
+
+@font-face
+{
+	font-family: hockey;
+  src: url(fonts/hockey.ttf);
+}
+
+@font-face
+{
+	font-family: Hangy;
+  src: url(fonts/Hangyaboly.ttf);
+}
+
+body
+{
+  background-color:white;
+  font-family: hangy;
+}
+
+#CalvinTitle
+{
+  font-family: CHNormal;
+}
+
+nav a {
+    text-decoration:none;
+}
+
+nav ul li 
+{
+	list-style:none;
+  width: 80%;
+}
+
+nav ul
+{
+	list-style:none;
+}
+
+nav ul li a:hover
+{
+  display: inline-table;
+  filter: grayscale(100%);
+}
+
+.grayscale {filter: grayscale(100%);}
+
+nav ul li a:active
+{
+	display:block;
+}
+
+img
+{
+	width:100%;
+}
+
+article
+{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 1%;
+  background-image: url('media_CH/Decal_06.png'),url('media_CH/CH_Dock.jpg');
+  background-repeat: no-repeat,no-repeat;
+  background-size: contain,cover;
+  background-position: right,left;
+  margin-bottom: 3%;
+  margin-top: 0%;
+  padding-top: 20px;
+  border: black 2px solid;
+  height: 100%;
+}
+
+header
+{
+  margin-top: 2%;
+}
+
+#sectionL
+{
+  flex: 1;
+  font-size: 1vw;
+  width: 35%;
+  height: 100%;
+  margin-top: 0.9%;
+  margin-left: 2%;
+  margin-bottom: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  background-color: white;
+  border: black 4px solid;
+}
+
+#footerTop
+{
+  position: relative; 
+  margin-top: -2%;
+}
+
+.container 
+{
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #00000000;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay 
+{
+  bottom: 0;
+  height: 28%;
+}
+
+.text 
+{
+  white-space: nowrap; 
+  font-size: 2.4vw;
+  text-shadow: -1px 0 black, 0 1px black, 0 -1px black, 2px 2px rgb(0, 0, 0) ; 
+  font-family: CHNormal;
+  position: absolute;
+  overflow: hidden;
+  top: 57%; 
+  transform: translate(-50%, -50%);
+}
+
+.collection
+{
+  font-family: hangy;
+  color: black;
+  position: absolute;
+  font-size: 1.7vw;
+  margin-top: 25%;
+  margin-left: 77%;
+  padding-left: 3px;
+  padding-right: 3px;
+  background-color: white;
+  border: black 1px solid;    
+}
+
+.titleGoon
+{
+  margin-left: 61%; 
+  margin-top: -20%; 
+  width: 20%; 
+  mix-blend-mode: multiply;
+}
+
+.titleSusie
+{
+  margin-left: 24%; 
+  margin-top: -20%; 
+  width: 10%; 
+  mix-blend-mode: multiply;
+}
+
+#favorite
+{
+  font-family: CHNormal; 
+  text-align: center; 
+  font-size: 5vw;
+}
+
+#sampler
+{
+  text-align: center; 
+  font-size: 2vw; 
+  margin-bottom: -1%; 
+  margin-top: 2%;
+}
+
+#buttons
+{
+  
+  width: 50%; 
+  min-width: 460px; 
+  height: 50%; 
+  margin-right: 19%;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.icon-menu 
+{
+  position: absolute;
+  width: 64%;
+  overflow: auto; 
+}
+
+.icon-menu a 
+{
+  float:right;
+  text-align: center;
+  margin-top: 1%;
+  margin-right: .5%;
+  width: 15%; 
+  color: black; 
+  font-size: 35px; 
+  border: black 2px solid;
+  background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0.2%, rgba(255, 255, 255, 0.85) 0.3%, rgba(255, 255, 255, 0.85) 99.7%, rgba(255, 255, 255, 0) 99.8%);
+}
+
+.icon-menu a:hover 
+{
+  background: orange;
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 0 -2px black;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* For desktop: */
+/* @media only screen and (max-width: 1600px) 
+{
+	.grid-container
+	{
+		display:grid;
+		grid-template-areas:
+			'head head head head head head'
+			'main main main main nav nav'
+			'aside aside aside aside nav nav'
+			'foot foot foot foot foot foot';
+		grid-gap:0px;
+		padding:10px;
+	}
+
+	#things{
+		display:inline;
+	}
+	#extra img{
+		max-width:400px;
+	}
+	#extra{
+		font-size:1.3em;
+	}
+} */
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* For mobile phones: */
+@media only screen and (max-width: 430px) and (min-width:360px)
+{
+
+  .title
+  { 
+    grid-area:head; 
+  }
+  .menu
+  { 
+    grid-area:nav; 
+ 
+  }
+  .content
+  { 
+    grid-area:main;
+
+  }
+
+  .contact{ grid-area:foot; }
+
+  article
+  {
+    background-image: url('media_CH/Decal_06.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    margin-bottom: 3%;
+   
+    margin-top: -4%;
+    padding-top: 0px;
+    border: black 2px solid;
+    height: auto;
+    width: auto;
+  }
+  .container 
+  {
+    position: relative;
+    width: 87.5vw;
+  }
+
+  .collection
+  {
+    font-size: 5vw;
+    margin-top: 22%;
+    margin-left: 70%;
+  }
+
+  .overlay 
+  {
+    top: 5px;
+    left: 10px;
+    width: 100%;
+    height: 30px;
+  }
+
+  .text 
+  {
+    font-size: 7vw;
+    text-shadow: -1px 0 black, 0 1px black, 0 -1px black, 1.5px 1.5px rgb(0, 0, 0)  ; 
+  }
+
+  .icon-menu 
+  {
+    width: 93%;
+  }
+
+  .icon-menu a 
+  {
+    float:right;
+    text-align: center;
+    margin-top: 7%;
+    margin-right: .5%;
+    width: 30%; 
+    color: black; 
+    font-size: 20px; 
+    border: black 2px solid;
+    background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0.2%, rgba(255, 255, 255, 0.85) 0.3%, rgba(255, 255, 255, 0.85) 99.7%, rgba(255, 255, 255, 0) 99.8%);
+  }
+
+  #sectionL
+  {
+    font-size: 5vw;
+    width: auto;
+    height: auto;
+    border: black 2px solid;
+    padding-left: 2%;
+    margin-right: 3.5%;
+  }
+
+  #favorite
+  {
+    font-size: 8vw;
+    margin-top: -2%;
+  }
+
+  #sampler
+  {
+    font-size: 5vw; 
+    margin-bottom: -1%; 
+    margin-top: 2%;
+  }
+
+  #buttons
+  {
+    width: 0%; 
+    min-width: 375px; 
+    height: 0%; 
+    margin-right: 0%;
+    margin-left: -30px;
+  }
+
+  nav ul li 
+  {
+	  list-style:none;
+    width: 100%;
+  }
+	.grid-container
+	{
+		display:grid;
+		grid-template-areas:
+			'head head head'
+      'main main main'
+			'nav nav nav'
+			'foot foot foot';
+		grid-gap:0px;
+		padding:0px;
+	}
+
+	header img
+  {
+		display:none;
+	}
+
+    #titles
+	{
+		display:none;
+	}
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* For tablets: */
+@media only screen and (max-width:1024px) and (min-width:750px)
+{
+  .title
+  { 
+    grid-area:head; 
+  }
+
+  .titleLook
+  {  
+    margin-bottom: -1.5%;
+  }
+
+  .menu
+  { 
+    grid-area:nav; 
+    margin-left: -6%;
+  }
+  .content
+  { 
+    grid-area:main;
+    margin-right: 3%;
+  }
+
+  .contact{ grid-area:foot; }
+
+
+	.grid-container
+	{
+		display:grid;
+		grid-template-areas:
+			'head head head'
+      'main main main'
+			'nav nav nav'
+			'aside aside aside'
+			'foot foot foot';
+		grid-gap:0px;
+		padding:0px;
+	}
+
+
+  #titles
+	{
+		display:none;
+	}
+
+  nav ul li 
+  {
+    width: 100%;
+  }
+
+  article
+  {
+    background-image: url('media_CH/CH_Dock.png');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:left;
+  }
+
+  header
+  {
+    margin-top: -1%;
+  }
+
+  #sectionL
+  {
+    font-size: 2vw;
+    height: 90%;
+    margin-left: 60%;
+  }  
+
+  #buttons
+  {
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: -43%;
+  }
+
+  #footerTop
+  {
+    position: relative; 
+    margin-top: 1%;
+  }
+
+  .overlay 
+  {
+    top: 5px;
+    left: 10px;
+    width: 100%;
+    height: 30px;
+  }
+
+  .text 
+  {
+    font-size: 3vw;
+    text-shadow: -1px 0 black, 0 1px black, 0 -1px black, 1.8px 1.8px rgb(0, 0, 0)  ; 
+  }
+
+  .icon-menu 
+  {
+    position: absolute;
+    width: 92%;
+    overflow: auto; 
+  }
+
+  .icon-menu a 
+  {
+    float:right;
+    text-align: center;
+    margin-top: 1.3%;
+    margin-right: .5%;
+    width: 30%; 
+    color: black; 
+    font-size: 35px; 
+    border: black 2px solid;
+    background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0.2%, rgba(255, 255, 255, 0.85) 0.3%, rgba(255, 255, 255, 0.85) 99.7%, rgba(255, 255, 255, 0) 99.8%);
+  }
+}
+</style>
+<head>
+<title>My Favorites</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Calvin and Hobbes Stuff" />
+<meta name="keywords" content="Calvin and Hobbes, Bill Watterson, Calvin, Hobbes, collections, comic strip" />
+<!-- <link rel="stylesheet" href="css/myscreen.css" media="all"/> -->
+<link rel="stylesheet" href="css/myprint.css" media="print"/>	
+</head>
+
+<body>
+<main class="grid-container">
+  <header class="title">
+      <h1 id="favorite">My Favorites</h1>
+      <a><img src="media_CH/SusieHobbesHug.jpg" class="titleSusie"></a>
+      <a><img src="media_CH/SnowGoons.jpg" class="titleGoon"></a>
+  </header>
+
+  <article class="grid-container">
+    <section class="content" id="sectionL">  
+    <h1 id="sampler">The Sampler Platter</h1>
+    <hr>
+    <p>
+        These are some of my favorites from Calvin and Hobbes.  
+        The "Art of Snow" is a collection of strips where Calvin builds his snow creations.  Personally, these hold the funniest moments of the series.  
+        The other collections are just as good though, showing the creativity of Calvin's point of view mixed with the reality of being a little kid. It's 
+        why I love the series so much.  It also has a lot of heart, great story arcs and a lot of memerable and interesting characters.
+
+    </p>
+    </section>
+    <nav class="menu" id="buttons">
+        <ul>
+            <li> 
+                <div class="container">
+                    <p class="collection">Collection 1</p>
+                    <a href="SnowArt.html" target="blank"><img alt="SnowArt" src="media_CH_Snowmen/SM_TitleBar.jpg"  style="border: black 2px solid;" title="Click for Snow Art"></a>
+                    
+                    <div class="overlay">
+                        <div class="text" style="color:deepskyblue; left: 25%;">The Art of Snow</div>
+                    </div>
+                </div>
+            </li>   
+            <li> 
+                <div class="container">
+                    <span class="collection">Collection 2</span>
+                    <a href="SpacemanSpiff.html" target="blank"><img alt="SpaceSpiff" src="media_CH_SpacemanSpiff/SpaceTitle.jpg" style="border: black 2px solid;"  title="Click for Spaceman Spiff"></a>
+                    <div class="overlay">
+                        <div class="text" style="color: red; left: 75%;">Spaceman Spiff</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="container">
+                    <span class="collection">Collection 3</span>
+                    <a href="Dinosaurs.html" target="blank"><img alt="Dinos" src="media_CH_Dinosaurs/DinoTitle.jpg" style="border: black 2px solid;"  title="Click for Dinosaurs"></a>
+                    <div class="overlay">
+                        <div class="text" style="color:olive; left: 40%;">When Dinosaurs Roam</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="container">
+                    <span class="collection">Collection 4</span>
+                    <a href="SusieDerkins.html" target="blank"><img alt="Susie" src="media_CH_Susie/SusieTitle.jpg" style="border: black 2px solid;"  title="Click for Susie Derkins"></a>
+                    <div class="overlay">
+                        <div class="text" style="color:orchid; left: 20%;">Susie Derkins</div>
+                    </div>
+                </div>           
+            </li>
+        </ul>
+    </nav>
+  </article> 
+
+  <section class="contact" id="footerTop">
+    <footer style="margin-left: 1%; margin-right: 1%;">
+        <div class="icon-menu"> 
+            <a href="../BooksPage_work.html"style="text-decoration: none; width:auto; padding-left:5px;">Books &#9654;</a>
+            <a href="../FinalProject.html" style="text-decoration: none; padding-top: .5%; padding-bottom: .3%;">Main </a>
+            <a href="../TheStartPage_work.html" style="text-decoration:none; width:auto; padding-right:5px;">&#9664; The Start</a>
+        </div>
+        <hr style= "height: 2px; border-style: double;">
+        <cite><small><br>
+        <br>
+        <br>
+        </small></cite>
+        <hr style= "height: 2px; border-style: double;">
+        <p style="background-color: rgba(255, 255, 255, 0); color: black; margin-top: -0.1%;">&copy;Mike Tonder</p>
+    </footer>
+  </section>
+
+</main>
+</body>
+</html>

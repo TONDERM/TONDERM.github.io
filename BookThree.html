@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body
+{
+  background-image: url('media_ScaryStories/BookThreeCover.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  width: 99%;
+}
+
+div
+{
+  text-align: center;
+}
+header
+{
+  text-align: center;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  border-top: black 2px Solid;
+}
+
+</style>
+
+<script src="jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#B3storyOne").click(function(){
+        $.get("BookThree_StoryOne.html", function(data,status){
+          if(status=="success"){  
+            $("#B3storyDisplay").html(data);
+           } 
+          else{
+            $("#B3storyDisplay").html("Error retrieving this story...");
+        }});
+    });
+
+    $("#B3storyTwo").click(function(){
+        $.get("BookThree_StoryTwo.html", function(data,status){
+          if(status=="success"){  
+            $("#B3storyDisplay").html(data);
+           } 
+          else{
+            $("#B3storyDisplay").html("Error retrieving this story...");
+        }});
+    });
+
+    $("#B3storyThree").click(function(){
+        $.get("BookThree_StoryThree.html", function(data,status){
+          if(status=="success"){  
+            $("#B3storyDisplay").html(data);
+           } 
+          else{
+            $("#B3storyDisplay").html("Error retrieving thie story...");
+        }});
+    });
+
+});
+</script>
+</head>
+<body>
+<header id="B3storyDisplay">
+  <span style="font-size: 30px;">Book Three</span><br>
+  <span style="font-size: 40px;">Scary Stories 3: More Tales to Chill Your Bones</span>
+</header>
+
+<div>
+  <hr style="border: black 2px solid;">
+  <button style="box-shadow: 2px 2px black;" id="B3storyOne">The Red Spot</button>
+  <button style="box-shadow: 2px 2px black;" id="B3storyTwo">Footsteps</button>
+  <button style="box-shadow: 2px 2px black;" id="B3storyThree">The Appointment</button>
+  <hr style="border: black 2px solid;">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,641 @@
+﻿<!DOCTYPE html>
+<html>
+<style> 
+*{box-sizing: border-box;}
+
+@font-face
+{
+	font-family: CHNormal;
+	src: url(fonts/CALVINN.TTF);
+}
+
+@font-face
+{
+	font-family: hockey;
+  src: url(fonts/hockey.ttf);
+}
+
+@font-face
+{
+	font-family: Hangy;
+  src: url(fonts/Hangyaboly.ttf);
+}
+
+body
+{
+  background-color:white;
+  font-family: hangy;
+}
+
+#CalvinTitle
+{
+  font-family: CHNormal;
+  text-align: center; 
+  font-size: 5vw;
+}
+
+img
+{
+	width:100%;
+}
+
+article
+{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 1%;
+  background-image: url('media_CH/TreeBG.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 3%;
+  margin-top: 0%;
+  padding-top: 20px;
+  border: black 2px solid;
+  height: 600px;
+
+}
+
+#sectionL
+{
+    flex: 1;
+    height: 100%;
+    max-width: 600px;
+    min-width: 400px;
+    margin-top: 0.9%;
+    margin-left: 61%;
+    margin-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: white;
+    border: black 2px solid;
+}
+
+#bottomMain
+{
+    position: relative; 
+    margin-top: -2%;
+}
+
+#hamburger
+{
+    flex: 1; 
+    margin-left: 96%;
+}
+
+.titleTree
+{
+  margin-left: 45%; 
+  margin-top: -24%; 
+  width: 40%; 
+  mix-blend-mode: multiply;
+}
+
+.titleLook
+{
+  margin-left: 16%; 
+  margin-top: -24%; 
+  width: 40%; 
+  mix-blend-mode: multiply;
+}
+
+
+/*------------------------------------------[Nav Menus]----------------------------------------------------*/
+
+nav 
+{   
+    height: 100%; 
+	text-align: center;
+    margin-left: 2%;
+}
+
+nav ul 
+{
+	list-style: none;
+	position: relative;
+	display:table; 
+}
+
+nav ul li 
+{
+    border: black 2px solid;
+    background-color: white;
+	padding: 30px 0px;
+    margin: 2%; 
+	list-style: none;
+	position: relative;
+    font-size: 2vw;
+	font-weight:700;
+	width:300px;
+	display:table;   
+}
+
+nav ul li:hover 
+{
+    background-color: orange;
+    width: 305px;
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 0 -2px black;
+}
+
+#mainMenu
+{
+    margin-left: 2%;
+    height: 500px;
+    background-image:url('media_CH/SketchBlackBox.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+
+a:link
+{
+    color:black;
+    text-decoration: underline;
+}
+
+a:visited
+{
+    color:goldenrod;
+    text-decoration: underline;
+}
+
+a:hover
+{
+    color: orange;
+    background: black;
+    text-decoration: underline;
+}
+
+/* ----------------------------------------------------------------------[BW to color side menu]----------------------------------------------------------------------------- */
+
+.dropdown-contentStart
+{
+    display: none;
+    position: absolute;
+    left:100%;
+    background-image:url('media_CH/TheStartButtonBW.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;   
+    opacity: 1.0;
+    width: 200%;
+    margin-top: -25.5%;
+    margin-left: 0.5%;
+    text-align: center;
+}
+
+.dropdown-contentStart :hover 
+{ 
+    display:block;
+    background-image:url('media_CH/TheStartButton.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aliceblue;
+}
+
+.dropdown-contentFavs
+{
+
+    display: none;
+    position: absolute;
+    left:100%;
+    background-image:url('media_CH/FavoritesButtonBW.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 1.0;
+    width: 200%;
+    margin-top: -25.5%;
+    margin-left: 0.5%;
+    text-align: center;
+}
+
+
+.dropdown-contentFavs :hover 
+{
+  
+    display:block;
+    background-image:url('media_CH/FavoritesButton.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aliceblue;
+}
+
+.dropdown-contentBooks
+{
+    display: none;
+    position: absolute;
+    left:100%;
+    background-image:url('media_CH/BooksButtonBW.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 1.0;
+    width: 200%;
+    margin-top: -25.5%;
+    margin-left: 0.5%;
+    text-align: center;
+}
+
+.dropdown-contentBooks :hover 
+{
+    display:block;
+    background-image:url('media_CH/BooksButton.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aliceblue;
+}
+
+.dropdown-contentBill
+{
+    display: none;
+    position: absolute;
+    left:100%;
+    background-image:url('media_CH/WattersonButtonBW.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 100;
+    opacity: 1.0;
+    width: 200%;
+    margin-top: -25.5%;
+    margin-left: 0.5%;
+
+    text-align: center;
+}
+
+.dropdown-contentBill :hover 
+{
+    display:block;
+    background-image:url('media_CH/WattersonButton.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 100;
+    color: aliceblue;
+}
+
+.dropdown-content :visited
+{
+
+    color: rgb(51, 99, 255);       
+}
+
+.dropdown-content a:active
+{
+    color: lightcoral;  
+    font-size: 18px;  
+}
+
+.dropdown:hover .dropdown-contentStart
+{   
+    display:block;
+}
+
+.dropdown:hover .dropdown-contentFavs
+{   
+    display:block;
+}
+
+.dropdown:hover .dropdown-contentBooks
+{   
+    display:block;
+}
+
+.dropdown:hover .dropdown-contentBill
+{   
+    display:block;
+}
+
+/*------------------------------------------[Overlay Icon Bar]----------------------------------------------------*/
+
+.icon-bar 
+{   
+    position: absolute;
+    width: 100%;
+    height: 0;
+    overflow-y:hidden; 
+    transition: 0.5s;
+    z-index: 1;   
+}
+
+.icon-bar a 
+{
+    float: right;
+    text-align: center;
+    width: 200px; 
+    padding: 5px 0px; 
+    transition: all 0.3s ease; 
+    color: black; 
+    font-size: 36px; 
+    background: linear-gradient(90deg,rgba(255, 0, 0, 0) 0.2%, orange 0.3%, orange 99.7%, rgba(255, 0, 0, 0) 99.8%);
+}
+
+.icon-bar a:hover 
+{
+    background: linear-gradient(90deg,rgba(255, 0, 0, 0) 0.2%, black 0.3%,black 99.7%, rgba(255, 0, 0, 0) 99.8%);
+    color: white;
+}
+
+.icon-bar .closebtn
+{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    font-size: 36px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* For desktop: */
+/* @media only screen and (min-width: 1025px) 
+{
+	.grid-container
+	{
+		display:grid;
+		grid-template-areas:
+			'head head head head'
+			'main main main main'
+			'aside aside aside aside' 
+			'foot foot foot foot';
+		grid-gap:0px;
+		padding:10px;
+	}
+} */
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* For mobile phones: */
+@media only screen and (max-width: 700px) and (min-width:200px)
+{
+
+  .title
+  { 
+    grid-area:head;
+  }
+  .menu
+  { 
+    grid-area:nav; 
+    margin-left: -6%;
+  }
+  #mainMenu
+{
+    margin-left: 10%;
+    height: 350px;
+    background-size: contain;
+}
+
+.dropdown:hover
+{
+    color: rgba(0, 128, 0, 0);
+    background: rgba(255, 255, 255, 0);
+    margin-right: 10%;
+    font-size: 3vw;
+    right: 300px;
+    height: 100px;
+    display:table-row;
+}
+
+nav ul li 
+{
+	padding: 20px 0px;
+    margin: 2%; 
+    font-size: 7vw;
+	width:200px;
+}
+
+article
+{ 
+  height: 500px;
+  width: 350px;
+}
+
+#CalvinTitle
+{
+  font-size: 8vw;
+}
+  .content
+  { 
+    grid-area:main;
+    
+    margin-right: 3%;
+  }
+
+
+  .contact{ grid-area:foot; }
+
+	.grid-container
+	{
+		display:grid;
+		grid-template-areas:
+			'head head head'
+            'main main main'
+			'nav nav nav'
+			'foot foot foot';
+		grid-gap:0px;
+		padding:0px;
+	}
+
+	header img{
+		display:none;
+	}
+
+    #titles
+	{
+		display:none;
+	}
+
+    #hamburger
+    {
+        display: none;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* For tablets: */
+@media only screen and (max-width:1024px) and (min-width:750px)
+{
+    .title
+    { 
+        grid-area:head; 
+    }
+
+    .titleLook
+    {
+        
+        margin-bottom: -1.5%;
+    }
+
+    .menu
+    { 
+        grid-area:nav; 
+        margin-left: -6%;
+    }
+
+    .content
+    { 
+        grid-area:main;
+        margin-right: 3%;
+    }
+
+    .contact{ grid-area:foot; }
+
+
+	.grid-container
+	{
+		display:grid;
+		grid-template-areas:
+			'head head head'
+            'main main main'
+			'nav nav nav'
+			'aside aside aside'
+			'foot foot foot';
+		grid-gap:0px;
+		padding:0px;
+	}
+
+    #mainMenu
+    {
+        margin-left: 2%;
+        height: 430px;
+        background-size: contain;
+    }
+
+    nav ul li 
+    {
+        padding: 20px 0px;
+        font-size: 3vw;
+        width:250px; 
+    }
+
+    nav ul li:hover 
+    {
+        width: 255px;
+    }
+
+    article
+    {
+        height: 500px;
+        width:985px; 
+    }
+
+    #hamburger
+    {
+        display: none;
+    }
+}
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+
+</style>
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<title>CalvinAndHobbes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Calvin and Hobbes Stuff" />
+<meta name="keywords" content="Calvin and Hobbes, Bill Watterson, Calvin, Hobbes, collections, comic strip" />
+<!-- <link rel="stylesheet" href="css/myscreen.css" media="all"/> -->
+<link rel="stylesheet" href="css/myprint.css" media="print"/>	
+</head>
+
+<body>
+<main class="grid-container">
+    <header class="title">
+        <h1 id="CalvinTitle">Calvin <span style="font-size:0.5em;">and</span> Hobbes</h1>
+        <img src="media_CH/Decal_02.jpg" class="titleLook">
+        <img src="media_CH/SideTrees_04.jpg" class="titleTree">
+    </header>
+
+
+
+    <article class="grid-container">
+
+        <section id="mainMenu" class="menu">
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    The Start
+                    <div class="dropdown-contentStart">
+                        <a href="TheStartPage_work.html" target="_self"><img alt="StartButton" src="media_CH/BlankButton.png" style="box-shadow: 4px 4px rgba(0,0,0,0.3);" title="The Start"></a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    My Favorites
+                    <div class="dropdown-contentFavs">
+                        <a href="FavoritesPage_work.html" target="_self"><img alt="FavsButton" src="media_CH/BlankButton.png" style="box-shadow: 4px 4px rgba(0,0,0,0.3);" title="Favorites"></a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    Books
+                    <div class="dropdown-contentBooks">
+                        <a href="BooksPage_work.html" target="_self"><img alt="BooksButton" src="media_CH/BlankButton.png" style="box-shadow: 4px 4px rgba(0,0,0,0.3);" title="Books"></a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    Mr. Watterson
+                    <div class="dropdown-contentBill">
+                        <a href="WattersonPage_work.html" target="_self"><img alt="BillButton" src="media_CH/BlankButton.png" style="box-shadow: 4px 4px rgba(0,0,0,0.3);" title="Mr. Watterson"></a>
+                    </div>
+                </li>
+            </ul>
+
+        </nav>
+        </section>
+
+        <div id="myIconNav" class="icon-bar" style="flex: 1; margin-top: 27.8%; margin-left: -5%;">
+            <a href="javascript:void(0)"><i class="fa fa-closebtn" onclick="closeIcon()">&times;</i></a>
+            <a href="https://lisabalbach.com/tonderm/CIT180/assignments.html" ><i class="fa fa-home"></i></a>
+            <a href="#" ><i class="fa fa-pinterest"></i></a>
+            <a href="https://www.linkedin.com/in/miketonder/" target="blank"><i class="fa fa-linkedin-square"></i></a>
+            <a href="https://www.youtube.com/channel/UCzFIBEnHrFuQwFriRCBkQ1w" target="blank"><i class="fa fa-youtube"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    
+        <div id="hamburger">
+            <span style="font-size: 35px; color: white; cursor: pointer" onclick="openIcon()">&#9776;</span>
+        </div>
+    
+        <script>
+            function openIcon() 
+            {
+                document.getElementById("myIconNav").style.height = "55px";
+            }
+    
+            function closeIcon() 
+            {
+                document.getElementById("myIconNav").style.height = "0";
+            }
+        </script>
+
+    </article> 
+
+    <section class="contact" id="bottomMain">
+        <footer style="margin-left: 1%; margin-right: 1%;">
+            <hr style= "height: 2px; border-style: double;">
+            <cite><small>sources<br>
+            <a href="https://viewcomiconline.com/category/calvin-and-hobbes/"target="_blank">Calvin and Hobbes Online Books</a><br>
+            <a href="https://calvinandhobbes.fandom.com/wiki/Main_Page"target="_blank">Calvin and Hobbes Wiki</a><br>  
+            </small></cite>
+            <hr style= "height: 2px; border-style: double;">
+            <p style="background-color: rgba(255, 255, 255, 0); color: black;">&copy;Mike Tonder</p>
+        </footer>
+
+       
+
+        <div  style="margin-left: 24%;">      
+        <h1 style="position: absolute; z-index: 5; font-family: CHNormal;font-size: 2vw; color: white; margin-top: -3%; margin-left: 21.5%;">Created by</h1>
+        <h1 style="position: absolute; z-index: 5; font-family: CHNormal;font-size: 2vw; color: white; margin-top: 0%; margin-left: 20.1%;">Bill Watterson</h1>
+        </div>
+        <img src="media_CH/TheEnd.jpg" id="titles" style="z-index: 3; margin-left: 37%; margin-top: -7%; width: 25%; mix-blend-mode: multiply;"> 
+
+        <div id="titles" style="margin-top: -12%;"> 
+            <img src="media_CH/Dance_01.jpg" style="z-index: 3; margin-left: 0%; width: 35%;"> 
+
+        </div>
+        <div id="titles" style="margin-top: -9.7%;"> 
+
+            <img src="media_CH/Dance_02.jpg" style="z-index: 3; margin-left: 63%; width: 35%;"> 
+        </div>
+    </section>
+
+</main>
+</body>
+</html>

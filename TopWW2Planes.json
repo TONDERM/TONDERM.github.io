@@ -1,0 +1,26 @@
+{"Top8aircraftofWW2":[
+{"Name":"Supermarine Spitfire","Country":"United Kingdom","FirstFlight":"March 1936","Introduced":"August 1938", 
+"Description":"The Spitfire is notable for its sleek, slender body, which allowed a maximum speed of 580 km/h. It’s also famous because its design and aerodynamic capabilities allowed it to sustain damage and remain in the air. This allowed pilots to withstand a beating during combat and still keep on fighting, much to the enemy’s frustration."},
+
+{"Name":"Messerschmitt Bf 109","Country":"Germany","FirstFlight":"May 1935","Introduced":"February 1937", 
+"Description":"The Bf 109 was used in numerous roles, including defense, counterattack, offense, and reconnaissance missions. The plane was designed with numerous features that gave it an edge in the air, including its speed (which could reach up to 640 kph), firepower (machine guns, rockets, and bombs), and durability."},
+
+{"Name":"North American P-51 Mustang","Country":"United States","FirstFlight":"October 1940","Introduced":"January 1942", 
+"Description":"The Mustang was first used in combat by the Royal Air Force (RAF) in 1942 and quickly changed the war’s course. It could go toe to toe against the Luftwaffe’s aerial phenoms: the Bf 109 and FW 190. The P-51 was equipped with 6 machine guns and could carry 230 kgs of bombs."},
+
+{"Name":"Mitsubishi A6M Zero","Country":"Japan","FirstFlight":"April 1939","Introduced":"July 1940", 
+"Description":"The plane’s design was revolutionary; It had a light weight, had low fuel consumption, and could reach high speeds (about 533 km/h). The plane was also highly maneuverable, giving Japanese pilots several advantages in combat with Allied planes."},
+
+{"Name":"Boeing B-29 Superfortress","Country":"United States","FirstFlight":"September 1942","Introduced":"May 1944", 
+"Description":"The B-29 had numerous futuristic features, including a pressurized cabin, a central fire control system, 12 50-caliber machine guns, and four 2200hp engines. It could also reach high altitudes with a large payload. With thick armor protecting its vast airframe, the plane had every right to be called “the Superfortress.”"},
+
+{"Name":"de Havilland Mosquito","Country":"United Kingdom","FirstFlight":"November 1940","Introduced":"November 1941", 
+"Description":"De Havilland’s design of the Mosquito came about when Britain needed a cheap, easy to build, and capable bomber. The plane was made almost entirely of wood and glue, which sped up the manufacturing process and also made it the fastest airplane of its time. The plane’s high speed of 668 km/h and agility made it a difficult target for the enemy to shoot down"},
+
+{"Name":"Focke-Wulf Fw 190","Country":"Germany","FirstFlight":"June 1939","Introduced":"August 1941", 
+"Description":"The airplane was designed with simplicity, durability, and ease of use in mind. It was powered by a highly advanced BMW 801 radial engine (an unconventional choice at the time) and had a top speed of 652 km/h. Four MG 151/20 cannons gave it formidable firepower, and two MG 131 machine guns provided added damage."},
+
+{"Name":"Dewoitine D.520","Country":"France","FirstFlight":"October 1938","Introduced":"January 1940", 
+"Description":"The D-520 was powered by a single 1000 hp Hispano-Suiza engine and had little shielding. It was armed with a 20mm cannon and four 7.5 mm machine guns. This arsenal was modest, but it did manage to give even the German Bf 109’s a headache. The Italian air force was utterly outmatched by the D-520."}
+]}
+

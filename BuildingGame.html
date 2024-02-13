@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<style>
+*{box-sizing: border-box;}
+
+.auto-style1 {
+		text-align: center;
+	}
+    @font-face
+  {
+      font-family: main;
+      
+      src: url(fonts/Rukinaxpersonaluse.otf);
+  }
+
+  @font-face
+  {
+      font-family: label;
+      
+      src: url(fonts/Ablaze.ttf);
+  }
+
+  @font-face
+  {
+      font-family: buttons;
+      
+      src: url(fonts/anteroly.ttf);
+  }
+  /* The Modal (background) */
+.column
+{
+  float:left;
+  width: 12%;
+  margin-left: 0.5%;
+  margin-top: -1%;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 150;
+	padding-top: 20px;
+  margin-top: 0%;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color:rgba(2, 0, 20, 0.95);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+	position: relative;
+	background-color: black;
+	margin: auto;
+	padding: 0;
+	width: 62%;
+  }
+  
+  /* The Close Button */
+  .close {
+	color: white;
+	position: absolute;
+	top: 10px;
+	right: 25px;
+	font-size: 35px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: #999;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+  .cursor {
+	cursor: pointer;
+
+  }
+
+  #imgS{
+    max-width: 400px;
+	min-width: 240px;
+	height: auto;
+	border-radius: 1px;
+	border: 2px solid rgba(255, 255, 255, 0.8);
+	margin: 3px;
+    box-shadow: 0 0 3px 1px rgb(14, 50, 128);
+  }
+  
+  .caption-container {
+	text-align: center;
+	background-color: black;
+	padding-top: 1px ;
+	color: white;
+	font-size: 1.5vw;
+	margin-top: -2%;
+  }
+  
+  .demo, .demo2, .demo3
+  {
+	opacity: 0.6;
+  }
+  
+  .active, .demo:hover, .demo2:hover, .demo3:hover
+  {
+	opacity: 1;
+  }
+  
+  #img:hover
+  {
+	mix-blend-mode:multiply;
+	filter: grayscale() contrast(100%);
+  }
+  
+  #up:hover
+  {
+	  animation: wobble 0.1s;
+	  animation-fill-mode:forwards; 
+  }
+  
+  #grow:hover
+  {
+	animation: grow .1s;
+	animation-duration: .2s; 
+	animation-fill-mode:forwards;
+  }
+  @keyframes grow
+  {
+	0% {transform:scale(1.0,1.0);}
+	100% {transform:scale(1.01,1.01);}
+  }
+  
+  @keyframes up
+  {
+	0% {transform:translateY(0px);}
+	100% {transform:translateY(-3px);}
+  } 
+  img
+  {
+    width: 100%;
+  }
+	</style>
+
+  <head>
+  <title>Building a Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/myfilterSearch.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1 style="font-family: main; letter-spacing: 4px; font-size: 3.8vmax;">Building a Game</h1>
+      <h2 style="font-family: label; letter-spacing: 4px; font-size: 1.5vmax;"> The many versions of one concept</h2>
+    </header>
+
+    <div id="buttons"></div> 
+
+    <div style="margin-bottom: 2%;" id="gallery">
+      <h1 style="margin-bottom: -2.6%; font-family: label; letter-spacing: 4px; font-size: 30px;">Images</h1>
+    <h4 style="font-family: buttons; letter-spacing: 2px; font-size: 15px;" id="version" data-tags="Version One">Version One</h4>
+      <img src="media_BuildGameImages/V1-W1_14.jpg" data-tags="Version One" title="Click for larger image" onclick="openModal();currentSlide(1)" class="cursor" id="imgS">
+      <img src="media_BuildGameImages/V1-W1_15.jpg" data-tags="Version One" title="Click for larger image" onclick="openModal();currentSlide(2)" class="cursor" id="imgS">
+      <img src="media_BuildGameImages/V1-W1_21.jpg" data-tags="Version One" title="Click for larger image" onclick="openModal();currentSlide(3)" class="cursor" id="imgS">
+      <img src="media_BuildGameImages/V1-W1_19.jpg" data-tags="Version One" title="Click for larger image" onclick="openModal();currentSlide(4)" class="cursor" id="imgS">
+
+      <img src="media_BuildGameImages/V1-W2_01.jpg" data-tags="Version One" title="Click for larger image" onclick="openModal();currentSlide(5)" class="cursor" id="imgS">
+      <img src="media_BuildGameImages/V1-W2_02.jpg" data-tags="Version One" title="Click for larger image" onclick="openModal();currentSlide(6)" class="cursor" id="imgS">
+      <img src="media_BuildGameImages/V1-W2_03.jpg" data-tags="Version One" title="Click for larger image" onclick="openModal();currentSlide(7)" class="cursor" id="imgS">
+      <img src="media_BuildGameImages/V1-W2_07.jpg" data-tags="Version One" title="Click for larger image" onclick="openModal();currentSlide(8)" class="cursor" id="imgS">
+
+      <!-- ------------------------------ modal ------------------------------ -->
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+          <div class="mySlides">
+            <img src="media_BuildGameImages/V1-W1_14.jpg" data-tags="Version One" style="width:100%; border: rgba(255, 255, 255, 0.7) 1px solid;">
+          </div>
+          <div class="mySlides">
+            <img src="media_BuildGameImages/V1-W1_15.jpg" data-tags="Version One" style="width:100%; border: rgba(255, 255, 255, 0.7) 1px solid;">
+          </div>
+          <div class="mySlides">
+            <img src="media_BuildGameImages/V1-W1_21.jpg" data-tags="Version One" style="width:100%; border: rgba(255, 255, 255, 0.7) 1px solid;">
+          </div>
+          <div class="mySlides">
+            <img src="media_BuildGameImages/V1-W1_19.jpg" data-tags="Version One" style="width:100%; border: rgba(255, 255, 255, 0.7) 1px solid;">
+          </div>
+          <div class="mySlides">
+            <img src="media_BuildGameImages/V1-W2_01.jpg" data-tags="Version One" style="width:100%; border: rgba(255, 255, 255, 0.7) 1px solid;">
+          </div>
+          <div class="mySlides">
+            <img src="media_BuildGameImages/V1-W2_02.jpg" data-tags="Version One" style="width:100%; border: rgba(255, 255, 255, 0.7) 1px solid;">
+          </div>
+          <div class="mySlides">
+            <img src="media_BuildGameImages/V1-W2_03.jpg" data-tags="Version One" style="width:100%; border: rgba(255, 255, 255, 0.7) 1px solid;">
+          </div>
+          <div class="mySlides">
+            <img src="media_BuildGameImages/V1-W2_07.jpg" data-tags="Version One" style="width:100%; border: rgba(255, 255, 255, 0.7) 1px solid;">
+          </div>
+
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <div style="margin-left: 0%;">
+            <div class="column">
+              <img class="demo cursor" src="media_BuildGameImages/V1-W1_14.jpg" data-tags="Version One" style="width:100%; border-radius: 1px; border: 2px solid rgba(255, 255, 255, 0.8);" onclick="currentSlide(1)" alt="World One">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="media_BuildGameImages/V1-W1_15.jpg" data-tags="Version One" style="width:100%; border-radius: 1px; border: 2px solid rgba(255, 255, 255, 0.8);" onclick="currentSlide(2)" alt="World One">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="media_BuildGameImages/V1-W1_21.jpg" data-tags="Version One" style="width:100%; border-radius: 1px; border: 2px solid rgba(255, 255, 255, 0.8);" onclick="currentSlide(3)" alt="World One">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="media_BuildGameImages/V1-W1_19.jpg" data-tags="Version One" style="width:100%; border-radius: 1px; border: 2px solid rgba(255, 255, 255, 0.8);" onclick="currentSlide(4)" alt="World One">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="media_BuildGameImages/V1-W2_01.jpg" data-tags="Version One" style="width:100%; border-radius: 1px; border: 2px solid rgba(255, 255, 255, 0.8);" onclick="currentSlide(5)" alt="World Two">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="media_BuildGameImages/V1-W2_02.jpg" data-tags="Version One" style="width:100%; border-radius: 1px; border: 2px solid rgba(255, 255, 255, 0.8);" onclick="currentSlide(6)" alt="World Two">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="media_BuildGameImages/V1-W2_03.jpg" data-tags="Version One" style="width:100%; border-radius: 1px; border: 2px solid rgba(255, 255, 255, 0.8);" onclick="currentSlide(7)" alt="World Two">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="media_BuildGameImages/V1-W2_07.jpg" data-tags="Version One" style="width:100%; border-radius: 1px; border: 2px solid rgba(255, 255, 255, 0.8);" onclick="currentSlide(8)" alt="World Two">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <h4 style="font-family: buttons; letter-spacing: 2px; font-size: 15px;" id="version" data-tags="Version Two">Version Two</h4>
+      <img src="media_BuildGameImages/V2-W1_01.jpg" data-tags="Version Two">
+      <img src="media_BuildGameImages/V2-W1_02.jpg" data-tags="Version Two">
+      <img src="media_BuildGameImages/V2-W1_03.jpg" data-tags="Version Two">
+      <img src="media_BuildGameImages/V2-W1_04.jpg" data-tags="Version Two">
+      <img src="media_BuildGameImages/V2-W2_06.jpg" data-tags="Version Two">
+      <img src="media_BuildGameImages/V2-W2_04.jpg" data-tags="Version Two">
+      <img src="media_BuildGameImages/V2-W2_01.jpg" data-tags="Version Two">
+      <img src="media_BuildGameImages/V2-W2_07.jpg" data-tags="Version Two">
+
+      <!-- ------------------------------ modal2 ------------------------------ -->
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+          <div class="mySlides">
+            <img src="media_BuildGameImages/V1-W1_14.jpg" data-tags="Version One" style="width:100%; border: rgba(255, 255, 255, 0.7) 1px solid;">
+          </div>
+          <div class="mySlides">
+            <img src="media_BuildGameImages/V1-W1_15.jpg" data-tags="Version One" style="width:100%; border: rgba(255, 255, 255, 0.7) 1px solid;">
+          </div>
+          <div class="mySlides">
+            <img src="media_BuildGameImages/V1-W1_21.jpg" data-tags="Version One" style="width:100%; border: rgba(255, 255, 255, 0.7) 1px solid;">
+          </div>
+          <div class="mySlides">
+            <img src="media_BuildGameImages/V1-W1_19.jpg" data-tags="Version One" style="width:100%; border: rgba(255, 255, 255, 0.7) 1px solid;">
+          </div>
+          <div class="mySlides">
+            <img src="media_BuildGameImages/V1-W2_01.jpg" data-tags="Version One" style="width:100%; border: rgba(255, 255, 255, 0.7) 1px solid;">
+          </div>
+          <div class="mySlides">
+            <img src="media_BuildGameImages/V1-W2_02.jpg" data-tags="Version One" style="width:100%; border: rgba(255, 255, 255, 0.7) 1px solid;">
+          </div>
+          <div class="mySlides">
+            <img src="media_BuildGameImages/V1-W2_03.jpg" data-tags="Version One" style="width:100%; border: rgba(255, 255, 255, 0.7) 1px solid;">
+          </div>
+          <div class="mySlides">
+            <img src="media_BuildGameImages/V1-W2_07.jpg" data-tags="Version One" style="width:100%; border: rgba(255, 255, 255, 0.7) 1px solid;">
+          </div>
+
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <div style="margin-left: 0%;">
+            <div class="column">
+              <img class="demo cursor" src="media_BuildGameImages/V1-W1_14.jpg" data-tags="Version One" style="width:100%; border-radius: 1px; border: 2px solid rgba(255, 255, 255, 0.8);" onclick="currentSlide(1)" alt="World One">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="media_BuildGameImages/V1-W1_15.jpg" data-tags="Version One" style="width:100%; border-radius: 1px; border: 2px solid rgba(255, 255, 255, 0.8);" onclick="currentSlide(2)" alt="World One">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="media_BuildGameImages/V1-W1_21.jpg" data-tags="Version One" style="width:100%; border-radius: 1px; border: 2px solid rgba(255, 255, 255, 0.8);" onclick="currentSlide(3)" alt="World One">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="media_BuildGameImages/V1-W1_19.jpg" data-tags="Version One" style="width:100%; border-radius: 1px; border: 2px solid rgba(255, 255, 255, 0.8);" onclick="currentSlide(4)" alt="World One">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="media_BuildGameImages/V1-W2_01.jpg" data-tags="Version One" style="width:100%; border-radius: 1px; border: 2px solid rgba(255, 255, 255, 0.8);" onclick="currentSlide(5)" alt="World Two">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="media_BuildGameImages/V1-W2_02.jpg" data-tags="Version One" style="width:100%; border-radius: 1px; border: 2px solid rgba(255, 255, 255, 0.8);" onclick="currentSlide(6)" alt="World Two">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="media_BuildGameImages/V1-W2_03.jpg" data-tags="Version One" style="width:100%; border-radius: 1px; border: 2px solid rgba(255, 255, 255, 0.8);" onclick="currentSlide(7)" alt="World Two">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="media_BuildGameImages/V1-W2_07.jpg" data-tags="Version One" style="width:100%; border-radius: 1px; border: 2px solid rgba(255, 255, 255, 0.8);" onclick="currentSlide(8)" alt="World Two">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <h4 style="font-family: buttons; letter-spacing: 2px; font-size: 15px;" id="version" data-tags="Version Three">Version Three</h4>
+      <img src="media_BuildGameImages/V3-W1_01.jpg" data-tags="Version Three">
+      <img src="media_BuildGameImages/V3-W1_02.jpg" data-tags="Version Three">
+      <img src="media_BuildGameImages/V3-W1_03.jpg" data-tags="Version Three">
+      <img src="media_BuildGameImages/V3-W1_04.jpg" data-tags="Version Three">
+      <img src="media_BuildGameImages/V3-W1_05.jpg" data-tags="Version Three">
+      <img src="media_BuildGameImages/V3-W1_06.jpg" data-tags="Version Three">
+      <img src="media_BuildGameImages/V3-W1_07.jpg" data-tags="Version Three">
+      <img src="media_BuildGameImages/V3-W1_08.jpg" data-tags="Version Three">
+
+      <!-- ------------------------------ modal3 ------------------------------ -->
+
+      <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <h4 style="font-family: buttons; letter-spacing: 2px; font-size: 15px;" id="version" data-tags="Version Four">Version Four</h4>
+      <img src="media_BuildGameImages/V4-W1_01.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W1_02.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W1_03.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W1_04.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W2_01.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W2_02.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W2_03.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W2_04.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W3_lava_01.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W3_lava_02.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W3_lava_03.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W3_lava_04.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W3_water_01.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W3_water_02.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W3_water_03.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W3_water_04.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W4_01.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W4_02.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W4_03.jpg" data-tags="Version Four">
+      <img src="media_BuildGameImages/V4-W4_04.jpg" data-tags="Version Four">
+
+    <h4 style="font-family: buttons; letter-spacing: 2px; font-size: 15px;" id="version" data-tags="Version Five">Version Five</h4>
+      <img src="media_BuildGameImages/V5-W1_01.jpg" data-tags="Version Five">
+      <img src="media_BuildGameImages/V5-W1_02.jpg" data-tags="Version Five">
+      <img src="media_BuildGameImages/V5-W1_03.jpg" data-tags="Version Five">
+      <img src="media_BuildGameImages/V5-W1_04.jpg" data-tags="Version Five">
+      <img src="media_BuildGameImages/V5-W1_05.jpg" data-tags="Version Five">
+      <img src="media_BuildGameImages/V5-W1_06.jpg" data-tags="Version Five">
+      <img src="media_BuildGameImages/V5-W1_07.jpg" data-tags="Version Five">
+      <img src="media_BuildGameImages/V5-W1_08.jpg" data-tags="Version Five">
+      <img src="media_BuildGameImages/V5-W1_09.jpg" data-tags="Version Five">
+      <img src="media_BuildGameImages/V5-W1_10.jpg" data-tags="Version Five">
+      <img src="media_BuildGameImages/V5-W1_11.jpg" data-tags="Version Five">
+      <img src="media_BuildGameImages/V5-W1_12.jpg" data-tags="Version Five">
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <!-- <script src="js/FilterButtonTag.js"></script> -->
+    <script src="js/myFilterTagSearch.js"></script>
+    <!-- <script src="js/myFilterTagVideos.js"></script> -->
+    <!-- &copy; -->
+    <script>
+      // ----------------------------------------------------------[VersionOne]-------------------------------------------------------------------------
+      function openModal() {
+          document.getElementById("myModal").style.display = "block";
+        }
+        
+        function closeModal() {
+          document.getElementById("myModal").style.display = "none";
+        }
+    
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) 
+        {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) 
+        {
+          showSlides(slideIndex = n);
+        }
+    
+        function showSlides(n) 
+        {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) 
+          {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) 
+          {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+    
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+
+          // ----------------------------------------------------------[VersionTwo]-------------------------------------------------------------------------
+          function openModal() {
+          document.getElementById("myModal").style.display = "block";
+        }
+        
+        function closeModal() {
+          document.getElementById("myModal").style.display = "none";
+        }
+    
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) 
+        {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) 
+        {
+          showSlides(slideIndex = n);
+        }
+    
+        function showSlides(n) 
+        {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) 
+          {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) 
+          {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+    
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
+  </body>
+</html>

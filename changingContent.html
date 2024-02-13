@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>changingContent</title>
+<style>
+*{box-sizing: border-box;}
+
+@font-face
+{
+    font-family: simpsons;
+    
+    src: url(fonts/Simpsonfont.ttf);
+}
+
+@font-face
+{
+    font-family: monster;
+    
+    src: url(fonts/CutenesMonster\ -personal\ use.otf);
+}
+
+@font-face
+{
+    font-family: pizzaria;
+    
+    src: url(fonts/PIZZARIA\ demo.ttf);
+}
+
+@font-face
+{
+    font-family: rye;
+    
+    src: url(fonts/Rye-Regular.ttf);
+}
+
+@font-face
+{
+    font-family: drolly;
+    
+    src: url(fonts/Drolly.ttf);
+}
+
+@font-face
+{
+    font-family: crackman;
+    
+    src: url(fonts/crackman\ front.ttf);
+}
+
+@font-face
+{
+    font-family: dimbo;
+    
+    src: url(fonts/Dimbo\ Regular.ttf);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+body
+{
+  font-family: simpsons;
+  background-image: url("media_Homer/SimpsonCloudsBG.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+article
+{
+  position: relative; 
+	display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+
+
+article>section
+{
+	display: flex;
+  background: rgba(255, 255, 255, 0.8);
+  border: black 2px solid;
+  width: 55%;
+  min-width: 450px;
+  max-height: 627px;
+  padding-top: 10px;
+  margin-bottom: 5%;
+  margin: 0.5%;
+}
+
+div
+{
+  position: absolute;
+  max-height: 627px;
+}
+
+#quoteBox
+{
+  position:absolute;
+  border: black 4px solid; 
+  z-index: 110; 
+  font-size: 30px; 
+  font-family: simpsons; 
+  text-align: center; 
+  margin-top: 5%; 
+  margin-left: -15%;
+  letter-spacing: 2px;
+  max-width: 30%;
+  min-width: 270px;
+  min-height: 10%;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+img
+{
+  max-width: 100%;
+  height: auto;
+}
+
+.inputButton{
+
+  width: 190px; 
+	height: 30px;
+	font-size:1.2em;
+	background-color: rgb(255,217,15);
+  font-family: dimbo;
+	color:black;
+}
+
+aside
+{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+}
+h1
+{
+  color: rgb(255,217,15); 
+  text-shadow: -2px 0 black, 0 2px black, 0 -2px;
+  letter-spacing: 2px;
+}
+
+#homerQuoting
+{
+  margin-bottom: -0.4%;
+}
+
+#homerHead
+{
+  width: 25%; 
+  justify-content: center; 
+  margin-top: -0.05%;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+@media only screen and (max-width: 700px) and (min-width:200px)
+{
+  article
+  {
+    position: relative; 
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: left;
+  }
+  #quoteBox
+  {
+    position:absolute;
+    border: black 4px solid; 
+    z-index: 110; 
+    font-size: 30px; 
+    font-family: simpsons; 
+    text-align: center; 
+    margin-top: 5%; 
+    margin-left: 45%;
+    letter-spacing: 2px;
+    max-width: 30%;
+    min-width: 260px;
+    min-height: 10%;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  #homerQuoting
+  {
+    margin-bottom: -1.6%;
+  }
+
+} 
+</style>
+
+
+</head>
+<header>
+    <h1 style="font-size: 3em; text-align: center;">Super Happy Fun Time With Homer Simpson!</h1>
+</header>
+<body>
+  <hr style="height: 3px; border-style: double; border-color: black; background-color: rgb(255,217,15);">
+  <article style="margin-top: 2%;">
+    <section id="quoteBox" style="background: rgb(255,217,15);"></section>      
+
+    <span style="width: 55%; ">
+    <section style="background: rgba(255, 255, 255, 0.8); border: black 2px solid;">
+      <img id="homerQuoting" src="media_Homer/HomerQuote.png">
+    </section>
+
+    <h1>Change:</h1>
+      <button class="inputButton" style="width: 150px;" type="button" onclick="homerQuotes();">Homer Quote</button>
+      <button class="inputButton" style="width: 150px;" type="button" id="changeColor">Quote Color</button>
+      <button class="inputButton" style="width: 150px;" type="button" onclick="fontQuotes();">Quote Font</button>
+      <button class="inputButton" style="width: 150px;" type="button" id="changeHue">Homer Color</button>
+      <button class="inputButton" style="width: 150px; margin-bottom: 5%;" type="button" onclick="resetAll();">Reset</button>
+    </span>
+
+    <section id="homerHead" style="width: 25%; justify-content: center; margin-top: -0.05%;">
+      <div id="hair" style="z-index: 100; height: 97%; opacity: 1;">
+        <img src="media_Homer/HomerHair.png" style="height: 97%;">
+      </div>
+      <div id="ears" style="z-index: 95; height: 97%; opacity: 1;">
+        <img src="media_Homer/HomerEars.png" style="height: 97%;">
+      </div>
+      <div id="nose" style="z-index: 90; height: 97%; opacity: 1;">
+        <img src="media_Homer/HomerNose.png" style="height: 97%;">
+      </div>
+      <div id="eyes" style="z-index: 85; height: 97%; opacity: 1;">
+        <img src="media_Homer/HomerEyes.png" style="height: 97%;">
+      </div>
+      <div id="stubble" style="z-index: 80; height: 97%; opacity: 1;">
+        <img src="media_Homer/HomerStubble.png" style="height: 97%;">
+      </div>
+      <div style="z-index: 75; height: 97%;">
+        <img src="media_Homer/HomerFaceBlank.png" style="height: 97%;">
+      </div>
+      
+      <img src="media_Homer/HomerFaceBlank.png" style="opacity: 0;">
+    </section>
+    
+    <aside>
+    <span class="inputButton" style="border: 3px black solid; font-size: 1.5em; padding-bottom: 30px; width: 200px; margin-left: -2%;">Add or Remove:</span>
+    <button class="inputButton" type="button" onclick="hairControl();">Hair</button>
+    <button class="inputButton" type="button" onclick="earControl();">Ears</button>
+    <button class="inputButton" type="button" onclick="noseControl();">Nose</button>
+    <button class="inputButton" type="button" onclick="eyeControl();">Eyes</button>
+    <button class="inputButton" type="button" onclick="stubbleControl();">Stubble</button>
+    </aside>
+    
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+
+    <script>
+    function hairControl()
+    {
+      var visible = document.getElementById("hair").style.opacity;
+      if(visible == 1)
+        document.getElementById("hair").style.opacity = 0
+
+      if(visible == 0)
+        document.getElementById("hair").style.opacity = 1
+    }
+
+    function earControl()
+    {
+      var visible = document.getElementById("ears").style.opacity;
+      if(visible == 1)
+        document.getElementById("ears").style.opacity = 0
+
+      if(visible == 0)
+        document.getElementById("ears").style.opacity = 1
+    }
+
+    function noseControl()
+    {
+      var visible = document.getElementById("nose").style.opacity;
+      if(visible == 1)
+        document.getElementById("nose").style.opacity = 0
+
+      if(visible == 0)
+        document.getElementById("nose").style.opacity = 1
+    }
+
+    function eyeControl()
+    {
+      var visible = document.getElementById("eyes").style.opacity;
+      if(visible == 1)
+        document.getElementById("eyes").style.opacity = 0
+
+      if(visible == 0)
+        document.getElementById("eyes").style.opacity = 1
+    }
+
+    function stubbleControl()
+    {
+      var visible = document.getElementById("stubble").style.opacity;
+      if(visible == 1)
+        document.getElementById("stubble").style.opacity = 0
+
+      if(visible == 0)
+        document.getElementById("stubble").style.opacity = 1
+    }
+
+    // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    function homerQuotes()
+    {
+      var random=Math.floor(Math.random()* 8)+1;
+      var qoute="";
+
+      switch(random)
+      {
+        case 1:
+          quote="I'm like that guy who single-handedly built the rocket & flew to the moon. What was his name? Apollo Creed?"
+          break;
+        case 2:
+          quote="I've learned that life is one crushing defeat after another until you just wish Flanders was dead."
+          break;
+        case 3:
+          quote="If 'The Flintstones' has taught us anything, it's that pelicans can be used to mix cement."
+          break;
+        case 4:
+          quote="I'm not normally a praying man, but if you're up there, please save me Superman."
+          break;
+        case 5:
+          quote="In America, first you get the sugar, then you get the power, then you get the women."
+          break;
+        case 6:
+          quote="Kids, you tried your best and you failed miserably. The lesson is: never try."
+          break;
+        case 7:
+          quote="Oh, I have three kids and no money. Why can't I have no kids and three money?"
+          break;
+        case 8:
+          quote="All my life, I've had one dream: to achieve my many goals."
+          break;
+      }
+      document.getElementById("quoteBox").innerHTML=quote;
+    }
+// ----------------------------------------------------------------------------------------------------------------
+    function random(number)
+    {
+      return Math.floor(Math.random()*(number+1));
+    }
+    document.getElementById("changeColor").onclick = function()
+    {
+      var newColor='rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+      document.getElementById("quoteBox").style.color = newColor;
+    }
+// ----------------------------------------------------------------------------------------------------------------
+    function randomD(deg)
+    {
+      return Math.floor(Math.random()*(deg+1));
+    }
+
+    document.getElementById("changeHue").onclick = function()
+    {
+      var newHue= 'hue-rotate(' + randomD(359) +'deg)';
+      document.getElementById("homerQuoting").style.filter = newHue;
+    }
+// ----------------------------------------------------------------------------------------------------------------
+    function fontQuotes()
+    {
+      var random=Math.floor(Math.random()* 4)+1;
+      var newFont="";
+
+      switch(random)
+      {
+        case 1:
+          newFont="crackman"
+          break;
+        case 2:
+        newFont="drolly"
+          break;
+        case 3:
+        newFont="pizzaria"
+          break;
+        case 4:
+        newFont="rye"
+          break;
+      }
+      document.getElementById("quoteBox").style.fontFamily = newFont;  
+    }
+
+    function resetAll()
+    {
+  		document.getElementById("quoteBox").style.color = "black";
+	  	document.getElementById("quoteBox").style.fontFamily = "simpsons";    
+		  document.getElementById("homerQuoting").style.filter = "hue-rotate(0deg)";	
+    } 	
+    </script>
+  </article>   
+    <br>
+    <footer>
+        
+        <hr style="height: 3px; border-style: double; border-color: black; background-color: rgb(255,217,15);">         
+        <cite style="padding-left: 10px;"><small>sources<br>
+        <a style="padding-left: 10px;" href="https://kidadl.com/articles/homer-simpson-quotes-from-the-lovable-doh-ball-dad"target="_blank">kidadl.com</a><br>
+        <span style="padding-left: 10px;">THE SIMPSONS is a trademark and brand of Twentieth Century Fox Film Corporation.</span>
+        </small></cite>
+        <hr style="height: 3px; border-style: double; border-color: black; background-color: rgb(255,217,15);">
+        <p style="background-color: rgba(255, 255, 255, 0); color: white; text-align: center;">&copy;Mike Tonder</p>      
+    </footer>
+</body>
+

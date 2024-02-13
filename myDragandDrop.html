@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+article
+{
+	display: flex; 
+	flex-wrap: wrap; 
+	justify-content: center; 
+	position: relative; 
+	margin-top: 5px;
+	background-image: url('media_MarioDragDrop/blueBrickBG.jpg');
+	background-repeat: repeat;
+	background-size: contain;
+}
+
+section
+{
+  display:flex;
+  flex-wrap:wrap;  
+}
+
+.grid-container 
+{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+}
+
+.column1 
+{
+  grid-column: 1 / span 1;
+  margin-right:3px;
+}
+
+.column2 
+{
+  grid-column: 2/ span 1;
+  margin-right:3px;
+}
+
+.column3 
+{
+  grid-column: 3/ span 1;
+  margin-right:3px;
+}
+
+.column4 
+{
+  grid-column: 4/ span 1;
+  margin-right:3px;
+}
+
+.snaptarget
+{
+   height: auto;
+   width: auto;
+}
+
+.snapground
+{
+   height: 32px;
+   width: 806px;
+}
+
+
+</style>
+
+   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"><script>
+      $(function()
+        {
+            $("#castleBig").draggable({ revert: "invalid", revertDuration: 100,snap: ".snaptarget", stack: ".snaptarget" });
+            
+            $("#castleSmall-1").draggable({ revert: "invalid",revertDuration: 100, snap: ".snaptarget", stack: ".snaptarget", scroll: true });
+            $("#castleSmall-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", stack: ".snaptarget" });
+
+            $("#pipeVertical-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeVertical-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeVertical-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeVertical-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeVertical-5").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeVertical-6").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeVertical-7").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeVertical-8").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+
+            $("#pipeHorizontal-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeHorizontal-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeHorizontal-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeHorizontal-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+
+            $("#pipeTop-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeTop-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeTop-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeTop-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+
+            $("#pipeLeft-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeLeft-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeLeft-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeLeft-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+
+            $("#pipeRight-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeRight-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeRight-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeRight-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+
+            $("#pipeLipTop-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeLipTop-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeLipTop-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeLipTop-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+
+            $("#pipeLipLeft-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeLipLeft-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeLipLeft-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeLipLeft-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+
+            $("#pipeLipRight-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeLipRight-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeLipRight-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeLipRight-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+
+            $("#treeTall-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#treeTall-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#treeTall-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#treeTall-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+
+            $("#treeShort-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#treeShort-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#treeShort-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#treeShort-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+
+            $("#bigCloud-1").draggable({ revert: "invalid", revertDuration: 100 });
+            $("#bigCloud-2").draggable({ revert: "invalid", revertDuration: 100 });
+            $("#bigCloud-3").draggable({ revert: "invalid", revertDuration: 100 });
+
+            $("#smallCloud-1").draggable({ revert: "invalid", revertDuration: 100 });
+            $("#smallCloud-2").draggable({ revert: "invalid", revertDuration: 100 });
+            $("#smallCloud-3").draggable({ revert: "invalid", revertDuration: 100 });
+
+            $("#bigHill-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#bigHill-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#bigHill-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#bigHill-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+
+            $("#smallHill-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#smallHill-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#smallHill-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#smallHill-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+
+            $("#bigBush-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#bigBush-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#bigBush-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+
+            $("#smallBush-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#smallBush-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#smallBush-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#smallBush-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#smallBush-5").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#smallBush-6").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+
+            $("#blockBrick-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBrick-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBrick-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBrick-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBrick-5").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBrick-6").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBrick-7").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBrick-8").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBrick-9").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBrick-10").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBrick-11").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBrick-12").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBrick-13").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBrick-14").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBrick-15").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+
+            $("#blockBlock-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-5").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-6").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-7").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-8").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-9").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-10").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-11").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-12").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-13").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-14").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-15").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-16").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-17").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-18").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-19").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-20").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+
+            $("#fencePiece-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#fencePiece-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#fencePiece-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#fencePiece-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#fencePiece-5").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+
+            $( "#droppable" ).droppable({
+               
+               classes: {
+                  "ui-droppable-active": "ui-state-active",
+               },
+               tolerance: "fit",
+            
+            });
+          
+            // $( "#returnable" ).droppable({
+            //    classes: "ui-droppable",              
+            //    helper: "clone",
+            //    tolerance: "fit"
+            // });
+         });
+</script>
+
+<script type="text/javascript">
+    
+   // Define the function 
+   // to screenshot the div
+  function takeshot()
+  {
+     let section = document.getElementById('droppable');
+       // Use the html2canvas
+       // function to take a screenshot
+       // and append it
+       // to the output div
+     html2canvas(section).then(function (canvas)
+     {
+        document
+        .getElementById('output')
+        .appendChild(canvas);
+     })
+  }
+</script>
+
+<title>Drag and Drop in the Mushroom Kingdom!</title>
+
+</head>
+
+<body style="background-color: black;">
+	<main style="width: 100%;">
+   <header style="display: flex; justify-content: center; background-image: url('media_MarioDragDrop/titleBG.jpg');background-repeat: no-repeat; background-size: cover;">
+      <p style="font-size: 20px; text-align: center;"><img style="width: 100%;" src="media_MarioDragDrop/marioTitle.jpg"/></p>  
+   </header>
+
+   <article>
+      
+      <div style="width: 800px; height: 500px; margin-left: -2%; margin: 1%;  box-shadow: 5px 5px rgba(0, 0, 0, 0.4);">
+         <section id="droppable" style="background-image: url(media_MarioDragDrop/marioBG.jpg); width: 800px; height: 500px;  border: black 3px solid">
+            <span style="width: 806px; height: 32px; margin-top: 468px;"  class="snaptarget"></span>    
+         </section>
+         <!-- <button onclick="takeshot()">
+            Take Screenshot
+        </button> -->
+      </div>
+
+      <!-- <div id="output"></div> -->
+    
+
+      
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+      <section class="grid-container" style="width: 1000px; padding-left: 5px; margin-right: -2%; margin-top: .5%; background-color:cornflowerblue; border: black 3px solid; 
+                     box-shadow: 5px 5px rgba(0, 0, 0, 0.4);">
+         <div class="column1" style="margin-bottom: -5%;">
+            <p  style="height: 352px; width: 325px; margin-top: 2%;"><img src="media_MarioDragDrop/bigCastle.png"  id="castleBig" style="z-index:9;" class="snaptarget"/></p> 
+ 
+            <p  style="height: 160px; margin-top: -4%; margin-bottom: 1%;" >
+               <img src="media_MarioDragDrop/smallCastle.png"  id="castleSmall-1" style="z-index:10;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/smallCastle.png"  id="castleSmall-2" style="z-index:10;" class="snaptarget"/>               
+             </p> 
+         </div>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+         <div class="column2" style="margin-bottom: -5%;">
+             <p style="height: 96px; width: 302px; margin-top: 2%; padding-left: 4.7%;" >
+               <img src="media_MarioDragDrop/pipeVertical.png" id="pipeVertical-1" style="z-index: 10;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeVertical.png" id="pipeVertical-2" style="z-index: 10;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeVertical.png" id="pipeVertical-3" style="z-index: 10;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeVertical.png" id="pipeVertical-4" style="z-index: 10;" class="snaptarget"/>
+             </p> 
+             <p style="height: 96px; width: 302px; margin-top: -13%; padding-left: 4.7%;" >
+               <img src="media_MarioDragDrop/pipeTop.png" id="pipeTop-1" style="z-index: 11;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeTop.png" id="pipeTop-2" style="z-index: 11;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeTop.png" id="pipeTop-3" style="z-index: 11;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeTop.png" id="pipeTop-4" style="z-index: 11;" class="snaptarget"/>
+             </p> 
+ 
+             <p style="height: 56px; width: 302px; margin-top: -13%;" >
+                <img src="media_MarioDragDrop/pipeRight.png" id="pipeRight-1" style="z-index: 12;" class="snaptarget"/>
+                <img src="media_MarioDragDrop/pipeLeft.png" id="pipeLeft-1" style="z-index: 13;" class="snaptarget"/>
+                <img src="media_MarioDragDrop/pipeRight.png" id="pipeRight-2" style="z-index: 12;" class="snaptarget"/>
+                <img src="media_MarioDragDrop/pipeLeft.png" id="pipeLeft-2" style="z-index: 13;" class="snaptarget"/>
+              </p>  
+
+              <p style="height: 56px; width: 302px; margin-top: -2%;" >
+               <img src="media_MarioDragDrop/pipeRight.png" id="pipeRight-3" style="z-index: 12;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeLeft.png" id="pipeLeft-3" style="z-index: 13;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeRight.png" id="pipeRight-4" style="z-index: 12;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeLeft.png" id="pipeLeft-4" style="z-index: 13;" class="snaptarget"/>
+             </p>  
+
+              <p style="height: 56px; width: 302px; margin-top: -3%;" >
+               <img src="media_MarioDragDrop/pipeHorizontal.png" id="pipeHorizontal-1" style="z-index: 10;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeHorizontal.png" id="pipeHorizontal-2" style="z-index: 10;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeHorizontal.png" id="pipeHorizontal-3" style="z-index: 10;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeHorizontal.png" id="pipeHorizontal-4" style="z-index: 10;" class="snaptarget"/>
+             </p> 
+             <p style="height: 96px; width: 302px; margin-top: -3%;" >
+               <img src="media_MarioDragDrop/pipeLipTop.png" id="pipeLipTop-1" style="z-index: 14;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeLipTop.png" id="pipeLipTop-2" style="z-index: 14;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeLipTop.png" id="pipeLipTop-3" style="z-index: 14;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeLipTop.png" id="pipeLipTop-4" style="z-index: 14;" class="snaptarget"/>
+             </p> 
+             <p style="height: 96px; width: 302px; margin-top: -23%; padding-left: 1.5%;" >
+               <img src="media_MarioDragDrop/pipeLipLeft.png" id="pipeLipLeft-1" style="z-index: 14;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeLipLeft.png" id="pipeLipLeft-2" style="z-index: 14;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeLipLeft.png" id="pipeLipLeft-3" style="z-index: 14;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeLipLeft.png" id="pipeLipLeft-4" style="z-index: 14;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeVertical.png" id="pipeVertical-5" style="z-index: 10;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeVertical.png" id="pipeVertical-6" style="z-index: 10;" class="snaptarget"/>
+               
+             </p> 
+             <p style="height: 96px; width: 302px; margin-top: -13%; margin-bottom: -10%; padding-left: 1.5%;" >
+               <img src="media_MarioDragDrop/pipeLipRight.png" id="pipeLipRight-1" style="z-index: 14;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeLipRight.png" id="pipeLipRight-2" style="z-index: 14;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeLipRight.png" id="pipeLipRight-3" style="z-index: 14;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeLipRight.png" id="pipeLipRight-4" style="z-index: 14;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeVertical.png" id="pipeVertical-7" style="z-index: 10;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/pipeVertical.png" id="pipeVertical-8" style="z-index: 10;" class="snaptarget"/>
+             </p> 
+         </div>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+         <div class="column3" style="margin-left: -17%; margin-bottom: -5%;">
+            <p style="height: 70px; width:196px; margin-top: 2%;">
+               <img src="media_MarioDragDrop/bigHill.png" id="bigHill-1" style="z-index:3;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/tree_02.png" id="treeShort-1" style="z-index:6;" class="snaptarget"/>    
+            </p> 
+            
+            <p style="height: 70px; width:196px; margin-top: -6%;">
+               <img src="media_MarioDragDrop/bigHill.png" id="bigHill-2" style="z-index:3;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/tree_02.png" id="treeShort-2" style="z-index:6;" class="snaptarget"/>    
+            </p> 
+
+            <p style="height: 70px; width:196px; margin-top: -6%;">
+               <img src="media_MarioDragDrop/bigHill.png" id="bigHill-3" style="z-index:3;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/tree_02.png" id="treeShort-3" style="z-index:6;" class="snaptarget"/>    
+            </p> 
+
+            <p style="height: 70px; width:196px; margin-top: -6%;">
+               <img src="media_MarioDragDrop/bigHill.png" id="bigHill-4" style="z-index:3;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/tree_02.png" id="treeShort-4" style="z-index:6;" class="snaptarget"/>    
+            </p> 
+            
+            <p  style="height: 60px; width:196px; margin-top: -5%;" >
+               <img src="media_MarioDragDrop/smallHill.png" id="smallHill-1" style="z-index:4;" class="snaptarget"/> <img src="media_MarioDragDrop/smallHill.png" id="smallHill-2" style="z-index:4;" class="snaptarget"/>              
+            </p>
+            <p  style="height: 60px; width:196px; margin-top: -15%;" >
+               <img src="media_MarioDragDrop/smallHill.png" id="smallHill-3" style="z-index:4;" class="snaptarget"/> <img src="media_MarioDragDrop/smallHill.png" id="smallHill-4" style="z-index:4;" class="snaptarget"/>              
+            </p>
+
+            <p  style="height: 32px; width:196px; margin-top: -15%;" >
+               <img src="media_MarioDragDrop/smallBush.png" id="smallBush-1" style="z-index:6;" class="snaptarget"/><img src="media_MarioDragDrop/smallBush.png" id="smallBush-2" style="z-index:6;" class="snaptarget"/><img src="media_MarioDragDrop/smallBush.png" id="smallBush-3" style="z-index:6;" class="snaptarget"/>             
+            </p>
+            <p  style="height: 32px; width:196px; margin-top: -5%;" >
+               <img src="media_MarioDragDrop/bigBush.png" id="bigBush-1" style="z-index:6;" class="snaptarget"/><img src="media_MarioDragDrop/smallBush.png" id="smallBush-4" style="z-index:6;" class="snaptarget"/>                
+            </p> 
+            <p  style="height: 32px; width:196px; margin-top: -5%;" >
+               <img src="media_MarioDragDrop/bigBush.png" id="bigBush-2" style="z-index:6;" class="snaptarget"/><img src="media_MarioDragDrop/smallBush.png" id="smallBush-5" style="z-index:6;" class="snaptarget"/>                
+            </p>
+            <p  style="height: 32px; width:196px; margin-top: -5%;" >
+               <img src="media_MarioDragDrop/bigBush.png" id="bigBush-3" style="z-index:6;" class="snaptarget"/><img src="media_MarioDragDrop/smallBush.png" id="smallBush-6" style="z-index:6;" class="snaptarget"/>                
+            </p>
+
+         </div>
+
+ <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->   
+
+         <div class="column4" style="margin-left: -13%; margin-bottom: -6%;">
+            <p  style="height: 92px; width:128px;  margin-top: 2%;" >
+               <img src="media_MarioDragDrop/tree_01.png" id="treeTall-1" style="z-index:11; margin-right: -4px;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/tree_01.png" id="treeTall-2" style="z-index:11; margin-right: -4px;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/tree_01.png" id="treeTall-3" style="z-index:11; margin-right: -4px;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/tree_01.png" id="treeTall-4" style="z-index:11; margin-right: -4px;" class="snaptarget"/>                
+            </p>
+
+            <p  style="height: 48px; width:170px; margin-top: -6%;" >
+               <img src="media_MarioDragDrop/bigCloud.png" id="bigCloud-1" style="z-index:1;"/><img src="media_MarioDragDrop/smallCloud.png" id="smallCloud-1" style="z-index:1;"/>            
+            </p>    
+            <p  style="height: 48px; width:170px; margin-top: -8%;" >
+               <img src="media_MarioDragDrop/bigCloud.png" id="bigCloud-2" style="z-index:1;"/><img src="media_MarioDragDrop/smallCloud.png" id="smallCloud-2" style="z-index:1;"/>            
+            </p>
+            <p  style="height: 48px; width:170px; margin-top: -8.1%;" >
+               <img src="media_MarioDragDrop/bigCloud.png" id="bigCloud-3" style="z-index:1;"/><img src="media_MarioDragDrop/smallCloud.png" id="smallCloud-3" style="z-index:1;"/>            
+            </p>
+            <p  style="height: 32px; width:180px; margin-top: -6%;" >
+               <img src="media_MarioDragDrop/fencePiece.png" id="fencePiece-1" style="z-index:6;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/fencePiece.png" id="fencePiece-2" style="z-index:6;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/fencePiece.png" id="fencePiece-3" style="z-index:6;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/fencePiece.png" id="fencePiece-4" style="z-index:6;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/fencePiece.png" id="fencePiece-5" style="z-index:6;" class="snaptarget"/>
+             
+            </p>
+            <p  style="height: 32px; width:180px; margin-top: -6%;" >
+               <img src="media_MarioDragDrop/blockBrick.png" id="blockBrick-1" style="z-index:6;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/blockBrick.png" id="blockBrick-2" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBrick.png" id="blockBrick-3" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBrick.png" id="blockBrick-4" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBrick.png" id="blockBrick-5" style="z-index:6;" class="snaptarget"/>                
+            </p>
+            <p  style="height: 32px; width:180px; margin-top: -6%;" >
+               <img src="media_MarioDragDrop/blockBrick.png" id="blockBrick-6" style="z-index:6;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/blockBrick.png" id="blockBrick-7" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBrick.png" id="blockBrick-8" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBrick.png" id="blockBrick-9" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBrick.png" id="blockBrick-10" style="z-index:6;" class="snaptarget"/>                
+            </p>
+            <p  style="height: 32px; width:180px; margin-top: -6%;" >
+               <img src="media_MarioDragDrop/blockBrick.png" id="blockBrick-11" style="z-index:6;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/blockBrick.png" id="blockBrick-12" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBrick.png" id="blockBrick-13" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBrick.png" id="blockBrick-14" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBrick.png" id="blockBrick-15" style="z-index:6;" class="snaptarget"/>                
+            </p>
+
+            <p  style="height: 32px; width:180px; margin-top: -5%;" >
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-1" style="z-index:6;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-2" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-3" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-4" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-5" style="z-index:6;" class="snaptarget"/>                
+            </p>
+            <p  style="height: 32px; width:180px; margin-top: -6%;" >
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-6" style="z-index:6;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-7" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-8" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-9" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-10" style="z-index:6;" class="snaptarget"/>                
+            </p>
+            <p  style="height: 32px; width:180px; margin-top: -6%;" >
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-11" style="z-index:6;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-12" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-13" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-14" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-15" style="z-index:6;" class="snaptarget"/>                
+            </p>
+            <p  style="height: 32px; width:180px; margin-top: -6%;" >
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-16" style="z-index:6;" class="snaptarget"/>
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-17" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-18" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-19" style="z-index:6;" class="snaptarget"/> 
+               <img src="media_MarioDragDrop/blockBlock.png" id="blockBlock-20" style="z-index:6;" class="snaptarget"/>                
+            </p>            
+         </div>
+      </section>
+   </article>
+
+   <footer style="background-color: cornflowerblue;">  
+      <hr style="height: 3px; border-style: double; border-color: white; background-color: rgb(163, 54, 21);">         
+         <cite style="padding-left: 10px;"><small>sources:<br>
+         <a style="padding-left: 10px;" href="https://mfgg.net/index.php?act=resdb&param=02&c=1&id=19120"target="_blank">Font Type</a>
+         <a style="padding-left: 5px;" href="http://www.geocities.ws/eight_ball_comics/crapn_stuff.gif"target="_blank">All Sprites</a><br>
+         <span style="padding-left: 10px;">Super Mario Bros is a trademark of Nintendo.</span>
+         </small></cite>
+      <hr style="height: 3px; border-style: double; border-color: white; background-color: rgb(163, 54, 21);">
+   </footer>
+
+      <p style="background-color: rgba(255, 255, 255, 0); color: white; text-align: center; margin-bottom: -2%;">&copy;Mike Tonder</p>  
+
+	</main>
+</body>
+</html>

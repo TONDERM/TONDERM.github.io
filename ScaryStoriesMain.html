@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+  font-family: scary;
+  src: url(fonts/CaslonAntique-Bold.ttf);
+}
+
+body
+{
+  background-image: url('media_ScaryStories/MainPageImage_02.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  width: 99%;
+}
+
+button
+{
+    margin: .1%;
+}
+header
+{
+  font-family: scary;
+  text-align: center;
+}
+
+</style>
+<script src="jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#B1").click(function(){
+        $.get("BookOne.html", function(data,status){ 
+          if (status=="success"){
+            $("#bookDisplay").html(data);
+           } 
+          else{
+            $("#bookDisplay").html("Error retrieving Book One");
+         }});
+    });
+    $("#B2").click(function(){
+        $.get("BookTwo.html", function(data,status){
+          if(status=="success"){  
+            $("#bookDisplay").html(data);
+           } 
+          else{
+            $("#bookDisplay").html("Error retrieving Book Two");
+        }});
+    });
+
+    $("#B3").click(function(){
+        $.get("BookThree.html", function(data,status){
+          if(status=="success"){  
+            $("#bookDisplay").html(data);
+           } 
+          else{
+            $("#bookDisplay").html("Error retrieving Book Three");
+        }});
+    });
+
+});
+</script>
+</head>
+<body>
+<header id="bookDisplay">
+    <span style="font-size: 70px; text-shadow: 1px 1px white;">Welcome to Scary Stories</span><br>
+    <span style="font-size: 50px; margin-top: -.5%; text-shadow: 1px 1px white;">Choose Your Book...</span>
+</header>
+
+<div style="text-align: center;">
+  <button style="box-shadow: 2px 2px black;" id="B1">Book One</button>
+  <button style="box-shadow: 2px 2px black;" id="B2">Book Two</button>
+  <button style="box-shadow: 2px 2px black;" id="B3">Book Three</button>
+</div>
+</body>
+</html>

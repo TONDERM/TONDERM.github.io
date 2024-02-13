@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Collection DOM Example</title>
+<!-- <link href="../css/CIT190.css" rel="stylesheet" type="text/css" /> -->
+<style>
+*{box-sizing: border-box;}
+
+@font-face
+{
+  font-family: maggieDogs;
+  src: url(fonts/BoldenVan\ demo.ttf);
+}
+
+@font-face
+{
+  font-family: imageInfo;
+  src: url(fonts/PIZZARIA\ demo.ttf);
+}
+
+@font-face
+{
+  font-family: info;
+  src: url(fonts/BOSCOWROUGHTfreebies.otf);
+}
+
+body
+{
+  background-image: url("media_Maggie/maggieBG.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+h2
+{
+  color:white;
+  font-size: 3vw; 
+  letter-spacing: 2px; 
+  font-family: maggieDogs; 
+  text-align: center; 
+  margin-left: 30%; 
+  margin-bottom: 1%; 
+  margin-right: 30%; 
+  padding-top: 20px; 
+  padding-bottom: 20px; 
+  background:rgba(139, 69, 19, 0.8); 
+  border:white 4px solid; 
+  border-radius: 10px 10px 10px 10px;
+  text-shadow: -2px 0 black, 0 2px black, 0 -2px black, 3px 3px black; 
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+h3
+{
+  text-decoration: underline tan 2px;
+  font-family: imageInfo;
+  letter-spacing: 2px;
+  text-shadow: -2px 0 black, 0 2px black, 0 -2px black; 
+}
+
+.h3BG
+{
+  background:rgba(139, 69, 19, 0.8); 
+  color:white;
+  padding:1%;
+  border: white 2px solid;
+}
+
+section
+{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: visible;
+    width: 100%; 
+    margin: 1%;
+}
+
+.figureA 
+{  
+  width: 10%; 
+  background: linear-gradient(to bottom,rgba(255, 0, 0, 0) 0.8%, white 0.9%, white 98.5%, rgba(255, 0, 0, 0) 98.6%);
+  min-width: 300px;
+}
+
+.figureB
+{  
+  width: 10%; 
+  background: linear-gradient(to bottom,rgba(255, 0, 0, 0) 0.8%, white 0.9%, white 71.5%, rgba(255, 0, 0, 0) 71.6%);
+  min-width: 300px;
+}
+
+.column
+{
+  float:left;
+  width: 10%;
+  margin-left: 1%;
+  margin-top: -1%;
+}
+
+.modal 
+{
+  display: none;
+  position: fixed;
+  z-index: 150;
+  padding-top: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content 
+{
+  position: relative;
+  background-color:black;
+  margin: auto;
+  padding: 0;
+  width: 62%;
+}
+
+/* The Close Button */
+.close 
+{
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,.close:focus 
+{
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cursor 
+{
+  cursor: pointer;
+}
+
+.caption-container 
+{
+  text-align: center;
+  background-color: black;
+  padding-top: 1px ;
+  color: white;
+  font-size: 1.5vw;
+  margin-top: -2%;
+}
+
+.demo
+{
+  opacity: 0.6;
+}
+
+.active, .demo:hover
+{
+  opacity: 1;
+}
+
+#img:hover
+{
+  mix-blend-mode:multiply;
+  filter: grayscale() contrast(100%);
+}
+
+#grow:hover
+{
+  animation: grow .1s;
+  animation-duration: .2s; 
+  animation-fill-mode:forwards;
+}
+
+@keyframes grow
+{
+  0% {transform:scale(1.0,1.0);}
+  100% {transform:scale(1.01,1.01);}
+}
+
+@keyframes up
+{
+  0% {transform:translateY(0px);}
+  100% {transform:translateY(-3px);}
+} 
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+nav a:hover{
+	background-color:wheat;
+    color: saddlebrown;
+}
+
+a:link
+{
+    color: white;
+}
+
+nav a:active{
+	color:goldenrod;
+}
+
+a:visited{
+	color:goldenrod;
+}
+
+</style>
+</head>
+<body onload="processName();">
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<h2 >Maggie the Dog</h2>
+<section style="width: auto;">
+  <figure class="figureA" style=" margin-left: 0%;" id="grow">
+    <img alt="My Favorite Toy" src="media_Maggie/Maggie_01.jpg" style="border: white 3px solid; box-shadow: 4px 4px rgba(0, 0, 0, 0.5); width:100%;" title="Click for larger image" onclick="openModal();currentSlide(1)" class="cursor" id="img">
+  </figure> 
+
+  <figure class="figureA" style="margin-left: -2%;" id="grow"> 
+    <img alt="I'm Sitting So Pretty!" src="media_Maggie/Maggie_02.jpg" style="border: white 3px solid; box-shadow: 4px 4px rgba(0, 0, 0, 0.5); width:100%;" title="Click for larger image" onclick="openModal();currentSlide(2)" class="cursor" id="img">
+  </figure>
+
+  <figure class="figureA" style="margin-left: -2%;" id="grow"> 
+    <img alt="Can I Fly Now?" src="media_Maggie/Maggie_08.jpg" style="border: white 3px solid; box-shadow: 4px 4px rgba(0, 0, 0, 0.5); width:100%;" title="Click for larger image" onclick="openModal();currentSlide(3)" class="cursor" id="img">
+  </figure>
+
+  <figure class="figureB" style=" margin-left: -2%;" id="grow">
+    <img alt="I See You Squirrel!" src="media_Maggie/Maggie_04.jpg" style="border: white 3px solid; box-shadow: 4px 4px rgba(0, 0, 0, 0.5); width:100%;" title="Click for larger image" onclick="openModal();currentSlide(4)" class="cursor" id="img">
+  </figure> 
+
+  <figure class="figureB" style="margin-left: -2%;" id="grow"> 
+    <img alt="Let's Play!" src="media_Maggie/Maggie_06.jpg" style="border: white 3px solid; box-shadow: 4px 4px rgba(0, 0, 0, 0.5); width:100%;" title="Click for larger image" onclick="openModal();currentSlide(5)" class="cursor" id="img">
+  </figure>
+
+  <figure class="figureB" style="margin-left: -2%; margin-right: -3%;" id="grow"> 
+    <img alt="Relaxing in the Leaves" src="media_Maggie/Maggie_07.jpg" style="border: white 3px solid; box-shadow: 4px 4px rgba(0, 0, 0, 0.5); width:100%;" title="Click for larger image" onclick="openModal();currentSlide(6)" class="cursor" id="img">
+  </figure>
+
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+    
+      <div class="mySlides">
+        <a href="media_Maggie/Maggie_01.jpg" target="blank"><img src="media_Maggie/Maggie_01.jpg" style="width:50%; margin-left: 25%;"></a>
+      </div>
+
+      <div class="mySlides">
+        <a href="media_Maggie/Maggie_02.jpg" target="blank"><img src="media_Maggie/Maggie_02.jpg" style="width:50%; margin-left: 25%;"></a>
+      </div>
+
+      <div class="mySlides">
+        <a href="media_Maggie/Maggie_08.jpg" target="blank"><img src="media_Maggie/Maggie_08.jpg" style="width:50%; margin-left: 25%;"></a>
+      </div>
+
+      <div class="mySlides">
+        <a href="media_Maggie/Maggie_04.jpg" target="blank"><img src="media_Maggie/Maggie_04.jpg" style="width:68.7%; margin-left: 16%;"></a>
+      </div>
+
+      <div class="mySlides">
+        <a href="media_Maggie/Maggie_06.jpg" target="blank"><img src="media_Maggie/Maggie_06.jpg" style="width:68.7%; margin-left: 16%;"></a>
+      </div>
+
+      <div class="mySlides">
+        <a href="media_Maggie/Maggie_07.jpg" target="blank"><img src="media_Maggie/Maggie_07.jpg" style="width:68.7%; margin-left: 16%;"></a>
+      </div>
+  
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <div style="margin-left: 25%;">
+        <div class="column">
+          <img class="demo cursor" src="media_Maggie/Maggie_01.jpg" style="width:100%" onclick="currentSlide(1)" alt="My Favorite Toy">
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="media_Maggie/Maggie_02.jpg" style="width:100%" onclick="currentSlide(2)" alt="I'm Sitting So Pretty!">
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="media_Maggie/Maggie_08.jpg" style="width:100%" onclick="currentSlide(3)" alt="Can I Fly Now?">
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="media_Maggie/Maggie_04.jpg" style="width:100%" onclick="currentSlide(4)" alt="I See You Squirrel!">
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="media_Maggie/Maggie_06.jpg" style="width:100%" onclick="currentSlide(5)" alt="Let's Play!">
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="media_Maggie/Maggie_07.jpg" style="width:100%" onclick="currentSlide(6)" alt="Relaxing in the Leaves">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+  
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) 
+  {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) 
+  {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) 
+  {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) 
+    {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) 
+    {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+</script>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="h3BG">
+<h3>Photo Name:</h3>
+<p id="name" style="font-family: info;">
+	<script>
+    // Displays the text from the alt attribute as the Image Name
+          function processName()
+          {
+            var maxNumber=6;
+            var contents = "";
+              // concatenate each alternate name
+            for ( var i = 0; i < document.images.length; i++ )
+              {
+                if (i >= maxNumber)
+                break;
+                contents += i+1 + ". " +  document.images[i].alt + "&nbsp;&nbsp; ";
+
+              } // end for
+              document.getElementById( "name" ).innerHTML = contents;
+              // calls function proccessSource in script below
+              processSource();  
+          }	
+    </script>
+</p>
+
+<h3>Photo Source</h3>
+<p id="source" style="font-family: info;">
+	<script>
+	//Displays the text from the src attribute as the file name and location
+        function processSource()
+        {
+          var maxNumber=6;
+          var contents = "";
+          // concatenate each alternate name
+          for ( var i = 0; i < document.images.length; i++ )
+            {
+              if (i >= maxNumber)
+              break;
+              contents += i+1 + ". " +  document.images[i].src + "&nbsp;&nbsp; ";
+            } // end for
+        document.getElementById( "source" ).innerHTML = contents;
+        // calls function processLinks in the script below
+        processLinks();
+        }
+	</script>
+</p>
+
+<h3>Photo Text Links</h3>
+
+	<nav id="links" style="font-family: info;">
+	<script>
+	// Creates navigation text links to the larger images
+		function processLinks()
+		{
+			var contents = "| ";
+			// concatenate each link to contents
+			for ( var i = 0; i < document.links.length; i++ )
+			{
+			   contents += "<a href=" + document.links[i].href + ">" + document.images[i].alt + "</a>  | ";
+			} // end for
+			document.getElementById( "links" ).innerHTML = contents;
+		} // end function processlinks
+	</script>  
+    </nav>
+  
+</div>
+<hr>
+</body>
+</html>

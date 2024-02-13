@@ -1,0 +1,406 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Memeber Join Form</title>
+<link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Jost&display=swap" rel="stylesheet">
+<style type="text/css">
+#page-wrap
+{
+    width: 700px;
+    margin: auto;
+}
+
+body{
+	font-family: 'Jost', sans-serif;
+	background-image:url('media_RockClub/rockMainBG.jpg');
+    background-repeat:no-repeat;
+    background-position:top center;
+    color:black;
+    font-size:14pt;
+    min-width:500px;
+}
+
+
+form
+{
+	display:flex;
+	flex-direction:column;
+    position: relative;
+	justify-content:center;
+}
+
+fieldset 
+{
+	margin-bottom: 1%;
+	padding:1%;
+	width:100%;
+	flex:1;
+	max-width:500px;
+    
+}
+h1{
+    z-index: 3;
+	font-family: 'Jost', sans-serif;
+	font-size:2em;
+	text-align:center;
+    margin-left: -90px;
+    margin-bottom: -3px;
+	color: white;
+	font-weight:700;
+	text-shadow: -1px 0 rgb(50, 33, 70), 0 1px rgb(50, 33, 70), 0 -1px rgb(50, 33, 70), 2px 2px 1px purple;
+	width:100%;
+
+}
+
+legend{
+	font-size:2em;
+	font-weight:900;
+	padding-top:15px;
+	padding-bottom:15px;
+	margin-left:10px;
+	color: white;
+	text-shadow: -1px 0 rgb(50, 33, 70), 0 1px rgb(50, 33, 70), 0 -1px rgb(50, 33, 70), 2px 2px 1px purple;
+
+}
+
+label
+{
+	text-align:right;
+	width:150px;
+	float:left;
+	padding-right:10px;
+	color:white;
+    text-shadow: -1px 0 rgb(50, 33, 70), 0 1px rgb(50, 33, 70), 0 -1px rgb(50, 33, 70), 1px 1px 1px black; 
+	font-size:14pt;
+	vertical-align:text-top;
+}
+
+#FormBG_01
+{
+    background: url(media_RockClub/rockBG_10.jpg) no-repeat top left scroll;
+    background-size: cover;
+    border:1px solid black;
+    box-shadow:2px 2px 2px black;
+}
+
+#FormBG_02
+{
+    background: url(media_RockClub/rockBG_10.jpg) no-repeat center scroll;
+    background-size: cover;
+    border:1px solid black;
+    box-shadow:2px 2px 2px black;
+}
+
+#FormBG_03
+{
+    background: url(media_RockClub/rockBG_10.jpg) no-repeat bottom right scroll;
+    background-size: cover;
+    border:1px solid black;
+    box-shadow:2px 2px 2px black;
+}
+
+	
+.inputButton{
+	font-size:14pt;
+	width: 100px; 
+	height: 30px;
+	font-size:12pt;
+	background-color: #EBF5FF;
+	color:black;
+	font-family: 'Jost', sans-serif;
+	font-weight:900;
+	margin-top:50px;
+	box-shadow:2px 2px 2px black;
+}
+.formEntry{
+	text-align:left;
+	width:200px;
+	font-size:14pt;
+	color:black;
+}
+.money{
+	text-align:left;
+	font-size:12pt;
+	color:black;
+	width:275px;
+}
+
+article
+{
+    flex: 1;
+    position: absolute;
+    
+    z-index: 2;
+    left:550px;
+    top: 72px;
+
+}
+
+aside
+{
+    flex: 1;
+    word-wrap: break-word;
+    width: 190px;
+    height: auto;
+    border: 1px solid rgba(255, 255, 255, 0.616);
+    border-radius: 8px;
+    font-size: 12pt;
+    
+    text-align: center;
+    color: white;
+    text-shadow: -1px 0 rgb(50, 33, 70), 0 1px rgb(50, 33, 70), 0 -1px rgb(50, 33, 70), 1px 1px 1px black; 
+    line-height: 17px;
+    margin-left: 4px;
+    margin-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background: url(media_RockClub/rockBG_14.jpg) no-repeat scroll;
+    background-size: cover;
+}
+
+figure
+{
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    
+    left:-10px;
+    /* top: 840px;  */
+    width: 100px;
+    height: auto;
+}
+
+#boxes
+{
+    flex: 1;
+    word-wrap: break-word;
+    width: 190px;
+    height: 405px;
+    border: 1px solid rgba(255, 255, 255, 0.616);
+    border-radius: 8px;
+    font-size: 12pt;
+    
+    text-align: center;
+    color: white;
+    text-shadow: -1px 0 rgb(50, 33, 70), 0 1px rgb(50, 33, 70), 0 -1px rgb(50, 33, 70), 1px 1px 1px black; 
+    line-height: 17px;
+    margin-left: 4px;
+    margin-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background: url(media_RockClub/rockBG_14.jpg) no-repeat scroll;
+    background-size: cover; 
+}
+
+.banner
+{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.submit_reset
+{
+    flex: 1;
+    flex-wrap: nowrap;
+
+
+}
+
+</style>
+</head>
+
+<body>
+    <div id="page-wrap">
+    <form name="RockClub" id="Subscription" action="https://lisabalbach.com/CIT180/Lesson8/FormProcessor.html" method="get">
+    <input type="hidden" name="mailto" id="mailto" value="mailto:tonderm@mail.nmc.edu">
+        <article>
+            <aside style="background-position: top;">
+                <p style="text-decoration: underline; font-weight: bold; letter-spacing: 1px;">Monthly Subscription</p>
+                Every month, we deliver a custom curated Rock Box right to your doorstep. 
+                <hr style="width: 70%; border: 1px solid black;">
+                This plan is a monthly payment of $40 and includes shipping.
+            </aside>
+            <br>
+            <aside style="background-position: center; letter-spacing: 1px;">
+                <p style="text-decoration: underline; font-weight: bold;">Bi-Monthly Subscription</p>
+                Every other month, we deliver a custom curated Rock Box right to your doorstep. 
+                <hr style="width: 70%; border: 1px solid black;">
+                This plan is a one time payment plan of $160 and includes shipping costs (6 boxes over 12 months).
+            </aside>
+            <br>
+            <aside style="background-position: bottom; letter-spacing: 1px;">
+                <p style="text-decoration: underline; font-weight: bold;">Quarterly Subscription</p>
+                Every quarter we deliver a custom curated Rock Box right to your doorstep.
+                <hr style="width: 70%; border: 1px solid black;">
+                This plan is a one time payment plan of $160 and includes shipping costs (4 boxes over 12 months).
+            </aside>
+            <br>
+            <br>
+            <div style="margin-top: 20px;">
+            <figure style="top: 820px;">
+                <img alt="agate" src="media_RockClub/agate.png"  style="width: 40%;" title="Click for larger image" >
+            </figure>
+            <figure style="top: 865px;"> 
+                <img alt="crystal" src="media_RockClub/crystal.png"  style="width: 40%;" title="Click for larger image" >
+            </figure>  
+            <figure style="top: 910px;">
+                <img alt="emerald" src="media_RockClub/emerald.png"  style="width: 40%;" title="Click for larger image" >
+            </figure>  
+            <figure style="top: 962px;">
+                <img alt="ruby" src="media_RockClub/ruby.png"  style="width: 40%;" title="Click for larger image" >
+            </figure>  
+            <figure style="top: 1013px;">
+                <img alt="geode" src="media_RockClub/geode.png"  style="width: 40%;" title="Click for larger image" >
+            </figure>  
+            <figure style="top: 1058px;">
+                <img alt="sapphire" src="media_RockClub/sapphire.png"  style="width: 40%;" title="Click for larger image" >
+            </figure>
+            </div>  
+            <aside id="boxes">
+                <p style="font-size: 20pt;">Favorite Rock?</p>
+                <div class="banner">
+                    <hr>
+                    <input type="checkbox" id="rock1" name="rock1" value="agate">
+                    <label for="rock1" >Agate </label><br>
+                    <hr>
+                </div>
+                <div class="banner">
+                    <hr>
+                    <input type="checkbox" id="rock2" name="rock2" value="crystal">
+                    <label for="rock2">Crystal </label><br>
+                    <hr>
+                </div>
+                <div class="banner">
+                    <hr>
+                    <input type="checkbox" id="rock3" name="rock3" value="emerald">
+                    <label for="rock3"> Emerald </label><br>
+                    <hr>
+                </div>
+                <div class="banner">
+                    <hr>
+                    <input type="checkbox" id="rock4" name="rock4" value="ruby">
+                    <label for="rock4"> Ruby </label><br>
+                    <hr>
+                </div>
+                <div class="banner">
+                    <hr>
+                    <input type="checkbox" id="rock5" name="rock5" value="geode">
+                    <label for="rock5"> Geode </label><br>
+                    <hr>
+                </div>
+                <div class="banner">
+                    <hr>
+                    <input type="checkbox" id="rock6" name="rock6" value="sapphire">
+                    <label for="rock6"> Sapphire </label><br>
+                    <hr>
+                </div>               
+            </aside>
+        </article>
+      
+        <h1>Rock Club Membership </h1>
+   
+        <fieldset id="FormBG_01">
+        <div style="display: block">
+        <p><label>First Name</label>
+            <input class="formEntry" id="given-name" name="given-name" type="text" placeholder="First name only" required autofocus></p>
+        
+            <p><label>Last Name</label>
+            <input class="formEntry" id="family-name" name="family-name" type="text" placeholder="Last name only" required></p>
+        
+            <p><label>Date of Birth</label>
+            <input class="formEntry" id="dob" name="dob" type="date" required></p>
+        
+            <p><label>Email</label>
+            <input class="formEntry" id="email" name="email" type="email" placeholder="example@domain.com" required></p>
+        
+            <p><label>Telephone</label>
+            <input class="formEntry" id="phone" name="phone" type="tel" placeholder="(231) 555-5555" required></p>
+
+            <p><label>Membership</label>
+            <input class="formEntry" id="membership" name="membership" list="options" placeholder="Please Select" required>
+            <datalist id="options">
+                <option label="Monthly" value="Monthly"></option>
+                <option label="Bi-Monthly" value="Bi-Monthly"></option>
+                <option label="Quarterly" value="Quarterly"></option>
+            </datalist></p>
+
+        </div>
+        </fieldset>
+
+        <fieldset id="FormBG_02">
+            <span style="display: inline;">
+            <legend >Billing Address</legend>
+            <hr style="margin-top: -25px; margin-bottom: 30px;">
+            </span>
+            <label>Address</label>
+            <textarea class="formEntry" id="address" name="address" required style="width: 350px; height: 200px; margin-left: 15%;"></textarea>
+        
+            <p><label>Country</label>
+            <input class="formEntry" id="country" name="country" list="country-names" placeholder="Please Select" required>
+            <datalist id="country-names">
+                <option label="United States" value="United States"></option>
+                <option label="Canada" value="Canada"></option>
+                <option label="England" value="England"></option>
+                <option label="Germany" value="Germany"></option>
+                <option label="France" value="France"></option>
+            </datalist></p>
+            <!-- for sanity's sake, I'm not including all States/Provences. -->
+            <p><label>State/Province</label>
+            <input class="formEntry" id="state-province" name="state-province" list="names" placeholder="Please Select" required>
+            <datalist id="names">
+                <option label="AK" value="Alaska"></option>
+                <option label="CA" value="Calfornia"></option>
+                <option label="MI" value="Michigan"></option>
+                <option label="Saxony" value="Saxony"></option>
+                <option label="Thuringia" value="Thuringia"></option>
+                <option label="Hamburg" value="Hamburg"></option>
+                <option label="Ontario" value="Ontario"></option>
+                <option label="Quebec" value="Quebec"></option>
+                <option label="Yukon" value="Yukon"></option>
+                <option label="Whales" value="Whales"></option>
+                <option label="Durham" value="Durham"></option>
+                <option label="Normandie" value="Normandie"></option>
+                <option label="Occitanie" value="Occitanie"></option>                   
+            </datalist></p>
+
+            <p><label>Post Code</label>
+                <input class="formEntry" id="postCode" name="postCode" type="text" required></p>
+        </fieldset>
+        
+        <fieldset id="FormBG_03">
+            <span style="display: inline;">
+                <legend>Card Details</legend>
+                <hr style="margin-top: -25px; margin-bottom: 30px;">
+            </span>
+                <label style="width:130px; padding-left: 20px;">
+                    <input id="VISA" name="cardtype" type="radio">VISA
+                </label> 
+                <label style="width:140px;">
+                    <input id="Mastercard" name="cardtype" type="radio">Mastercard
+                </label> 
+                <label style="width:110px;">
+                    <input id="AMEX" name="cardtype" type="radio">AMEX
+                </label><br>
+                
+                <p><label>Name</label>
+                <input id="cardName" name="cardName" type="text" placeholder="Name as it appears on your card" class="money" required></p>
+        
+                <p><label>Card Number</label>
+                <input id="cardNo" name="cardNo" type="number" required class="money"></p>
+        
+                <p><label>Security Code</label>
+                <input id="security" name="security" type="number" required pattern="[0-9]{3}" placeholder="Three digits on back of card" class="money"></p>
+        
+                <p><label>Experation Date</label>
+                <input id="expiry" name="expiry" type="date" required></p>
+        </fieldset>
+        
+        <div style="margin-top: -50px; margin-left: -160px;">
+            <p style="text-align: center; margin-right: 2%;">
+            <button class="inputButton" type="submit" style="width: 200px;">Submit Information</button>
+            <button class="inputButton" type="reset" value="reset">Reset</button></p>
+        </div>
+    </form>
+    </div>
+</body>

@@ -1,0 +1,496 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script> -->
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: aliceblue;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+    
+
+    float: left;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    padding: 10px;
+  
+}
+
+/* Style the images inside the grid */
+.column img {
+
+  opacity: 1;
+  border: 1px solid black; 
+
+}
+
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  width: auto;
+  position: relative;
+  display: none;
+  margin-top: 2%;
+
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: -5%;
+  left: 5px;
+  color: black;
+  font-size: 2vmin;
+}
+/*------------------------------------------[Nav Menus]----------------------------------------------------*/
+
+nav 
+{   
+    
+	text-align: center;
+ 
+}
+
+ul 
+{
+
+    display: inline;
+
+}
+
+ul li 
+{
+    
+    background-color: palevioletred;
+    margin-bottom: 2%; 
+    opacity: .8;
+
+}
+
+ul li:hover 
+{
+    opacity: 1;
+
+    
+    
+    /* color: white; */
+    /* text-shadow: -2px 0 black, 0 2px black, 0 -2px black; */
+}
+.B1{
+    background-image: url("media/CalvinHobbesButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+
+}
+
+.B2{
+    background-image: url("media/SCP-Button.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B3{
+    background-image: url("media/BigfootButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B4{
+    background-image: url("media/MikeGameButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B5{
+    background-image: url("media/MarioButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B6{
+    background-image: url("media/ScaryStoriesButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B7{
+    background-image: url("media/HomerButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B8{
+    background-image: url("media/ScoobVilliansButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B9{
+    background-image: url("media/ZeldaButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B10{
+    background-image: url("media/AdultCeraelButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B11{
+    background-image: url("media/AfterCrashButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B12{
+    background-image: url("media/FaerieButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B13{
+    background-image: url("media/MaggieButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B14{
+    background-image: url("media/GodzillaButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B15{
+    background-image: url("media/PeanutButterButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B16{
+    background-image: url("media/RockClubButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B17{
+    background-image: url("media/TopHorrorButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B18{
+    background-image: url("media/SP-Button.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B19{
+    background-image: url("media/WW2-AircraftButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B20{
+    background-image: url("media/TallestBuildingButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B21{
+    background-image: url("media/SoupButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.B22{
+    background-image: url("media/MedievalBeastiariesButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.B23{
+    background-image: url("media/BuildGameButton.jpg");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+/* Closable button inside the expanded image */
+/* .closebtn {
+  position: absolute;
+  top: 10px;
+  left: 300px;
+  color: red;
+  font-size: 35px;
+  cursor: pointer;
+} */
+
+</style>
+
+
+</head>
+<body>
+
+<header style="text-align:center">
+  <h2>Tabbed Image Gallery</h2>
+</header>
+
+    <section class="row" style="margin-left: 1%; min-width: 400px;">
+        <div class="column" style="width: 25%; min-width: 100px; max-height: 800px; overflow: auto; padding-left: 10px; background-color:gainsboro;">
+            <ul>                                     
+                <li >
+                    <a href="CalvinHobbes/FinalProject.html" target="blank">
+                        <button class="B1">
+                            <img src="media/CalvinThumb.jpg" alt="Multi-page site.  Fully styled and responsive with animation plus jquery/API" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>
+                <li >
+                    <a href="CalvinHobbes/FinalProject.html" target="blank">
+                        <button class="B2">
+                            <img src="media/SCP-Thumb.jpg" alt="ASP.NET" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>         
+                <li >
+                    <a href="CalvinHobbes/FinalProject.html" target="blank">
+                        <button class="B3">
+                            <img src="media/BigfootThumb.jpg" alt="ASP.NET" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>
+                <li >
+                    <a href="AmazingGameCollection/GameSelectWork_02.html" target="blank">
+                        <button class="B4">
+                            <img src="media/MikeGameThumb.jpg" alt="Canvas" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>   
+                <li >
+                    <a href="MarioDragDrop/myDragandDrop.html" target="blank">
+                        <button class="B5">
+                            <img src="media/MarioThumb.jpg" alt="CalvinAndHobbes" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>  
+                <li >
+                    <a href="ScaryStories/ScaryStoriesMain.html" target="blank">
+                        <button class="B6">
+                            <img src="media/ScaryStoriesThumb.jpg" alt="CalvinAndHobbes" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>  
+                <li >
+                    <a href="Homer/changingContent.html" target="blank">
+                        <button class="B7">
+                            <img src="media/HomerThumb.jpg" alt="CalvinAndHobbes" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>  
+
+                <li >
+                    <a href="ScoobyDooVillians/ScoobyDooVillians.html" target="blank">
+                        <button class="B8">
+                            <img src="media/ScoobVilliansThumb.jpg" alt="Multi-media Implemintation" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>   
+                <li >
+                    <a href="MinishCapLink/myAnimation.html" target="blank">
+                        <button class="B9">
+                            <img src="media/ZeldaThumb.jpg" alt="CalvinAndHobbes" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>   
+                <li >
+                    <a href="CerealAnimated/flexboxModelWithAnimation.html" target="blank">
+                        <button class="B10">
+                            <img src="media/AdultCeraelThumb.jpg" alt="CalvinAndHobbes" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>  
+                <li >
+                    <a href="Lesson10/ConsoleGenerations.html" target="blank">
+                        <button class="B11">
+                            <img src="media/AfterCrashThumb.jpg" alt="CalvinAndHobbes" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>  
+                <li >
+                    <a href="Lesson10/FaerieFlora.html" target="blank">
+                        <button class="B12">
+                            <img src="media/FarieThumb.jpg" alt="CalvinAndHobbes" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>  
+                <li >
+                    <a href="Maggie/myImageCollection.html" target="blank">
+                        <button class="B13">
+                            <img src="media/MaggieThumb.jpg" alt="CalvinAndHobbes" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>  
+                <li >
+                    <a href="BuildingGame/BuildingGame.html" target="blank">
+                        <button class="B23">
+                            <img src="media/BuildGameThumb.jpg" alt="jQuery/Sorting" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li> 
+                <li >
+                    <a href="Godzilla/GodzillaMovies.html" target="blank">
+                        <button class="B14">
+                            <img src="media/GodzillaThumb.jpg" alt="CalvinAndHobbes" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>  
+                <li >
+                    <a href="PeanutButterSandwich/PeanutButterSandwhich.html" target="blank">
+                        <button class="B15">
+                            <img src="media/PeanutButterThumb.jpg" alt="CalvinAndHobbes" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>  
+                <li >
+                    <a href="RockClubForm/RockClubForm.html" target="blank">
+                        <button class="B16">
+                            <img src="media/RockClubThumb.jpg" alt="CalvinAndHobbes" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>
+                <li >
+                    <a href="Top5Horror/Top5HorrorMovies.html" target="blank">
+                        <button class="B17">
+                            <img src="media/TopHorrorThumb.jpg" alt="CalvinAndHobbes" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>  
+                <li >
+                    <a href="Lesson7/SmashingPumpkins.html" target="blank">
+                        <button class="B18">
+                            <img src="media/SP-Thumb.jpg" alt="CalvinAndHobbes" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>  
+                <li >
+                    <a href="Lesson7/TopWW2Planes.html" target="blank">
+                        <button class="B19">
+                            <img src="media/WW2-AircraftThumb.jpg" alt="CalvinAndHobbes" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>  
+                <li >
+                    <a href="Lesson7/HistoriesTallestStructures.html" target="blank">
+                        <button class="B20">
+                            <img src="media/TallestBuildingThumb.jpg" alt="CalvinAndHobbes" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>  
+                <li >
+                    <a href="KneophlaRecipe/RecipeKneophla.html" target="blank">
+                        <button class="B21">
+                            <img src="media/SoupThumb.jpg" alt="CalvinAndHobbes" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>    
+                <li >
+                    <a href="MedievalBestiary/medieval-bestiary.html" target="blank">
+                        <button class="B22">
+                            <img src="media/MedievalBeastiariesThumb.jpg" alt="CalvinAndHobbes" style="opacity: 0; width: 30%; transform: scaleX(3.4);"  onmouseover="myFunction(this)">
+                        </button>
+                    </a>
+                </li>  
+            </ul>
+        </div>         
+        <div class="column" style="width: 75%; height: auto;">
+            <div class="container">
+                <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
+                <img id="expandedImg" style="width:100%;">  
+                <div id="imgtext"></div>            
+            </div>    
+        </div>    
+    </section>
+
+<!-- <div class="container">
+  <img id="expandedImg" style="width:100%;">
+  <div id="imgtext"></div>
+</div> -->
+
+<script>
+function myFunction(imgs) 
+{
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";  
+}
+</script>
+
+</body>
+</html>

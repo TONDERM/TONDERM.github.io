@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeline>
+    <structure>
+        <age>8000 B.C.E.</age>
+        <name>Tower of Jericho</name>
+        <location>modern-day Jericho</location>
+        <country>Palestine</country>
+        <height>28 ft</height>
+    </structure>
+
+    <structure>
+        <age>4000 B.C.E.</age>
+        <name>Anu Ziggurat</name>
+        <location>modern-day Al-Warka</location>
+        <country>Iraq</country>
+        <height>40 ft</height>
+    </structure>
+
+    <structure>
+        <age>2648 B.C.E.</age>
+        <name>Step Pyramid of Djoser</name>
+        <location>modern-day Saqqara</location>
+        <country>Egypt</country>
+        <height>205 ft</height>
+    </structure>
+
+    <structure>
+        <age>2610 B.C.E.</age>
+        <name>Meidum Pyramid</name>
+        <location>modern-day Meidum</location>
+        <country>Egypt</country>
+        <height>307 ft</height>
+    </structure>
+
+    <structure>
+        <age>2605 B.C.E.</age>
+        <name>Bent Pyramid</name>
+        <location>modern-day Dashur</location>
+        <country>Egypt</country>
+        <height>332 ft</height>
+    </structure>
+
+    <structure>
+        <age>2600 B.C.E.</age>
+        <name>Red Pyramid of Dahshur</name>
+        <location>modern-day Dahshur</location>
+        <country>Egypt</country>
+        <height>344 ft</height>
+    </structure>
+
+    <structure>
+        <age>2570 B.C.E.</age>
+        <name>Great Pyramid of Giza</name>
+        <location>modern-day Giza</location>
+        <country>Egypt</country>
+        <height>481 ft</height>
+    </structure>
+
+    <structure>
+        <age>1221 C.E.</age>
+        <name>Old St. Paul's Cathedral</name>
+        <location>London</location>
+        <country>England</country>
+        <height>489 ft</height>
+    </structure>
+
+    <structure>
+        <age>1311 C.E.</age>
+        <name>Lincoln Cathedral</name>
+        <location>Lincoln</location>
+        <country>England</country>
+        <height>524 ft</height>
+    </structure>
+
+    <structure>
+        <age>1848 C.E. </age>
+        <name>Washington Monument</name>
+        <location>Washington D.C.</location>
+        <country>United States</country>
+        <height>555 ft</height>
+    </structure>
+
+    <structure>
+        <age>1887 C.E. </age>
+        <name>Eiffel Tower</name>
+        <location>Paris</location>
+        <country>France</country>
+        <height>934 ft</height>
+    </structure>
+
+    <structure>
+        <age>1930 C.E. </age>
+        <name>Chrysler Building</name>
+        <location>New York City, NY.</location>
+        <country>United States</country>
+        <height>1,046 ft</height>
+    </structure>
+
+    <structure>
+        <age>1931 C.E. </age>
+        <name>Empire State Building</name>
+        <location>New York City, NY.</location>
+        <country>United States</country>
+        <height>1,250 ft</height>
+    </structure>
+
+    <structure>
+        <age>1963 C.E. </age>
+        <name>KVLY-TV Mast</name>
+        <location>Blanchard, ND.</location>
+        <country>United States</country>
+        <height>2,063 ft</height>
+    </structure>
+
+    <structure>
+        <age>2009 C.E. </age>
+        <name>Burj Khalifa</name>
+        <location>Dubai</location>
+        <country>United Arab Emirates</country>
+        <height>2,722 ft</height>
+    </structure>
+
+</timeline>

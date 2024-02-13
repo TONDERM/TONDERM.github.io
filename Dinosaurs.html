@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html>
+<style> 
+*{box-sizing: border-box;}
+
+@font-face
+{
+	font-family: CHNormal;
+	src: url(fonts/CALVINN.TTF);
+}
+
+@font-face
+{
+	font-family: hockey;
+  src: url(fonts/hockey.ttf);
+}
+
+@font-face
+{
+	font-family: Hangy;
+  src: url(fonts/Hangyaboly.ttf);
+}
+
+body
+{
+  font-family: hockey;
+  background-image: url("media_CH/DinoBG_Cut.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#CalvinTitle
+{
+  font-family: CHNormal;
+}
+
+nav {
+	height:auto;
+	background:lemonchiffon;
+  width:80%;
+  border: purple 1px solid;
+  
+
+  
+}
+nav a {
+    text-decoration:none;
+}
+
+nav ul
+{
+  margin-left: -4%;
+}
+
+nav ul li {
+	list-style:none;
+	border-bottom:black 2px solid;
+	border-right:black 2px solid;
+  width: 100%;
+
+}
+
+nav ul li a:hover, nav ul li a:active{
+	display:block;
+    background:greenyellow;
+    color:black;
+}
+section
+{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: visible;
+    width: 100%; 
+    margin: 1%;
+
+    /* justify-content: center; */
+}
+#sectionL
+{
+  width: 30%;
+  margin-left: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  background-color: hotpink;
+  float: left;
+}
+
+#sectionR
+{
+  width: 10%;
+  height: auto;
+  /* height: 800px; */
+  /* margin-left: 10%; */
+  margin-right: 1.0%;
+  
+  background-color: hotpink;
+  float: right;
+
+}
+
+#navR {
+	background:lemonchiffon;
+  width:100%;
+  border: purple 1px solid;
+
+  
+
+    /* padding:10px; */
+}
+
+#ulR
+{
+  margin-left: -20%;
+  
+  
+}
+
+img
+{
+	width:100%;
+}
+/* img span
+{
+	width:50px;
+} */
+
+span {
+  position: absolute;
+
+  /* font-family: hockey; */
+}
+
+.text-block {
+  position: absolute;
+
+  overflow: auto;
+  height: 53%;
+  bottom: 39%;
+  /* right: 20px; */
+  background-color: black;
+  color: white;
+  /* font-weight: bold; */
+  margin-left: 16%;
+  margin-right: 27%;
+  z-index: 10; 
+  font-size: 1em;
+  letter-spacing: 1px;
+  
+}
+
+figure 
+{  
+  width: 33.25%; 
+  /* background: linear-gradient(to bottom,rgba(255, 0, 0, 0) 0.8%, rgb(151, 180, 124) 0.9%, rgb(151, 180, 124) 98.5%, rgba(255, 0, 0, 0) 98.6%); */
+  /* background: linear-gradient(to bottom,rgba(255, 0, 0, 0) 0.8%, rgb(160, 180, 124) 0.9%, rgb(160, 180, 124) 98.5%, rgba(255, 0, 0, 0) 98.6%); */
+  background: linear-gradient(to bottom,rgba(255, 0, 0, 0) 0.8%, rgb(205, 209, 155) 0.9%, rgb(205, 209, 155) 98.5%, rgba(255, 0, 0, 0) 98.6%);
+  min-width: 300px;
+}
+
+
+
+h2
+{
+  font-family: hangy;
+  font-size: 1.5vw;
+  /* text-shadow: -1px 0 olivedrab, 0 1px olivedrab, 0 -1px olivedrab; */
+}
+
+.icon-menu 
+{
+    position: absolute;
+    width: 54%;
+
+    overflow: auto; 
+}
+
+.icon-menu a 
+{
+
+    float:right;
+    text-align: center;
+    margin-top: 1.2%;
+    margin-right: .5%;
+    width: 15%; 
+
+    /* transition: all 0.3s ease;  */
+    color: black; 
+    font-size: 35px; 
+    border: black 2px solid;
+    background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0.2%, rgba(255, 255, 255, 1) 0.3%, rgba(255, 255, 255, 1) 99.7%, rgba(255, 255, 255, 0) 99.8%);
+}
+
+.icon-menu a:hover 
+{
+
+    background:darkkhaki;
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 0 -2px black, 1.8px 1.8px black;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+.column
+{
+  float:left;
+  width: 25%;
+  margin-left: 1%;
+  margin-top: -1%;
+}
+/* .columnR
+{
+  float:right;
+  width: 25%;
+  margin-right: 25%;
+} */
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 150;
+  padding-top: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 62%;
+  /* max-width: 1200px; */
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* .mySlides {
+  display: none;
+} */
+
+.cursor {
+  cursor: pointer;
+  border: black 3px solid; 
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding-top: 1px ;
+  color: white;
+  font-size: 1.5vw;
+  margin-top: -2%;
+}
+
+.demo, .demo2, .demo3
+{
+  opacity: 0.6;
+}
+
+.active, .demo:hover, .demo2:hover, .demo3:hover
+{
+  opacity: 1;
+}
+
+#img:hover
+{
+  mix-blend-mode:multiply;
+  filter: grayscale() contrast(100%);
+  /* animation:grow 1.0s linear;
+  animation-iteration-count: 1;
+  animation-fill-mode:forwards; */
+}
+
+#up:hover
+{
+    animation: wobble 0.1s;
+    /* animation-duration: 0.4s; */
+    animation-fill-mode:forwards; 
+}
+
+#grow:hover
+{
+  animation: grow .1s;
+  animation-duration: .2s; 
+  animation-fill-mode:forwards;
+}
+@keyframes grow
+{
+  0% {transform:scale(1.0,1.0);}
+  100% {transform:scale(1.01,1.01);}
+}
+
+@keyframes up
+{
+  0% {transform:translateY(0px);}
+  /* 50% {transform:translateY(-5px);} */
+  100% {transform:translateY(-3px);}
+} 
+
+#colors
+{
+	/* text-shadow:1px 1px 1px grey;
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 2px;
+    border-radius: 8px; */
+  animation: rainbow 3s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes rainbow
+{
+    0%  {background-color: red;}
+    25% {background-color: yellow;}
+    50% {background-color: blue;}
+    75% {background-color:orange}
+    100% {background-color: green;}
+  }
+  .banner{
+    z-index: 15; 
+    width: 80%; 
+    border: black 4px solid; 
+    margin-bottom: 1%; 
+    margin-left: 10%; 
+    position: relative;
+  }
+
+  .bannerTitle{
+    font-family: CHNormal; 
+    font-size:6vw; 
+    color:white; 
+    text-shadow: -2px 0 black, 0 2px black, 0 -2px black, 3px 3px black; 
+    margin-left:17%; margin-top: 5%;
+  }
+
+  .hrTop
+  {
+    z-index: 1; 
+    height: 4px; 
+    margin-bottom: -0.2%;  
+    margin-left: -0.5%; 
+    margin-right: -0.4%; 
+    border-style: double; 
+    border: black 1px double; 
+    background-color: darkolivegreen; 
+    position: relative;
+  }
+
+  .hrBottom
+  {
+    z-index: 1; 
+    height: 4px; 
+    margin-top: -0.2%;  
+    margin-left: -0.5%;
+    margin-right: -0.4%; 
+    border-style: double; 
+    border: black 1px double; 
+    background-color: darkolivegreen; 
+    position: relative;
+  }
+
+  .hrBG
+  {
+    z-index: 1; 
+    margin-left: -0.5%; 
+    margin-right: -0.4%; 
+    padding-top: 19%; 
+    background-color:rgb(121, 141, 83); 
+    opacity: .6;
+  }
+
+  .hrAll
+  {
+    margin-top: -24%;
+    margin-bottom: 8%;
+    
+  }
+
+  .blurb{
+    z-index: 20; 
+    font-size: 1.3em; 
+    font-weight:900; 
+    width: 80%; 
+    margin-left: 10%; 
+    padding-left: 2%; 
+    padding-right: 1%; 
+    padding-top: 1%; 
+    padding-bottom: 1%; 
+    background-color:rgb(121, 141, 83); 
+    border: black 2px solid; 
+    position: relative;
+  }
+
+  .figOne{
+    margin-left: 0%;
+  }
+
+  .figTwo{
+    margin-left: -2%;
+  }
+
+  .figThree{
+    margin-left: -2%; 
+    margin-right: -3%;
+  }
+
+  .figTitle{
+    width: 100%;
+    text-align: center;
+    margin-left: 1%; 
+    margin-bottom: -1%; 
+    margin-right: 86.2%;
+    background: darkkhaki; 
+    border:black 2px solid; 
+    border-radius: 20px 20px 0px 0px;
+  }
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* For mobile phones: */
+@media only screen and (max-width: 430px) and (min-width:360px)
+{
+  .banner{
+    z-index: 15; 
+    width: 100%; 
+    border: black 3px solid; 
+    margin-bottom: 1%; 
+    margin-left: 0%; 
+    position: relative;
+  }
+
+  .bannerTitle{
+    text-align: center;
+    width: 100%;
+    font-family: CHNormal; 
+    font-size:8vw; 
+    color:white; 
+    text-shadow: -1px 0 black, 0 1px black, 0 -1px black, 2px 2px black; 
+    margin-left:0%; margin-top: 5%;
+  }
+
+  .hrTop
+  {
+    height: 0px; 
+    margin-top: 0%;  
+    margin-left: 0%; 
+    margin-right: 0%; 
+    border-style: none; 
+    border:none;  
+    background-color:#ffffff00;
+  }
+
+  .hrBottom
+  {
+    z-index: 1; 
+    height: 0px; 
+    margin-top: 0%;  
+    margin-left: 0%; 
+    margin-right: 0%; 
+    border-style: none; 
+    border:none;  
+    background-color:#ffffff00;
+  }
+
+  .hrBG
+  {
+    z-index: 1; 
+    margin-left: 0%; 
+    margin-right: 0%; 
+    padding-top: 0%; 
+    background-color:#ffffff00;
+
+  }
+
+  .hrAll
+  {
+    margin-top: 0%; 
+    margin-bottom: 0%;
+    
+  }
+
+  .blurb{
+    text-align: center;
+    z-index: 20; 
+    font-size: 1.3em; 
+    font-weight:900; 
+    width: 100%; 
+    margin-left: 0%; 
+    margin-bottom: 1%;
+    padding-left: 2%; 
+    padding-right: 1%; 
+    padding-top: 1%; 
+    padding-bottom: 1%; 
+    background-color:rgb(121, 141, 83); 
+    border: black 2px solid; 
+    position: relative;
+  }
+
+  .figOne{
+    min-width:100%;
+    margin-left: 0%;
+    margin-bottom: -5%;
+  }
+
+  .figTwo{
+    min-width:100%;
+    margin-left: 0%;
+    margin-bottom: -5%;
+  }
+
+  .figThree{
+    min-width:100%;
+    margin-left: 0%; 
+    margin-right: 0%;
+    margin-bottom: -1%;
+  }
+
+  .figTitle{
+    text-align: center;
+    width: 99%;
+    height: auto;
+    font-size: 5vw;
+    margin-left: .5%; 
+    margin-bottom: -5%; 
+    margin-right:0%;
+    padding-bottom: 3px;
+    padding-top: 2px;
+    background: darkkhaki; 
+    border:black 2px solid; 
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .cursor {
+  cursor: pointer;
+  border: black 2px solid; 
+  box-shadow: 0px 0px rgba(0, 0, 0, 0);
+ }
+
+ figure 
+  {  
+    background:rgba(0, 0, 0, 0);
+  }
+}
+</style>
+<head>
+<title>When Dinosaurs Roam</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <meta name="description" content="Dr Seuss quotes" />
+<meta name="keywords" content="quotations, Dr Seuss " /> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">	 -->
+<!-- <link rel="stylesheet" href="css/myscreen.css" media="all"/> -->
+<link rel="stylesheet" href="css/myprint.css" media="print"/>	
+</head>
+<body>
+    <section class="banner">    
+      <span class="bannerTitle">When Dinosaurs Roam</span>
+      <img alt="Snow" src="media_CH_Dinosaurs/DinoBannerGraphic.jpg">    
+    </section>
+
+    <div class="blurb">
+      Like Spaceman Spiff, Dinosaurs provide Calvin with another reality.  Depending on what he's daydreaming about, Calvin is either himself interacting or he's a Dinosaur. 
+      Of course he is an apex preditor when he imagines himself as one, usually the Calvinosaurus, which often provides a humurous juxtiposition of his imagination and reality. 
+      Calvin usually daydreams himself amoung Dinasaurs when he's at school or some other place he'd rather not be.  When out and about, he imagines himself as Calvinosaurus or 
+      some other apex preditor.  Hunting for prey that are usually his parents or Susie.  
+    </div>
+
+    <div class="hrAll">
+      <hr class="hrTop">
+      <div class="hrBG"></div>
+      <hr class="hrBottom">
+    </div>
+
+<!-- ---------------------- Dinosaur Schooling ----------------------- -->
+
+<!-- <h2 class="figTitle">Dinosaur Schooling</h2> -->
+    <section style="width: auto;">
+      <h2 class="figTitle">Dinosaur Schooling</h2>
+      <figure class="figOne" id="grow">
+        <img alt="Snow" src="media_CH_Dinosaurs/Dino_08.jpg" title="Click for larger image" onclick="openModal();currentSlide(1)" class="cursor" id="img">
+      </figure> 
+
+      <figure class="figTwo" id="grow"> 
+        <img alt="Snow" src="media_CH_Dinosaurs/Dino_06.jpg" title="Click for larger image" onclick="openModal();currentSlide(2)" class="cursor" id="img">
+      </figure>
+
+      <figure class="figThree" id="grow"> 
+        <img alt="Snow" src="media_CH_Dinosaurs/Dino_05.jpg" title="Click for larger image" onclick="openModal();currentSlide(3)" class="cursor" id="img">
+      </figure>
+  <!-- ------------------------------ modal ------------------------------ -->
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlides">
+            <img src="media_CH_Dinosaurs/Dino_08.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <img src="media_CH_Dinosaurs/Dino_06.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <img src="media_CH_Dinosaurs/Dino_05.jpg" style="width:100%">
+          </div>
+
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <div style="margin-left: 17%;">
+            <div class="column">
+              <img class="demo cursor" src="media_CH_Dinosaurs/Dino_08.jpg" style="width:100%" onclick="currentSlide(1)" alt="Playground Snack">
+            </div>
+
+            <div class="column">
+              <img class="demo cursor" src="media_CH_Dinosaurs/Dino_06.jpg" style="width:100%" onclick="currentSlide(2)" alt="Prehistoric Transportation">
+            </div>
+
+            <div class="column">
+              <img class="demo cursor" src="media_CH_Dinosaurs/Dino_05.jpg" style="width:100%" onclick="currentSlide(3)" alt="Attention Denied">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br>
+<!-- ---------------------- Dinosaur Parenting ----------------------- -->
+<!-- <h2 class="figTitle">Dinosaur Parenting</h2> -->
+    <section style="width: auto;">
+      <h2 class="figTitle">Dinosaur Parenting</h2>
+      <figure class="figOne" id="grow">
+        <img alt="Snow" src="media_CH_Dinosaurs/Dino_07.jpg" title="Click for larger image" onclick="openModal2();currentSlide2(1)" class="cursor" id="img">
+      </figure> 
+
+      <figure class="figTwo" id="grow"> 
+        <img alt="Snow" src="media_CH_Dinosaurs/Dino_02.jpg" title="Click for larger image" onclick="openModal2();currentSlide2(2)" class="cursor" id="img">
+      </figure>
+
+      <figure class="figThree" id="grow"> 
+        <img alt="Snow" src="media_CH_Dinosaurs/Dino_03.jpg" title="Click for larger image" onclick="openModal2();currentSlide2(3)" class="cursor" id="img">
+      </figure>
+  <!-- ------------------------------ modal ------------------------------ -->
+      <div id="myModal2" class="modal">
+        <span class="close cursor" onclick="closeModal2()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlides2">
+            <img src="media_CH_Dinosaurs/Dino_07.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides2">
+            <img src="media_CH_Dinosaurs/Dino_02.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides2">
+            <img src="media_CH_Dinosaurs/Dino_03.jpg" style="width:100%">
+          </div>
+
+          <div class="caption-container">
+            <p id="caption2"></p>
+          </div>
+
+          <div style="margin-left: 17%;">
+            <div class="column">
+              <img class="demo2 cursor" src="media_CH_Dinosaurs/Dino_07.jpg" style="width:100%" onclick="currentSlide2(1)" alt="Leg Chomp">
+            </div>
+            <div class="column">
+              <img class="demo2 cursor" src="media_CH_Dinosaurs/Dino_02.jpg" style="width:100%" onclick="currentSlide2(2)" alt="Manners">
+            </div>
+
+            <div class="column">
+              <img class="demo2 cursor" src="media_CH_Dinosaurs/Dino_03.jpg" style="width:100%" onclick="currentSlide2(3)" alt="Closet Dinasaur">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br>
+<!-- ---------------------- Dinosaur Play ----------------------- -->
+<!-- <h2 class="figTitle">Dinosaur Play</h2> -->
+    <section style="width: auto;">
+      <h2 class="figTitle">Dinosaur Play</h2>
+      
+      <figure class="figOne" id="grow">
+        <img alt="Snow" src="media_CH_Dinosaurs/Dino_01.jpg" title="Click for larger image" onclick="openModal3();currentSlide3(1)" class="cursor" id="img">
+      </figure> 
+
+      <figure class="figTwo" id="grow"> 
+        <img alt="Snow" src="media_CH_Dinosaurs/Dino_10.jpg" title="Click for larger image" onclick="openModal3();currentSlide3(2)" class="cursor" id="img">
+      </figure>
+
+      <figure class="figThree" id="grow"> 
+        <img alt="Snow" src="media_CH_Dinosaurs/Dino_04.jpg" title="Click for larger image" onclick="openModal3();currentSlide3(3)" class="cursor" id="img">
+      </figure>
+  <!-- ------------------------------ modal ------------------------------ -->
+      <div id="myModal3" class="modal">
+        <span class="close cursor" onclick="closeModal3()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlides3">
+            <img src="media_CH_Dinosaurs/Dino_01.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides3">
+            <img src="media_CH_Dinosaurs/Dino_10.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides3">
+            <img src="media_CH_Dinosaurs/Dino_04.jpg" style="width:100%">
+          </div>
+
+          <div class="caption-container">
+            <p id="caption3"></p>
+          </div>
+
+          <div style="margin-left: 17%;">
+            <div class="column">
+              <img class="demo3 cursor" src="media_CH_Dinosaurs/Dino_01.jpg" style="width:100%" onclick="currentSlide3(1)" alt="T-Rex pilot">
+            </div>
+            <div class="column">
+              <img class="demo3 cursor" src="media_CH_Dinosaurs/Dino_10.jpg" style="width:100%" onclick="currentSlide3(2)" alt="Search For the Calvinosaur">
+            </div>
+            <div class="column">
+              <img class="demo3 cursor" src="media_CH_Dinosaurs/Dino_04.jpg" style="width:100%" onclick="currentSlide3(3)" alt="Wrong Reality">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br>
+
+      <footer class="contact" style="z-index: 10; margin-left: 1%; margin-right: 1%; position: relative;">
+          <div class="icon-menu"> 
+
+              <a href="FavoritesPage_work.html" style="text-decoration: none; padding-top: .5%; padding-bottom: .3%;">Back </a>
+
+          </div>
+
+          <hr style= "height: 4px; margin-left: -1.5%; margin-right: -1.47%; border-style: double; background-color:darkolivegreen;">
+          <cite><small><br>
+            <br>
+            <br>  
+            </small></cite>
+          <hr style= "height: 4px; margin-left: -1.5%; margin-right: -1.47%; border-style: double; background-color: darkolivegreen;">
+
+          <p id="colors" style="letter-spacing: 1px; font-weight: bold; width: 5.15%; background-color: white; border: black 1px solid; border-radius: 10px; color: black; margin-top: -0.1%; padding-left: 10px; padding-top: 3px;">&copy;Mike Tonder</p>
+      </footer>
+
+      <div style="z-index: 1; background-image: url(media_CH_Dinosaurs/DinoBottomBanner.jpg); margin-top: -6.2%; margin-left: -0.5%; margin-right: -0.4%; padding-top: 3.8%;"></div>
+
+      <script>
+        // ----------------------------------------------------------[Dinosaur Schooling]-------------------------------------------------------------------------
+        function openModal() {
+          document.getElementById("myModal").style.display = "block";
+        }
+        
+        function closeModal() {
+          document.getElementById("myModal").style.display = "none";
+        }
+    
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) 
+        {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) 
+        {
+          showSlides(slideIndex = n);
+        }
+    
+        function showSlides(n) 
+        {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) 
+          {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) 
+          {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+    
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    
+        // ----------------------------------------------------------------[Dinosaur Parenting]-------------------------------------------------------------------------------
+        function openModal2() {
+          document.getElementById("myModal2").style.display = "block";
+        }
+        
+        function closeModal2() {
+          document.getElementById("myModal2").style.display = "none";
+        }
+        
+        function currentSlide2(n) 
+        {
+          showSlides2(slideIndex2 = n);
+        }
+        
+        function showSlides2(n) 
+        {
+          var i;
+          var slides2 = document.getElementsByClassName("mySlides2");
+          var dots2 = document.getElementsByClassName("demo2");
+          var captionText2 = document.getElementById("caption2");
+          if (n > slides2.length) {slideIndex2 = 1}
+          if (n < 1) {slideIndex2 = slides2.length}
+          for (i = 0; i < slides2.length; i++) 
+          {
+              slides2[i].style.display = "none";
+          }
+          for (i = 0; i < dots2.length; i++) 
+          {
+              dots2[i].className = dots2[i].className.replace(" active", "");
+          }
+    
+          slides2[slideIndex2-1].style.display = "block";
+          dots2[slideIndex2-1].className += " active";
+          captionText2.innerHTML = dots2[slideIndex2-1].alt;
+        }
+    
+        // ------------------------------------------------------------------[Dinosaur Play]--------------------------------------------------------------------------------
+        function openModal3() 
+        {
+          document.getElementById("myModal3").style.display = "block";
+        }
+        
+        function closeModal3() 
+        {
+          document.getElementById("myModal3").style.display = "none";
+        }
+        
+        function currentSlide3(n) 
+        {
+          showSlides3(slideIndex3 = n);
+        }
+        
+        function showSlides3(n) 
+        {
+          var i;
+          var slides3 = document.getElementsByClassName("mySlides3");
+          var dots3 = document.getElementsByClassName("demo3");
+          var captionText3 = document.getElementById("caption3");
+          if (n > slides3.length) {slideIndex3 = 1}
+          if (n < 1) {slideIndex3 = slides3.length}
+          for (i = 0; i < slides3.length; i++) 
+          {
+              slides3[i].style.display = "none";
+          }
+          for (i = 0; i < dots3.length; i++) 
+          {
+              dots3[i].className = dots3[i].className.replace(" active", "");
+          }
+    
+          slides3[slideIndex3-1].style.display = "block";
+          dots3[slideIndex3-1].className += " active";
+          captionText3.innerHTML = dots3[slideIndex3-1].alt;
+        }
+      </script>
+</body>
+</html>

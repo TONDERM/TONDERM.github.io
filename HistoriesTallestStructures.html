@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tall Structures of Histroy</title>
+</head>
+<style>
+@font-face {
+    font-family: tall;
+    src: url(fonts/Quando-Regular.ttf);
+}
+
+body
+{
+    background-image: url('media_WW2planesTallSP/tallBuildingBG.jpg');
+    background-repeat: no-repeat;
+    background-size: 1500px 900px;
+}
+
+div 
+{
+    background-color:sandybrown;
+    box-shadow: 2px 2px black;
+    border-radius: 10px;
+    opacity: .7;
+    padding: 10px 0px 10px 20px;
+    text-align: left;
+    width: 36%;
+    font-family: tall;
+    font-weight: 900;
+    font-size: 100%;
+    margin-left: 10%;
+}
+
+h2 
+{
+    font-family: tall;
+    text-shadow: 2px 2px rgba(255, 255, 255, 0.8);
+    color:black;
+    margin-left: 15%;
+    margin-bottom: .3%;
+}
+
+th 
+{
+    text-align: center;
+    border-top-style: double; 
+    border-bottom-style: double; 
+    border-bottom-color: white;
+    border-top-color: white;
+    color: white;
+    text-shadow: 2px 2px black;
+    padding: 10px 0px;
+    margin: 0px;
+}
+
+td 
+{
+    border-bottom: solid 1px black;
+    border-right: 1px black solid;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.alignCenter
+{
+    text-align: center;
+}
+
+button 
+{
+    border-radius: 20px;
+    padding: 10px;
+}
+</style>
+<body>
+<h2>The Tallest Structures Throughout History:</h2>
+
+<div id="structureInfo">
+    <button id="load">Histories Structures</button>
+</div>
+
+<script>
+var myCollection = document.getElementById("load");
+myCollection.addEventListener("click", function() {
+    var xhttp=new XMLHttpRequest();
+    xhttp.onreadystatechange=function() {
+        if (xhttp.readyState==4 && xhttp.status==200)
+            {
+                xmlDoc=xhttp.responseXML;
+                var txt="<table style='border:0'><tr><th>Age</th><th>Name</th><th>Country</th><th>Height</th>";
+                var a=xmlDoc.getElementsByTagName("age");
+                var n=xmlDoc.getElementsByTagName("name");
+                var c=xmlDoc.getElementsByTagName("country");
+                var h=xmlDoc.getElementsByTagName("height");
+                
+                for (var i=0;i<a.length;i++)
+                    {
+                        txt=txt + "<tr><td>";
+                        txt=txt + a[i].childNodes[0].nodeValue + "</td><td>";
+                        txt=txt + n[i].childNodes[0].nodeValue + "</td><td class='alignCenter'>";
+                        txt=txt + c[i].childNodes[0].nodeValue + "</td><td class='alignCenter'>";
+                        txt=txt + h[i].childNodes[0].nodeValue + "</td></tr>";
+                    }
+                txt = txt + "</table>";    
+                document.getElementById("structureInfo").innerHTML=txt;
+                document.getElementById("load").style.visibility='hidden';
+            }
+    }
+    xhttp.open("GET","tallestStructures.xml",true);
+    xhttp.send();
+});
+</script>
+</body>
+</html>

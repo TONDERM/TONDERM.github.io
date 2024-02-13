@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<style>
+@font-face 
+{
+  font-family: ww2;
+  src: url(fonts/texgyrepagella-regular.otf);
+}
+
+body
+{
+  font-family: ww2;
+  background-image:url(media_WW2planesTallSP/WW2_PlanesBG.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+<body>
+<div style="background-color:white;opacity:.8; width:50%;padding:1%;">
+<h1 style="color:darkorange; font-weight:900; text-decoration: underline;">Top 8 aircraft of World War II</h1>
+<p id="content"></p>
+</div>
+<script>
+var xhr = new XMLHttpRequest(); 
+xhr.onload = function() {                       
+  if(xhr.status === 200) {      
+    responseObject = JSON.parse(xhr.responseText);
+    var newContent = '';
+    for (var i = 0; i < responseObject.Top8aircraftofWW2.length; i++) {
+      newContent += '<p>Name: ' + responseObject.Top8aircraftofWW2[i].Name + '<br>';
+      newContent += 'Country: ' + responseObject.Top8aircraftofWW2[i].Country + '<br>';
+      newContent += 'First Flight: ' + responseObject.Top8aircraftofWW2[i].FirstFlight + '<br>';
+      newContent += 'Introduced: ' + responseObject.Top8aircraftofWW2[i].Introduced + '<br>';
+      newContent += 'Description: ' + responseObject.Top8aircraftofWW2[i].Description + '</p>';
+      newContent += '<hr>';
+    }
+
+    document.getElementById('content').innerHTML = newContent;
+  }
+};
+xhr.open('GET', 'TopWW2Planes.json', true);        
+xhr.send(null);        
+</script>
+</body>
+</html>

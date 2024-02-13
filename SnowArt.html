@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html>
+<style> 
+* {
+  box-sizing: border-box;
+}
+
+@font-face
+{
+	font-family: CHNormal;
+	src: url(fonts/CALVINN.TTF);
+}
+
+@font-face
+{
+	font-family: hockey;
+  src: url(fonts/hockey.ttf);
+}
+
+@font-face
+{
+	font-family: Hangy;
+  src: url(fonts/Hangyaboly.ttf);
+}
+
+body
+{
+  font-family: hockey;
+  background-image: url("media_CH/SnowArtBG_Cut.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section
+{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: visible;
+    width: 85.0%; 
+    margin: 1%;
+}
+
+img
+{
+	width:100%;
+}
+
+span {
+  position: absolute;
+}
+
+figure 
+{ 
+  background: linear-gradient(to bottom,rgba(255, 0, 0, 0) 0.2%, rgb(185, 247, 255) 0.3%, rgb(185, 247, 255) 97.5%, rgba(255, 0, 0, 0) 97.6%);
+ 
+  width: 47%;
+  min-width: 300px;
+}
+
+.banner{
+    z-index: 15;
+    width: 80%;
+    border: black 4px solid;
+    margin-bottom: 1%;
+    margin-left: 10%;
+    position: relative;
+  }
+
+  .bannerTitle{
+    font-family: CHNormal; 
+    font-size:6vw; 
+    margin-left:23%; 
+    margin-top: 5%; 
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.4);
+  }
+
+#img:hover
+{
+  mix-blend-mode:multiply;
+}
+
+
+h2
+{
+  font-family: hangy;
+  font-size: 1.5vw;
+  color: black;
+  text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 0 -1px whitesmoke;
+}
+
+.hrTop
+  {
+    z-index: 1;
+    height: 4px; 
+    margin-bottom: -0.2%;  
+    margin-left: -0.5%; 
+    margin-right: -0.4%; 
+    border-style: double; 
+    border: black 1px double; 
+    background-color:rgb(197, 144, 97); 
+    position: relative; 
+  }
+
+  .hrBottom
+  {
+    z-index: 1; 
+    height: 4px; 
+    margin-top: -0.2%;  
+    margin-left: -0.5%; 
+    margin-right: -0.4%; 
+    border-style: double; 
+    border: black 1px double;  
+    background-color:rgb(197, 144, 97); position: relative;
+  }
+
+  .hrBG
+  {
+    z-index: 1; 
+    margin-left: -0.5%; 
+    margin-right: -0.4%; 
+    padding-top: 19%; 
+    background-color:ghostwhite; 
+    opacity: .6;
+  }
+
+  .hrAll
+  {
+    margin-top: -25.2%; 
+    margin-bottom: 8%;
+  }
+
+  .blurb{
+    z-index: 20; 
+    font-size: 1.3em; 
+    font-weight:900; 
+    width: 80%; 
+    margin-left: 10%; 
+    padding-left: 2%; 
+    padding-right: 1%; 
+    padding-top: 1%; 
+    padding-bottom: 1%; 
+    background-color:whitesmoke; 
+    border: black 2px solid; 
+    position: relative;
+  }
+
+.macabre{
+  margin-left: 9.5%; 
+  margin-right: 75%; 
+  margin-bottom: -2%; 
+  padding-left: 20px; 
+  background: snow; 
+  border:black 2px solid; 
+  border-radius: 20px 20px 0px 0px;
+}
+
+.childhood{
+  margin-left: 9.5%; 
+  margin-bottom: -2%; 
+  margin-right: 79.2%; 
+  padding-left: 20px; 
+  background: snow; 
+  border:black 2px solid; 
+  border-radius: 20px 20px 0px 0px;
+}
+
+.vehicular{
+  margin-left: 9.5%; 
+  margin-bottom: -2%; 
+  margin-right: 71%; 
+  padding-left: 20px; 
+  background: snow; 
+  border:black 2px solid; 
+  border-radius: 20px 20px 0px 0px;
+}
+
+.misc{
+  margin-left: 9.5%; 
+  margin-bottom: -2%; 
+  margin-right: 78.5%; 
+  padding-left: 20px; 
+  background: snow;
+  border:black 2px solid; 
+  border-radius: 20px 20px 0px 0px;
+}
+
+.figOne{
+  margin-left: 0%;
+}
+
+.figTwo{
+  margin-left: -2%;
+}
+
+.sectFig{
+  margin-left: 9.5%;
+}
+
+.columnL
+{
+  float:left;
+  width: 25%;
+  margin-left: 25%;
+}
+.columnR
+{
+  float:right;
+  width: 25%;
+  margin-right: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 150;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  /* max-width: 1200px; */
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* .mySlides {
+  display: none;
+} */
+
+.cursor {
+  cursor: pointer;
+  border: black 3px solid; 
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo, .demo2, .demo3, .demo4
+{
+  opacity: 0.6;
+}
+
+.active, .demo:hover, .demo2:hover, .demo3:hover, .demo4:hover  
+{
+  opacity: 1;
+}
+
+/* -------------------------------------------------------------------------------- */
+.icon-menu 
+{
+  position: absolute;
+  width:100%; 
+}
+
+.icon-menu a 
+{
+  float:right;
+  text-align: center;
+  margin-top: 1.2%;   
+  margin-right: .5%;
+  width: 15%; 
+    /* transition: all 0.3s ease;  */
+  color: black; 
+  font-size: 35px; 
+  border: black 2px solid;
+  background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0.2%, rgba(255, 255, 255, 1) 0.3%, rgba(255, 255, 255, 1) 99.7%, rgba(255, 255, 255, 0) 99.8%);
+}
+
+.icon-menu a:hover 
+{
+  background:skyblue;
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 0 -2px black, 1.8px 1.8px black;
+}
+
+#grow:hover
+{
+  animation: grow .1s;
+  animation-duration: .2s; 
+  animation-fill-mode:forwards;
+}
+@keyframes grow
+{
+  0% {transform:scale(1.0,1.0);}
+  100% {transform:scale(1.01,1.01);}
+}
+
+#colors
+{
+
+  animation: rainbow 3s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes rainbow
+{
+    0%  {background-color: red;}
+    25% {background-color: yellow;}
+    50% {background-color: blue;}
+    75% {background-color:orange}
+    100% {background-color: green;}
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* For mobile phones: */
+@media only screen and (max-width: 430px) and (min-width:360px)
+{
+  /* body
+{
+  font-family: hockey;
+  background-image: url("media/SnowArtBG_Cut.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section
+{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: visible;
+    width: 85.0%; 
+    margin: 1%;
+}
+
+img
+{
+	width:100%;
+}
+
+span {
+  position: absolute;
+}
+
+figure 
+{ 
+  background: linear-gradient(to bottom,rgba(255, 0, 0, 0) 0.2%, rgb(185, 247, 255) 0.3%, rgb(185, 247, 255) 97.5%, rgba(255, 0, 0, 0) 97.6%);
+ 
+  width: 47%;
+  min-width: 300px;
+} */
+
+
+  body
+  {
+
+    font-family: hockey;
+    background-image: url("media_CH/SnowArtBG_mobile.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  section
+  {
+    display: flex;
+    flex-wrap: wrap;
+    overflow:visible;
+    align-self: center;
+  }
+
+  img
+  {
+    width:100%;
+    height: auto;
+  }
+
+  span {
+    position: absolute;
+  }
+
+  figure 
+  { 
+    background: rgba(0, 0, 0, 0);   
+    padding-left: 1%;
+  }
+
+  .banner{
+    z-index: 15;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: 0%;
+    border: black 3px solid;
+    margin-bottom: 1%;
+    position: relative;
+  }
+
+  .bannerTitle{
+    
+    font-family: CHNormal; 
+    font-size:6vw; 
+    margin-left:30%; 
+    margin-top: 5%; 
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+  }
+
+  .hrTop
+  {
+
+    height: 0px; 
+    margin-top: 0%;  
+    margin-left: 0%; 
+    margin-right: 0%; 
+    border-style: none; 
+    border:none;  
+    background-color:#ffffff00;
+  }
+
+  .hrBottom
+  {
+    z-index: 1; 
+    height: 0px; 
+    margin-top: 0%;  
+    margin-left: 0%; 
+    margin-right: 0%; 
+    border-style: none; 
+    border:none;  
+    background-color:#ffffff00;
+  }
+
+  .hrBG
+  {
+    z-index: 1; 
+    margin-left: 0%; 
+    margin-right: 0%; 
+    padding-top: 0%; 
+    background-color:#ffffff00;
+
+  }
+
+  .hrAll
+  {
+    margin-top: 0%; 
+    margin-bottom: 0%;
+    
+  }
+
+  .blurb{
+    z-index: 20; 
+    font-size: 1.3em; 
+    font-weight:900; 
+    text-align: center;
+    width: 100%; 
+    margin-left: 0%;
+    margin-top: 2%;
+    margin-bottom: 5%; 
+    padding-left: 2%; 
+    padding-right: 1%; 
+    padding-top: 1%; 
+    padding-bottom: 1%; 
+    background-color:whitesmoke; 
+    border: black 2px solid; 
+    position: relative;
+  }
+
+  .macabre{
+  width: max-content;
+  height: auto;
+  font-size: 5vw;
+  margin-left: 9.5%; 
+  margin-right: 50%; 
+  margin-bottom: -6%; 
+  padding-left: 20px;
+  padding-right: 20px; 
+  background: snow; 
+  border:black 2px solid; 
+  border-radius: 20px 20px 0px 0px;
+}
+
+.childhood{
+  width: max-content;
+  height: auto;
+  font-size: 5vw;
+  margin-left: 9.5%; 
+  margin-right: 50%; 
+  margin-bottom: -6%; 
+  padding-left: 20px;
+  padding-right: 20px; 
+  background: snow; 
+  border:black 2px solid; 
+  border-radius: 20px 20px 0px 0px;
+}
+
+.vehicular{
+  width: max-content;
+  height: auto;
+  font-size: 5vw;
+  margin-left: 9.5%; 
+  margin-right: 50%; 
+  margin-bottom: -6%; 
+  padding-left: 20px;
+  padding-right: 20px; 
+  background: snow; 
+  border:black 2px solid; 
+  border-radius: 20px 20px 0px 0px;
+}
+
+.misc{
+  width: max-content;
+  height: auto;
+  font-size: 5vw;
+  margin-left: 9.5%; 
+  margin-right: 50%; 
+  margin-bottom: -6%; 
+  padding-left: 20px;
+  padding-right: 20px; 
+  background: snow;
+  border:black 2px solid; 
+  border-radius: 20px 20px 0px 0px;
+}
+
+.figOne{
+  width: 100%;
+  margin-left: 0%;
+  margin-bottom: -3%;
+}
+
+.figTwo{
+  width: 100%;
+  margin-left: 0%;
+}
+
+.sectFig{
+  width: 100%;    /*----causes screen width overscan if over 100%----*/
+  margin-left: 0%;
+  margin-bottom: -2%;
+}
+
+figure > img{
+  min-width: 110%;
+}
+
+section > img{
+  background-image: url("media_CH_Snowmen/SnowBannerGraphic_Mobile.jpg");
+}
+
+.cursor {
+  cursor: pointer;
+  border: black 2px solid; 
+  box-shadow: 0px 0px rgba(0, 0, 0, 0);
+}
+/*------------------------------------------[for modal]-----------------------------------------------*/
+  .columnL
+  {
+    float:left;
+    width: 25%;
+    margin-left: 25%;
+  }
+
+  .columnR
+  {
+    float:right;
+    width: 25%;
+    margin-right: 25%;
+  }
+}
+/* ------------------------------------------------------------[pop-up window]------------------------------------------------------------- */
+
+</style>
+<head>
+<title>TheArtOfSnow</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <section class="banner">     
+    <span class="bannerTitle">The Art of Snow</span>
+    <img src="media_CH_Snowmen/SnowBannerGraphic.jpg" alt="Snow" > 
+  </section>
+
+  <div class="blurb">
+    Calvin's "snowmen" are probably my favorite part of the series.  While starting out some what simple, it has evolved into a very clear window into Calvin's mind.  
+    Most of these would be impossible to make in reality but for Calvin, it's just another day outside during winter.  Aside from the improbability of such creations 
+    (plus the fact there's never a shortage of snow), the strange thing is that his parents never react to the incredible skill, effort and imagination it takes for 
+    Calvin to create them. They react as if this is just another thing to put up with. If he put as much effort into school as he does his creations, he'd probably 
+    be a genius! 
+  </div>
+
+  <div class="hrAll">
+    <hr class="hrTop">
+    <div class="hrBG"></div>
+    <hr class="hrBottom">
+  </div>
+
+<!-- -------------------------------------------------------------[Portraying the Macarbe]----------------------------------------------------------------------------- -->
+<h2 class="macabre">Portraying the Macarbe</h2>
+<section class="sectFig">
+  <figure class="figOne" id="grow">
+    <img alt="Snow" src="media_CH_Snowmen/SM_HouseOfHorrors.jpg" title="Click for larger image" onclick="openModal4();currentSlide4(1)" class="cursor" id="img">
+  </figure> 
+
+  <figure class="figTwo" id="grow"> 
+    <img alt="Snow" src="media_CH_Snowmen/SM_Random_02.jpg" title="Click for larger image" onclick="openModal4();currentSlide4(2)" class="cursor" id="img">
+  </figure>
+</section>
+
+<div id="myModal4" class="modal">
+  <span class="close cursor" onclick="closeModal4()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides4">
+      <!-- <div class="numbertext">1 / 4</div> -->
+      <img src="media_CH_Snowmen/SM_HouseOfHorrors.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides4">
+      <!-- <div class="numbertext">2 / 4</div> -->
+      <img src="media_CH_Snowmen/SM_Random_02.jpg" style="width:100%">
+    </div>
+
+    <div class="caption-container">
+      <p id="caption4"></p>
+    </div>
+
+    <div class="columnL">
+      <img class="demo4 cursor" src="media_CH_Snowmen/SM_HouseOfHorrors.jpg" style="width:100%" onclick="currentSlide4(1)" alt="House of Horror">
+    </div>
+    <div class="columnR">
+      <img class="demo4 cursor" src="media_CH_Snowmen/SM_Random_02.jpg" style="width:100%" onclick="currentSlide4(2)" alt="Slowing Down Traffic">
+    </div>
+  </div>
+</div>
+</section>
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+  <br>
+
+<!-- -----------------------------------------------------------------[Childhood Woes]--------------------------------------------------------------------------------- -->
+<h2 class="childhood">Childhood Woes</h2>
+<section class="sectFig">
+  <figure class="figOne" id="grow">
+    <img alt="Snow" src="media_CH_Snowmen/SM_GrossDinner.jpg" title="Click for larger image" onclick="openModal3();currentSlide3(1)" class="cursor" id="img">
+  </figure> 
+
+  <figure class="figTwo" id="grow"> 
+    <img alt="Snow" src="media_CH_Snowmen/SM_Hmph.jpg" title="Click for larger image" onclick="openModal3();currentSlide3(2)" class="cursor" id="img">
+  </figure>
+</section>
+
+<div id="myModal3" class="modal">
+  <span class="close cursor" onclick="closeModal3()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides3">
+      <!-- <div class="numbertext">1 / 4</div> -->
+      <img src="media_CH_Snowmen/SM_GrossDinner.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides3">
+      <!-- <div class="numbertext">2 / 4</div> -->
+      <img src="media_CH_Snowmen/SM_Hmph.jpg" style="width:100%">
+    </div>
+
+    <div class="caption-container">
+      <p id="caption3"></p>
+    </div>
+
+    <div class="columnL">
+      <img class="demo3 cursor" src="media_CH_Snowmen/SM_GrossDinner.jpg" style="width:100%" onclick="currentSlide3(1)" alt="Tonights Dinner">
+    </div>
+    <div class="columnR">
+      <img class="demo3 cursor" src="media_CH_Snowmen/SM_Hmph.jpg" style="width:100%" onclick="currentSlide3(2)" alt="I Don't Want to Go Outside">
+    </div>
+  </div>
+</div>
+</section>
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+  <br>
+
+<!-- ----------------------------------------------------------[Matters of the Vehicular Kind]------------------------------------------------------------------------- -->
+  <h2 class="vehicular">Matters of the Vehicular Kind</h2>
+  <section class="sectFig">
+    <figure class="figOne" id="grow">
+      <img alt="Snow" src="media_CH_Snowmen/SM_SnowCarHit.jpg" title="Click for larger image" onclick="openModal();currentSlide(1)" class="cursor" id="img">
+    </figure> 
+
+    <figure class="figTwo" id="grow"> 
+      <img alt="Snow" src="media_CH_Snowmen/SM_Crossing.jpg" title="Click for larger image" onclick="openModal();currentSlide(2)" class="cursor" id="img">
+    </figure>
+  </section>
+
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+      <div class="mySlides">
+        <img src="media_CH_Snowmen/SM_SnowCarHit.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <img src="media_CH_Snowmen/SM_Crossing.jpg" style="width:100%">
+      </div>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <div class="columnL">
+        <img class="demo cursor" src="media_CH_Snowmen/SM_SnowCarHit.jpg" style="width:100%" onclick="currentSlide(1)" alt="Death by Car">
+      </div>
+      <div class="columnR">
+        <img class="demo cursor" src="media_CH_Snowmen/SM_Crossing.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snowman Crossing">
+      </div>
+    </div>
+  </div>
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+  <br>
+
+<!-- ----------------------------------------------------------------[The Miscellaneous]------------------------------------------------------------------------------- -->
+  <h2 class="misc">The Miscellaneous</h2>
+  <section class="sectFig">
+    <figure class="figOne" id="grow">
+      <img alt="Snow" src="media_CH_Snowmen/SM_AlienEating.jpg" title="Click for larger image" onclick="openModal2();currentSlide2(1)" class="cursor" id="img">
+    </figure> 
+
+    <figure class="figTwo" id="grow"> 
+      <img alt="Snow" src="media_CH_Snowmen/SM_HorizonHead.jpg" title="Click for larger image" onclick="openModal2();currentSlide2(2)" class="cursor" id="img">
+    </figure>
+  </section>
+
+  <div id="myModal2" class="modal">
+    <span class="close cursor" onclick="closeModal2()">&times;</span>
+    <div class="modal-content">
+
+      <div class="mySlides2">
+        <!-- <div class="numbertext">1 / 4</div> -->
+        <img src="media_CH_Snowmen/SM_AlienEating.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides2">
+        <!-- <div class="numbertext">2 / 4</div> -->
+        <img src="media_CH_Snowmen/SM_HorizonHead.jpg" style="width:100%">
+      </div>
+
+      <div class="caption-container">
+        <p id="caption2"></p>
+      </div>
+
+      <div class="columnL">
+        <img class="demo2 cursor" src="media_CH_Snowmen/SM_AlienEating.jpg" style="width:100%" onclick="currentSlide2(1)" alt="Monster Eating Snowmen">
+      </div>
+      <div class="columnR">
+        <img class="demo2 cursor" src="media_CH_Snowmen/SM_HorizonHead.jpg" style="width:100%" onclick="currentSlide2(2)" alt="Big Head on the Horizon">
+      </div>
+    </div>
+  </div>
+  </section>
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+  <br>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+  <footer class="contact" style="z-index: 10; margin-left: 1%; margin-right: 1%; position: relative;">
+    <div class="icon-menu"> 
+
+      <a href="FavoritesPage_work.html" style="text-decoration: none; width: fit-content; padding-left: 5%; padding-right: 5%; padding-top: .5%; padding-bottom: .3%;">Back </a>
+
+    </div>
+    <hr style= "height: 4px; margin-left: -1.5%; margin-right: -1.47%; border-style: double; background-color:rgb(197, 144, 97);">
+    <cite><small><br>
+      <br>
+      <br>  
+    </small></cite>
+    <hr style= "height: 4px; margin-left: -1.5%; margin-right: -1.47%; border-style: double; background-color: rgb(197, 144, 97);">
+      <p id="colors" style="letter-spacing: 1px; font-weight: bold; width: fit-content; background-color: white; border: black 1px solid; border-radius: 10px; color: black; margin-top: -0.1%; padding-left: 10px; padding-right: 10px; padding-top: 3px;">&copy;Mike Tonder</p>
+  </footer>
+
+ 
+
+  <div style="z-index: 1; background-image: url(media_CH_Snowmen/SnowBottomBanner.jpg); margin-top: -6.2%; margin-left: -0.5%; margin-right: -0.4%; padding-top: 3.8%;"></div>
+
+  <script>
+    // ----------------------------------------------------------[Matters of the Vehicular Kind]-------------------------------------------------------------------------
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+    
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) 
+    {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) 
+    {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) 
+    {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) 
+      {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) 
+      {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+
+    // ----------------------------------------------------------------[The Miscellaneous]-------------------------------------------------------------------------------
+    function openModal2() {
+      document.getElementById("myModal2").style.display = "block";
+    }
+    
+    function closeModal2() {
+      document.getElementById("myModal2").style.display = "none";
+    }
+    
+    function currentSlide2(n) 
+    {
+      showSlides2(slideIndex2 = n);
+    }
+    
+    function showSlides2(n) 
+    {
+      var i;
+      var slides2 = document.getElementsByClassName("mySlides2");
+      var dots2 = document.getElementsByClassName("demo2");
+      var captionText2 = document.getElementById("caption2");
+      if (n > slides2.length) {slideIndex2 = 1}
+      if (n < 1) {slideIndex2 = slides2.length}
+      for (i = 0; i < slides2.length; i++) 
+      {
+          slides2[i].style.display = "none";
+      }
+      for (i = 0; i < dots2.length; i++) 
+      {
+          dots2[i].className = dots2[i].className.replace(" active", "");
+      }
+
+      slides2[slideIndex2-1].style.display = "block";
+      dots2[slideIndex2-1].className += " active";
+      captionText2.innerHTML = dots2[slideIndex2-1].alt;
+    }
+
+    // ------------------------------------------------------------------[Childhood Woes]--------------------------------------------------------------------------------
+    function openModal3() 
+    {
+      document.getElementById("myModal3").style.display = "block";
+    }
+    
+    function closeModal3() 
+    {
+      document.getElementById("myModal3").style.display = "none";
+    }
+    
+    function currentSlide3(n) 
+    {
+      showSlides3(slideIndex3 = n);
+    }
+    
+    function showSlides3(n) 
+    {
+      var i;
+      var slides3 = document.getElementsByClassName("mySlides3");
+      var dots3 = document.getElementsByClassName("demo3");
+      var captionText3 = document.getElementById("caption3");
+      if (n > slides3.length) {slideIndex3 = 1}
+      if (n < 1) {slideIndex3 = slides3.length}
+      for (i = 0; i < slides3.length; i++) 
+      {
+          slides3[i].style.display = "none";
+      }
+      for (i = 0; i < dots3.length; i++) 
+      {
+          dots3[i].className = dots3[i].className.replace(" active", "");
+      }
+
+      slides3[slideIndex3-1].style.display = "block";
+      dots3[slideIndex3-1].className += " active";
+      captionText3.innerHTML = dots3[slideIndex3-1].alt;
+    }
+
+    // --------------------------------------------------------------[Portraying the Macarbe]----------------------------------------------------------------------------
+    function openModal4() 
+    {
+      document.getElementById("myModal4").style.display = "block";
+    }
+    
+    function closeModal4() 
+    {
+      document.getElementById("myModal4").style.display = "none";
+    }
+    
+    function currentSlide4(n) 
+    {
+      showSlides4(slideIndex4 = n);
+    }
+    
+    function showSlides4(n) 
+    {
+      var i;
+      var slides4 = document.getElementsByClassName("mySlides4");
+      var dots4 = document.getElementsByClassName("demo4");
+      var captionText4 = document.getElementById("caption4");
+      if (n > slides4.length) {slideIndex4 = 1}
+      if (n < 1) {slideIndex4 = slides4.length}
+      for (i = 0; i < slides4.length; i++) 
+      {
+          slides4[i].style.display = "none";
+      }
+      for (i = 0; i < dots4.length; i++) 
+      {
+          dots4[i].className = dots4[i].className.replace(" active", "");
+      }
+
+      slides4[slideIndex4-1].style.display = "block";
+      dots4[slideIndex4-1].className += " active";
+      captionText4.innerHTML = dots4[slideIndex4-1].alt;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hyrule in a Box</title>
+<link href="css/myAnimation.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+<article>
+<section>
+<div id ="container">
+<img alt="not zelda" src='media_MinishCap/Link_StillDown.gif' id ="link" />
+</div>
+</section>
+<section style="margin-top:10px; margin-left: 255px; padding-bottom:5px; height:140px; width: 300px;">
+<p style=" position:relative; text-align:center; margin-left: 0px; margin-top: 0px;">
+
+<button style="border-radius: 15px 15px 0px 0px" id="up" onclick="turnAround('u');">Move up </button><br>
+<button style="border-radius: 15px 0px 0px 15px" id="left" onclick="turnAround('l');">Move left</button>
+<button style="width: 60px;background-size: 60px 35px;" id="stop" onclick="clearInterval(turnLink);">Stop</button>
+<button style="border-radius: 0px 15px 15px 0px" id="right" onclick="turnAround('r');">Move right</button><br>
+<button style="border-radius: 0px 0px 15px 15px" id="down" onclick="turnAround('d');">Move down</button><br>
+</p>
+</section>
+<section style=" width: 100px; height: auto;">
+<p >
+<button style="position:absolute; margin-left:570px; margin-top: -116px;" id="rock" onclick="turnAround('p');">Dance!</button>
+</p>
+</section>
+<hr style="height: 2px; border-style: double; border-color: black; background-color: black">  
+
+<footer style="background-color: palegreen;">
+        
+  <hr style="height: 3px; border-style: double; border-color: black; background-color:limegreen;">         
+  <cite style="padding-left: 10px;"><small>sources<br>
+  <a style="padding-left: 10px;" href="https://www.spriters-resource.com/game_boy_advance/thelegendofzeldatheminishcap/sheet/6554/"target="_blank">Environment Sprites</a><br>
+  <a style="padding-left: 10px;" href="https://www.freepngimg.com/png/83118-art-sprite-2d-unity-computer-graphics-grass"target="_blank">Link Animation Sheet</a><br>
+  <span style="padding-left: 10px;">Link and The Legend of Zelda are trademarks of Nintendo.</span>
+  </small></cite>
+  <hr style="height: 3px; border-style: double; border-color: black; background-color: limegreen;">
+       
+</footer>
+<p style="background-color: rgba(255, 255, 255, 0); color: white; text-align: center;">&copy;Mike Tonder</p> 
+
+<div id="coords" style="background-color: rgba(205, 134, 63, 0.80); height: auto; border: 2px black solid;">
+<p style="text-shadow: 1px 1px black; margin: 5px;"> X Coordinate:<input type="text" id="xCoord" /><br> 
+ Y Coordinate:<input type="text" id="yCoord" /></p>
+ </div>
+ </article>
+ <script src="js/myAnimation.js"></script>
+
+</body>
+</html>
