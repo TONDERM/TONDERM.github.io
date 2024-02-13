@@ -1,0 +1,66 @@
+body
+{
+	display: flex;
+  background-color:sienna;
+	align-content: center;
+
+}
+
+#container 
+{
+  width: 100px;
+  height: 100px;
+}
+
+#link 
+{
+  width: 45px;
+  height: 60px;
+  position: relative;
+  background-color: none;
+}
+
+p
+{
+  color:white;
+}
+
+input
+{
+	text-align:center;
+}
+
+#coords
+{
+	position:absolute;
+	left:580px;
+	top:20px;
+}
+
+section
+{
+	width:900px;
+	height:609px;
+}
+
+button
+{
+	margin-top: 5px;
+	width:100px;
+	height: 35px;
+	padding:10px;
+	color:white;
+	text-shadow: 1px 1px black;
+	box-shadow: 1px 1px black;
+	background-image:url('../media_MinishCap/ButtonBG.jpg');
+	background-size: 100px 35px;
+}
+
+article
+{	
+	align-content: center;
+	border: black 3px solid;
+  background-image:url('../media_MinishCap/ZeldaArea.jpg');
+  background-repeat:no-repeat;
+  background-size:900px 780px;
+}

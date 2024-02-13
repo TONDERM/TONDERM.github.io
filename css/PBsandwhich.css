@@ -1,0 +1,11 @@
+@import url(https://db.onlinewebfonts.com/c/7331967d95384e6ed32d24d8cc20499e?family=Geometric+Slabserif+703); 
+
+@font-face
+{
+    font-family: "Geometric Slabserif 703"; src: url("//db.onlinewebfonts.com/t/7331967d95384e6ed32d24d8cc20499e.eot"); 
+    src: url("//db.onlinewebfonts.com/t/7331967d95384e6ed32d24d8cc20499e.eot?#iefix") format("embedded-opentype"), 
+    url("//db.onlinewebfonts.com/t/7331967d95384e6ed32d24d8cc20499e.woff2") format("woff2"), 
+    url("//db.onlinewebfonts.com/t/7331967d95384e6ed32d24d8cc20499e.woff") format("woff"), 
+    url("//db.onlinewebfonts.com/t/7331967d95384e6ed32d24d8cc20499e.ttf") format("truetype"), 
+    url("//db.onlinewebfonts.com/t/7331967d95384e6ed32d24d8cc20499e.svg#Geometric Slabserif 703") format("svg");
+}

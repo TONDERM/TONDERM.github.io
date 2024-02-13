@@ -1,0 +1,101 @@
+*{
+    background: white;
+    text-shadow:none;
+    font-weight:normal;
+    font-size: 15pt;
+}
+
+script  {
+    display:none;
+}
+
+article
+{
+    display:block;
+    height: 50%;
+    width: auto;
+    margin: -2%;
+    padding: none;
+}
+
+footer
+{
+    display: none;
+}
+
+img
+{
+    display: none;
+}
+
+.icon-menu
+{
+    display: none;
+}
+
+/* --------------------------------------------[Main Page]--------------------------------------------- */
+
+#bottomMain
+{
+    display: none;
+}
+
+#hamburger
+{
+    display: none;
+}
+
+
+/* --------------------------------------------[The Start Page]--------------------------------------------- */
+
+#sectionL
+{
+  width: 90%;
+  margin-top: none;
+  margin-bottom: none;
+  margin-left: 3.5%;
+  border: none;
+}
+
+#sectionR
+{
+  width: 90%;
+  margin-top: none;
+  margin-bottom: none;
+  margin-left: 3.5%;
+  border: none;
+}
+
+/* --------------------------------------------[Favorites Page]--------------------------------------------- */
+
+.collection
+{
+    position:static;
+    font-size: 15pt;
+    margin-top: 1%;
+    margin-bottom: 0.1%;
+    margin-left: 67.6%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;  
+}
+
+/* --------------------------------------------[Watterson Page]--------------------------------------------- */
+
+#sectionA
+{
+    border: none;
+    width:100%;
+    margin: none;
+    padding: none;
+}
+
+#sectionB
+{
+    border: none;
+    width: 100%;
+    margin: none;
+    padding: none;
+}
+/* -------------------------------------------------------------------------------------------------------- */
+

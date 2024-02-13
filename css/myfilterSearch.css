@@ -1,0 +1,123 @@
+﻿/* @import url(http://fonts.googleapis.com/css?family=Karla:400,700); */
+
+
+
+body {
+	margin: 0;
+	padding: 0;
+	background-image:url('../media_BuildGameImages/BG_01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-attachment: fixed;
+
+	font-family: 'Karla', sans-serif;
+}
+
+/* Header */
+header {
+	background-color: rgba(2, 0, 24, 0.8);
+	border-top: green 4px solid;
+	border-bottom: green 4px solid;
+	/* rgb(35, 68, 216)  */
+	margin: 10px 0 40px 0;
+	
+	padding: 10px;
+	text-align: center;
+}
+
+#version {
+	color:white;
+	padding-top: 9px;
+	padding-bottom: 3px;
+	border-top: 1px solid green;
+	border-bottom: 1px solid green;
+	margin-top: 3%;
+	margin-bottom: 1%;
+	/* background-color: rgba(2, 0, 24); */
+	background-color: rgba(2, 0, 24);
+}
+
+h1 {
+  color:azure; 
+
+  /* text-shadow: -0.1px 0 4px rgb(35, 68, 216, 0.5), 0 0.1px 4px rgb(35, 68, 216, 0.5); */
+  margin: 10px auto 5px auto;
+  text-align: center;
+  overflow: hidden;}
+
+h2 {
+	margin: 0;
+	color:azure;
+}
+/* Filter and search options */
+/* Filter buttons */
+div{
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	margin-top:20px;
+}
+
+.filterRow
+{
+	max-width:1150px;
+	height: auto;
+}
+
+button {
+	background-color:azure;
+	border: none;
+	margin: .5%;
+	padding: 3px 10px 2px 10px;
+	margin-right:10px;
+	border-radius: 10px;
+	box-shadow:1px 1px black;
+	color: black;
+	font-family: buttons;
+	font-size: 100%;
+	
+}
+
+button:hover, button.active {
+	background-color: black;
+	color: white;
+	box-shadow:1px 1px darkgray;
+	cursor: pointer;
+}
+
+/* Gallery of images */
+#gallery {
+    
+    position: relative;
+	background-color: rgba(2, 0, 24, 0.8);
+	width: 90%;
+	max-width:1800px;
+	/* min-width: 430px; */
+	border:darkgreen solid;
+	
+	border-radius: 10px;
+	text-align: center;
+}
+
+/* img {
+	max-width: 400px;
+	min-width: 240px;
+	height: auto;
+	border-radius: 1px;
+	border: 2px solid rgba(255, 255, 255, 0.8);
+	margin: 3px;
+    box-shadow: 0 0 3px 1px rgb(14, 50, 128);
+} */
+
+/* video{
+	width: 410px; 
+	height:230px; 
+	border: 1px solid rgb(35, 68, 216, 0.8);
+	border-radius: 1px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 15px;
+	box-shadow: 0 0 4px 2px rgb(14, 50, 128);
+} */
+
+	

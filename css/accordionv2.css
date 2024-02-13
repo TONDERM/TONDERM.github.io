@@ -1,0 +1,61 @@
+﻿@font-face {
+  font-family: fancy;
+  src: url("../BRADHITC.TTF");
+}
+
+body
+{
+  font-family: fancy;
+  background-image: url("../media_FaerieConsole/MainBG.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+img
+{
+  width: 100%;
+  height: auto;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+ }
+ button {
+  border: none;
+ }
+.accordion{
+  font-family: fancy;
+  background-color: #5d693f;
+  border: rgb(0, 0, 0) 3px solid;
+  border-style: double;
+  margin: 0;
+  padding: 0;
+  overflow: auto;}
+
+.accordion-control {
+  font-family: fancy;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #242c1a;
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 0.5em 0.5em 0.5em 0.7em;
+  margin: 0;
+  border-top: 1px solid rgb(94, 116, 60);
+  width:100%;
+ }
+.accordion-panel {
+  display: none;
+  }
+h1{
+	text-align:center;
+  background-image:radial-gradient(farthest-corner at 50% 90%, rgba(196, 204, 86, .5),rgba(196, 204, 86, 0.4),rgba(196, 204, 86, 0.0), rgba(196, 204, 86, 0.0));
+  border-bottom: #242c1a 1px solid;
+}
+p{
+	text-align:center;
+}

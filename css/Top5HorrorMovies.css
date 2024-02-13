@@ -1,0 +1,184 @@
+@font-face
+{
+  font-family: scream;
+  src: url(../fonts/Another\ Scream.ttf);
+}
+
+@font-face
+{
+  font-family: ghoster;
+  src: url(../fonts/Spooky\ Ghoster.ttf);
+}
+
+@font-face
+{
+  font-family: gruesome;
+  src: url(../fonts/Gruesome.ttf);
+}
+
+body
+{
+  /* display: flex;
+  position: relative;
+  justify-content: center; */
+  letter-spacing: 2px;
+  font-weight: 100;
+  font-family: scream;
+  /* text-align: center; */
+  background-image: url('../media_Top5Horror/horrorBG_01.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  width: 99%;
+}
+
+main
+{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  /* letter-spacing: 2px;
+  font-weight: 100;
+  font-family: scream; */
+  text-align: center;
+}
+
+section 
+{
+  margin-top: 50px;
+  border-radius: 0px;
+  box-shadow: 2px 2px black;
+  border: rgb(71, 0, 0) 3px double;
+  height: auto;
+  background-image: url('../media_Top5Horror/oldBG_02.png');
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+label 
+{
+  font-weight: 900;
+  font-size: 120%;
+}
+
+#counter 
+{
+  font-family: gruesome;
+  background-image: url('../media_Top5Horror/addButtonBG.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50px;
+  border: 1px black double;
+  color: darkred;
+  padding-bottom: 0px;
+  padding-top: 3px;
+  padding-left: 7px;
+  padding-right: 5px;
+  font-size: 30px;
+  margin-bottom:-5%;
+  margin-right: 10px;
+}
+
+p
+{
+  font-family: ghoster;
+  font-size: 20px; 
+  text-shadow: 2PX 2px black;
+  color: beige;
+}
+
+div
+{
+  z-index: 100;
+  border: black 2px solid;
+  background-image: url('../media_Top5Horror/oldBG_01.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 280px;
+  height: 90px;
+  margin-bottom: 15px;
+  margin-top: 5%;
+  margin-left: 77px;
+}
+
+h1 
+{
+  text-align: center;
+  margin-top: -11%;
+  margin-bottom: -4%;
+  font-family: ghoster;
+  font-size: 50px;
+  color:darkred;
+  text-shadow: 1px 1px black;
+}
+
+h2 
+{
+  text-align: center;
+  margin-top: 1%;
+  font-family: gruesome;
+  font-size: 30px;
+}
+
+form
+{
+  background-image: url('../media_Top5Horror/listBanner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 10px;
+}
+
+
+ol 
+{
+  display: inline-block;
+  cursor: move;
+  text-align: center;
+  border-left: 3px darkred solid;
+  padding-left: 40px;
+  width: 300px;
+  max-width: 100%;
+  background-color:beige;
+}
+
+li 
+{
+  background-image: url('../media_Top5Horror/oldBG_04.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px black solid;
+  font-family: gruesome;
+  color:rgba(0, 0, 0, 0.7);
+  font-size: 130%;
+  padding-left: 5px;
+}
+
+li:first-child 
+{
+  font-family: gruesome;
+  font-size: 160%;
+  padding-left: 5px;
+  color: black;
+  background-image: url('../media_Top5Horror/listNumBG.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+input[type='submit'] 
+{
+  font-family: scream;
+  font-size: 20px;
+  background-image: url('../media_Top5Horror/addButtonBG.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 0;
+  color: black;
+  padding-top: 13px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 0px;
+}
