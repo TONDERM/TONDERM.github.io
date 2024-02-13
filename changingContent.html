@@ -363,7 +363,7 @@ h1
 // ----------------------------------------------------------------------------------------------------------------
     function fontQuotes()
     {
-      var random=Math.floor(Math.random()* 4)+1;
+      var random=Math.floor(Math.random()* 7)+1;
       var newFont="";
 
       switch(random)
@@ -379,6 +379,15 @@ h1
           break;
         case 4:
         newFont="rye"
+          break;
+        case 5:
+        newFont="simpsons"
+          break;
+        case 6:
+        newFont="monster"
+          break;
+        case 7:
+        newFont="dimbo"
           break;
       }
       document.getElementById("quoteBox").style.fontFamily = newFont;  
