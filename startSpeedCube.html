@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<style>
+body
+{
+
+    background-color: black;
+}
+section
+{
+    margin-left: 17.5%;
+    margin-top: 4.40%;
+    border: 5px white ; border-style: double;
+    background-image: url("media_SpeedCube/startScreen_01.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1216px;
+    height: 768px;
+}
+</style>
+<body>
+    <section>
+        <button class="inputButton" style="width: 150px; height: 60px; margin-top:450px; margin-left: 533px;" type="button" onclick="PlayCube();">Play</button>
+        <button class="inputButton" style="width: 150px; height: 60px; margin-top:5px; margin-left: 533px;" type="button" onclick="HowToPlay();">How to Play</button>
+        <button class="inputButton" style="width: 150px; height: 60px; margin-top:5px; margin-left: 533px;" type="button" onclick="GoBack();">Back</button>
+    </section>
+    <script>
+    function PlayCube()
+    {
+        window.location.href = 'GameSpeedCube.html';
+        
+    }
+
+    function HowToPlay()
+    {
+        window.location.href = 'howtoplaySpeedCube.html';
+        
+    }
+    function GoBack()
+    {
+        window.location.href = '../GameAmazingCollection.html';
+    }
+    </script>  
+</body>
+</html>
