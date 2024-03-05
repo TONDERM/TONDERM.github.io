@@ -12,7 +12,11 @@
 	font-family: test;
 	src: url(fonts/Steamy.otf);
 }
-
+@font-face
+{
+	font-family: test3;
+	src: url(fonts/Quando-Regular.ttf);
+}
 body {
   margin: 0;
   font-family: Arial;
@@ -94,7 +98,16 @@ header{
 }
 
 article{
-    display: flex;  justify-content: center; color:rgb(24, 44, 75); top: 115px; position: absolute; z-index: -1;    
+    width: 100%;
+    display: flex; 
+    justify-content: center; 
+    color:rgb(24, 44, 75); 
+    top: 115px; 
+    position: absolute; 
+    z-index: -1; 
+    font-family: test3;
+    font-size: .8em;
+ 
 }
 
 /*-------------------------------------------------------------------------------------------------------------*/
@@ -105,17 +118,13 @@ article{
     }
 
     article{
-    display: flex;  justify-content: center; color:rgb(24, 44, 75); top: 90px; position: absolute; z-index: -1;    
+    top: 90px; position: absolute; z-index: -1;
 }
 }
 @media only screen and (max-width: 614px){
     header{
         font-family: test; font-size:3em; font-weight: 100; color: rgb(24, 44, 75);text-align:center; position: fixed; width: 100%; background-color: aliceblue;
     }
-
-    article{
-    display: flex;  justify-content: center; color:rgb(24, 44, 75); top: 90px; position: absolute; z-index: -1;    
-}
 }
 @media screen and (max-width: 500px) {
   .topnav a:not(:first-child) {display: none;}
@@ -156,214 +165,221 @@ article{
 </header>
 
 <article>
-<div style="background-color: rgb(112, 168, 170, 0.1); width: 44%; height: auto; text-align: center; padding-top: 10px; padding-bottom: 10px; border-left: 2px solid rgb(24, 44, 75);
-            border-right: 2px solid rgb(24, 44, 75); min-width: 500px;">
-    <h1 style="margin-bottom: -1.3%;">Mike Tonder</h1>
-    <p style="margin-bottom: 2%;">(231)-499-8344  -  mtonder@yahoo.com</p>
-     
-    <!-- <span>3183 Silver Farms Lane, Traverse City, MI 49684  -  (231) 499-8344  -  mtonder@yahoo.com</span><br>          -->
-    <section style="padding: 3px; border: 0px solid black; border-radius: 5px; background-color:rgb(204, 215, 231); margin: 1%;">
-        <h3 style="margin-bottom: -.5%; margin-top: 1%; background-color: rgb(224, 232, 243);">- 2020 to 2024 -</h3>
+    <div style="background-color: rgb(112, 168, 170, 0.1); width: 44%; height: auto; text-align: center; padding-top: 10px; padding-bottom: 10px; border-left: 2px solid rgb(24, 44, 75);
+                border-right: 2px solid rgb(24, 44, 75); min-width: 500px;">
+        <h1 style="margin-bottom: -1.3%;">Mike Tonder</h1>
+        <p style="margin-bottom: 2%;">(231)-499-8344  -  mtonder@yahoo.com</p>
+        
+        <!-- <span>3183 Silver Farms Lane, Traverse City, MI 49684  -  (231) 499-8344  -  mtonder@yahoo.com</span><br>          -->
+        <section style="padding: 3px; border: 0px solid black; border-radius: 5px; background-color:rgb(204, 215, 231); margin: 1%;">
+            <h3 style="margin-bottom: -.5%; margin-top: 1%; background-color: rgb(224, 232, 243);">- 2020 to 2024 -</h3>
 
-        <h4>Northwestern Michigan College</h4>
-        <div style="display: flex; justify-content: center; margin-top: -4%;"> 
-            <p style="text-align: left;">
-                2 years IT Infrastructure 
-                <br> 
-                2 years Web Development
+            <h4>Northwestern Michigan College</h4>
+            <div style="display: flex; justify-content: center; margin-top: -4%;"> 
+                <p style="text-align: left;">
+                    2 years IT Infrastructure 
+                    <br> 
+                    2 years Web Development
+                </p>
+            </div>
+            <a href="https://antrimcountybridgeclub.com/" target="blank">Antrim County Bridge Club.</a> 
+            <p style="margin-left: 2%; margin-right: 2%;">
+                This is my Capstone project.  I worked with two other students to build a site to the clients specifications.  I handled all the front-end responsabilities 
+                as well helping with some back-end duties. One teammate focused with the back-end while the other acted as a generalist (helping with both the front-end or back-end).
             </p>
-        </div>
-        <a href="https://antrimcountybridgeclub.com/" target="blank">Antrim County Bridge Club.</a> 
-        <p style="margin-left: 2%; margin-right: 2%;">
-            This is my Capstone project.  I worked with two other students to build a site to the clients specifications.  I handled all the front-end responsabilities 
-            as well helping with some back-end duties. One teammate focused with the back-end while the other acted as a generalist (helping with both the front-end or back-end).
-        </p>
-        <a href="Capstone Project Notebook.pdf" target="blank">Capstone Project Notebook</a>
-        <p>PDF Notebook detailing the work, progression and design layouts for the project.</p>       
- 
-    </section>     
-    <section class="row" style="padding: 3px; border-radius: 5px; border: 0px solid black; background-color:rgb(204, 215, 231); margin: 1%;">
-        <h1 style="margin-bottom: 1%; margin-top: 1%; background-color: rgb(224, 232, 243);">Previous Work Experience and Education</h1>
-        <h4 style="margin-bottom: 1%;">Environment / 3D Artist</h4> 
-        <span>Experienced 3D artist, passionate about gaming, creating and expanding my skillset.</span>
-        <br> 
-        <h5 style="margin-bottom: 1%;">Key Areas of Knowledge, Skills & Training:</h5> 
-        <div class="column" style="padding: 3px; border: 0px solid black; text-align: left;">
-            
-            <li>Maya</li> 
-            <li>3D modeling</li>                                                  
-            <li>Finding Solutions</li>  
-            <li>Photoshop</li>
-        </div> 
-        <div class="column" style="padding: 3px; border: 0px solid black; text-align: left;">
-            <li>Texturing</li>  	                                         
-            <li>Adapting to New Situations</li>        
-            <li>Unity</li>                                                   
-            <li>Lighting</li>
-        </div>
-        <div class="column" style="padding: 3px; border: 0px solid black; text-align: left; margin-bottom: 20px;">
-            <li>Reliable Under Pressure</li>  
-            <li>JavaScript</li>                                           
-            <li>Team player</li>                                                   
-            <li>Effective Communication Skills</li> 	
-        </div>
-        <hr>   	
-        <h3 style="margin-bottom: -.5%; background-color: rgb(224, 232, 243);">- 2015 to 2019 -</h3>
-        
-        <h4 style="margin-bottom: -1.3%;">TONE RED STUDIOS, Traverse City, MI</h4>  
-        <h4>Founder, Lead Game Developer - Developing 3D games from the ground up.</h4>
-        
-        <p style="margin-left: 2%; margin-right: 2%;">Continuation of developing 3D environments, creating layout and level design as well as refining gameplay elements for multiple game concepts.</p>
+            <a href="Capstone Project Notebook.pdf" target="blank">Capstone Project Notebook</a>
+            <p>PDF Notebook detailing the work, progression and design layouts for the project.</p>       
     
-        <a href="#Nothing">Demo Reel Long</a><br>
-        <a href="#Nothing">Demo Reel 2019 Quick Stills</a><br>
-        <a href="#Nothing">Demo Reel Journey</a><br>
-        <a href="#Nothing">Demo Reel Castle</a><br>
-        <hr>
-        <div style="padding: 3px; border: 0px solid black;">
-            <h3 style="margin-bottom: -.5%;  margin-top: 1%; background-color: rgb(224, 232, 243);">- 2012 to 2015 -</h3>
+        </section>     
+        <section class="row" style="padding: 3px; border-radius: 5px; border: 0px solid black; background-color:rgb(204, 215, 231); margin: 1%;">
+            <h1 style="margin-bottom: 1%; margin-top: 1%; background-color: rgb(224, 232, 243);">Previous Work Experience and Education</h1>
+            <h4 style="margin-bottom: 1%;">Environment / 3D Artist</h4> 
+            <span>Experienced 3D artist, passionate about gaming, creating and expanding my skillset.</span>
+            <br> 
+            <h5 style="margin-bottom: 1%;">Key Areas of Knowledge, Skills & Training:</h5> 
+            <div class="column" style="padding: 3px; border: 0px solid black; text-align: left;">
+                
+                <li>Maya</li> 
+                <li>3D modeling</li>                                                  
+                <li>Finding Solutions</li>  
+                <li>Photoshop</li>
+            </div> 
+            <div class="column" style="padding: 3px; border: 0px solid black; text-align: left;">
+                <li>Texturing</li>  	                                         
+                <li>Adapting to New Situations</li>        
+                <li>Unity</li>                                                   
+                <li>Lighting</li>
+            </div>
+            <div class="column" style="padding: 3px; border: 0px solid black; text-align: left; margin-bottom: 20px;">
+                <li>Reliable Under Pressure</li>  
+                <li>JavaScript</li>                                           
+                <li>Team player</li>                                                   
+                <li>Effective Communication Skills</li> 	
+            </div>
+            <hr>   	
+            <h3 style="margin-bottom: -.5%; background-color: rgb(224, 232, 243);">- 2015 to 2019 -</h3>
+            
+            <h4 style="margin-bottom: -1.3%;">TONE RED STUDIOS, Traverse City, MI</h4>  
+            <h4>Founder, Lead Game Developer - Developing 3D games from the ground up.</h4>
+            
+            <p style="margin-left: 2%; margin-right: 2%;">Continuation of developing 3D environments, creating layout and level design as well as refining gameplay elements for multiple game concepts.</p>
+        
+            <a href="#Nothing">Demo Reel Long</a><br>
+            <a href="#Nothing">Demo Reel 2019 Quick Stills</a><br>
+            <a href="#Nothing">Demo Reel Journey</a><br>
+            <a href="#Nothing">Demo Reel Castle</a><br>
+            <hr>
+            <div style="padding: 3px; border: 0px solid black;">
+                <h3 style="margin-bottom: -.5%;  margin-top: 1%; background-color: rgb(224, 232, 243);">- 2012 to 2015 -</h3>
 
-            <p style="margin-left: 2%; margin-right: 2%;">Developing 3D environments, animations, layouts, level design and gameplay elements for a self funded game concept.</p>       
-            <ul>
-                <li style="margin-bottom: 1.5%;">Undertook a tremendous amount of R&D in order to greatly expand knowledge of the Unity game engine. A better understanding of Unity, programming and management of game 
-                    development were all set goals.
+                <p style="margin-left: 2%; margin-right: 2%;">Developing 3D environments, animations, layouts, level design and gameplay elements for a self funded game concept.</p>       
+                <ul>
+                    <li style="margin-bottom: 1.5%;">Undertook a tremendous amount of R&D in order to greatly expand knowledge of the Unity game engine. A better understanding of Unity, programming and management of game 
+                        development were all set goals.
+                    </li>
+                    <li style="margin-bottom: 1.5%;">Built all assets including geometry, textures, FX and scripting as well lighting set up.</li>   
+                    <li style="margin-bottom: 1.5%;">self-taught JavaScripting, took a lot of problem solving to realize game concepts. This included camera control, character control, enemy AI/behavior, FX, animation, 
+                    character interaction and gameplay mechanics.</li> 
+                    <li style="margin-bottom: 1.5%;">Familiar with organizing assets as to be easy to locate, update and added.  Assets included scripts, textures, imported geometry and sound elements.</li> 
+                    <li style="margin-bottom: 1.5%;">Critical thinking for level design and layout. Creating puzzles and layouts that make sense to the player and would be enjoyable had to really be considered.</li> 
+                </ul>
+            </div>
+            <br>
+            <a href="#Nothing">Gameplay Showcase</a><br> 
+            <a href="#Nothing">Game Highlight Reel</a>
+            <hr> 
+            <div style="padding: 3px; border: 0px solid black;">
+                <h3 style="margin-bottom: -.5%;  margin-top: 1%; background-color: rgb(224, 232, 243);">- 2009 to 2011 -</h3>
+                <h4 style="margin-bottom: -1.3%;">UNITED TRIBES TECHNICAL COLLEGE, Bismarck, ND</h4> 	
+                <h4>Independent Contractor</h4>
+                <p style="margin-left: 2%; margin-right: 2%;"> 
+                    Developed a prototype game or “Interactive Experience” for the school.  Played the role of project manager, developer, and owned the business relationship with client.  
+                    Specified, planned, and tracked the project via milestones and periodic demos.
+                </p>
+            </div>
+
+            <div style="padding: 3px; border: 0px solid black;">
+                <ul>
+                    <li style="margin-bottom: 1.5%;">
+                        Customer curriculum requirements called for the use of the Unity tool set.  Ramped quickly using various learning resources and produced first working demo 
+                        within 2 months.
+                    </li> 
+                    <li style="margin-bottom: 1.5%;">
+                        Development required a multitude of tasks:<br> 
+                    <p style="margin-left: 10px; font-style: italic;">- Referencing of campus blueprints to maintain a proper sense of scale with buildings and landscape while modeling in Maya.</p>
+                    <p style="margin-left: 10px; font-style: italic;">- Photographing outside of all campus buildings for texturing purposes.  Interiors of select buildings in which the user would enter were also photographed.  Using 
+                        photos, textures would be created for use with 3D models built in Maya.</p> 
+                    <p style="margin-left: 10px; font-style: italic;">- Developed “mini-games” to help user experience certain elements of what the school curriculum had to offer. These would be simple, fun games meant to showcase each 
+                        department.</p> 
+                    <p style="margin-left: 10px; font-style: italic;">- Programmed working functions needed for users to experience the virtual campus.  Functions included the ability to enter and leave buildings while maintaining 
+                        position location, interaction with key landmarks and faculty, UI (user interface), camera control, character animation and control, hit detection and world boundaries 
+                        (making sure the user doesn’t go through geometry or “fall off” the world).</p>
+                    </li>    
+                    <li style="margin-bottom: 1.5%;">
+                        Required to teach a 101 class for the 3D software Maya. Developed a curriculum that would best teach students who had no prior experience with 3d software or even 
+                        knew what 3d work was.
+                    </li> 
+                    <li style="margin-bottom: 1.5%;">
+                        Given a set amount time, prioritizing and deciding what would be taught and how to teach that was of great importance. Considered what would be the basics and important 
+                        foundation skills and designed projects that would best communicate and build these skills. Focused on not being a frustrating or confusing experience to help students 
+                        on any level to learn.
+                    </li> 
+                    <li style="margin-bottom: 1.5%;">
+                        Fairly evaluating and grading students work and progression as to improve performance.
+                    </li>
+                    <li style="margin-bottom: 1.5%;">
+                        Managed students helping with project development. Delegated tasks to students capable of delivering finished assets while monitoring workflow to maintain timeline. 
+                    </li>
+                    <li style="margin-bottom: 1.5%;">
+                        Collaborated with other school department heads and teachers for input on what they needed or would like to see with their department in the project.
+                    </li> 
+                </ul>
+            </div>
+            <br>
+            <a href="#Nothing">UTTC Work Reel</a>
+            <hr> 
+            <div style="padding: 3px; border: 0px solid black;">
+            <h3 style="margin-bottom: -.5%; margin-top: 1%; background-color: rgb(224, 232, 243);">- 2006 to 2008 -</h3>
+            <h4 style="margin-bottom: -1.3%;">MUMBOJUMBO GAMES, Dallas, TX</h4> 	
+            <h4>Lead 3d artist</h4>
+            <ul>  
+                <li style="margin-bottom: 1.5%;">
+                    Responsible for creating 3D assets, as well as 2D assets and FX animation. 
                 </li>
-                <li style="margin-bottom: 1.5%;">Built all assets including geometry, textures, FX and scripting as well lighting set up.</li>   
-                <li style="margin-bottom: 1.5%;">self-taught JavaScripting, took a lot of problem solving to realize game concepts. This included camera control, character control, enemy AI/behavior, FX, animation, 
-                character interaction and gameplay mechanics.</li> 
-                <li style="margin-bottom: 1.5%;">Familiar with organizing assets as to be easy to locate, update and added.  Assets included scripts, textures, imported geometry and sound elements.</li> 
-                <li style="margin-bottom: 1.5%;">Critical thinking for level design and layout. Creating puzzles and layouts that make sense to the player and would be enjoyable had to really be considered.</li> 
+                <li style="margin-bottom: 1.5%;">
+                    Provided assistance to artists needing solutions with software and other 3D related queries. 
+                </li>
+                <li style="margin-bottom: 1.5%;">
+                    Worked closely with programmers, art director, producers and other artists to achieve and maintain consistency, and quality.  
+                </li>
             </ul>
-        </div>
-        <br>
-        <a href="#Nothing">Gameplay Showcase</a><br> 
-        <a href="#Nothing">Game Highlight Reel</a>
-        <hr> 
-        <div style="padding: 3px; border: 0px solid black;">
-            <h3 style="margin-bottom: -.5%;  margin-top: 1%; background-color: rgb(224, 232, 243);">- 2009 to 2011 -</h3>
-            <h4 style="margin-bottom: -1.3%;">UNITED TRIBES TECHNICAL COLLEGE, Bismarck, ND</h4> 	
-            <h4>Independent Contractor</h4>
-            <p style="margin-left: 2%; margin-right: 2%;"> 
-                Developed a prototype game or “Interactive Experience” for the school.  Played the role of project manager, developer, and owned the business relationship with client.  
-                Specified, planned, and tracked the project via milestones and periodic demos.
+            </div>
+
+            <div style="padding: 3px; border: 0px solid black;">
+            <h3 style="margin-bottom: -.5%; background-color: rgb(224, 232, 243);">- 2004 to 2006 -</h3>
+            <h4 style="margin-bottom: -1.3%;">STARGATE STUDIOS, South Pasadena, CA</h4> 	
+            <h4>3D Artist</h4> 
+            <p style="margin-left: 2%; margin-right: 2%;">Award-nominated artist. Worked with major Network producers and Hollywood directors creating FX.</p> 
+            <ul>
+                <li style="margin-bottom: 1.5%;">
+                    Experience working within strict deadlines. Time management was critical. Studio usually had to finish FX for episode/film shots within the week of receiving them.  
+                    Deadlines ranged from 1-3 days. Rarely were deadlines over this.
+                </li>
+                <li style="margin-bottom: 1.5%;">
+                    Worked closely with other departments to deliver a finished, quality segment the network desired in time for air. Many times resolving issues that involved team work 
+                    and communication with other departments.
+                </li>
+                <li style="margin-bottom: 1.5%;"> 
+                    Solving technical issues, be it with software, rendering or with the shots themselves and how best to achieve and implement the 3D work needed. 
+                </li>
+                <li style="margin-bottom: 1.5%;"> 
+                    Lead artist for television shows C.S.I., Las Vegas and Clubhouse.  Award-nominated for latter two.
+                </li>
+                <li style="margin-bottom: 1.5%;">
+                    Learning proprietary/new software that the studio acquired in a timely fashion and to implement them in your workflow. 
+                </li>
+                <li style="margin-bottom: 1.5%;">
+                    Teamwork within 3D department was common. Helping each other resolve issues, find solutions to a problem or just the best way on how to handle a specific situation 
+                    with a shot was a regular occurrence. 
+                </li>
+            </ul>
+            </div>
+            <br>
+            <a href="#Nothing">Work Reel</a> 
+            <hr>
+            <div style="padding: 3px; border: 0px solid black;">
+            <h3 style="margin-bottom: -.5%; margin-top: 1%; background-color: rgb(224, 232, 243);">- 1999 to 2003 -</h3>
+            <h4 style="margin-bottom: -1.3%;">COLLEGE FOR CREATIVE STUDIES, Detroit, MI</h4> 	
+            <h4>Student (1999 to 2003)</h4> 
+            <p style="margin-left: 2%; margin-right: 2%;">
+                Proctored in college computer labs. Provided help to students who had questions or problems with software/hardware. Also helped in problem solving within the software on 
+                how to go about implementing an idea. Basics would be shown and handed off to the student for them to work and expand upon.
             </p>
-        </div>
-
-        <div style="padding: 3px; border: 0px solid black;">
             <ul>
                 <li style="margin-bottom: 1.5%;">
-                    Customer curriculum requirements called for the use of the Unity tool set.  Ramped quickly using various learning resources and produced first working demo 
-                    within 2 months.
-                </li> 
-                <li style="margin-bottom: 1.5%;">
-                    Development required a multitude of tasks:<br> 
-                <p style="margin-left: 10px; font-style: italic;">- Referencing of campus blueprints to maintain a proper sense of scale with buildings and landscape while modeling in Maya.</p>
-                <p style="margin-left: 10px; font-style: italic;">- Photographing outside of all campus buildings for texturing purposes.  Interiors of select buildings in which the user would enter were also photographed.  Using 
-                    photos, textures would be created for use with 3D models built in Maya.</p> 
-                <p style="margin-left: 10px; font-style: italic;">- Developed “mini-games” to help user experience certain elements of what the school curriculum had to offer. These would be simple, fun games meant to showcase each 
-                    department.</p> 
-                <p style="margin-left: 10px; font-style: italic;">- Programmed working functions needed for users to experience the virtual campus.  Functions included the ability to enter and leave buildings while maintaining 
-                    position location, interaction with key landmarks and faculty, UI (user interface), camera control, character animation and control, hit detection and world boundaries 
-                    (making sure the user doesn’t go through geometry or “fall off” the world).</p>
-                </li>    
-                <li style="margin-bottom: 1.5%;">
-                    Required to teach a 101 class for the 3D software Maya. Developed a curriculum that would best teach students who had no prior experience with 3d software or even 
-                    knew what 3d work was.
-                </li> 
-                <li style="margin-bottom: 1.5%;">
-                    Given a set amount time, prioritizing and deciding what would be taught and how to teach that was of great importance. Considered what would be the basics and important 
-                    foundation skills and designed projects that would best communicate and build these skills. Focused on not being a frustrating or confusing experience to help students 
-                    on any level to learn.
-                </li> 
-                <li style="margin-bottom: 1.5%;">
-                    Fairly evaluating and grading students work and progression as to improve performance.
+                    Able to do and receive constructive critiquing for conveying, providing and receiving helpful ideas to improve upon my and others work. 
                 </li>
                 <li style="margin-bottom: 1.5%;">
-                    Managed students helping with project development. Delegated tasks to students capable of delivering finished assets while monitoring workflow to maintain timeline. 
+                    Graduated top of the department class, with the school purchasing my senior project, a short animated 3D film titled “The Legend of Farmer Jenkins”. 
                 </li>
-                <li style="margin-bottom: 1.5%;">
-                    Collaborated with other school department heads and teachers for input on what they needed or would like to see with their department in the project.
-                </li> 
             </ul>
-        </div>
-        <br>
-        <a href="#Nothing">UTTC Work Reel</a>
-        <hr> 
-        <div style="padding: 3px; border: 0px solid black;">
-        <h3 style="margin-bottom: -.5%; margin-top: 1%; background-color: rgb(224, 232, 243);">- 2006 to 2008 -</h3>
-        <h4 style="margin-bottom: -1.3%;">MUMBOJUMBO GAMES, Dallas, TX</h4> 	
-        <h4>Lead 3d artist</h4>
-        <ul>  
-            <li style="margin-bottom: 1.5%;">
-                Responsible for creating 3D assets, as well as 2D assets and FX animation. 
-            </li>
-            <li style="margin-bottom: 1.5%;">
-                Provided assistance to artists needing solutions with software and other 3D related queries. 
-            </li>
-            <li style="margin-bottom: 1.5%;">
-                Worked closely with programmers, art director, producers and other artists to achieve and maintain consistency, and quality.  
-            </li>
-        </ul>
-        </div>
-
-        <div style="padding: 3px; border: 0px solid black;">
-        <h3 style="margin-bottom: -.5%; background-color: rgb(224, 232, 243);">- 2004 to 2006 -</h3>
-        <h4 style="margin-bottom: -1.3%;">STARGATE STUDIOS, South Pasadena, CA</h4> 	
-        <h4>3D Artist</h4> 
-        <p style="margin-left: 2%; margin-right: 2%;">Award-nominated artist. Worked with major Network producers and Hollywood directors creating FX.</p> 
-        <ul>
-            <li style="margin-bottom: 1.5%;">
-                Experience working within strict deadlines. Time management was critical. Studio usually had to finish FX for episode/film shots within the week of receiving them.  
-                Deadlines ranged from 1-3 days. Rarely were deadlines over this.
-            </li>
-            <li style="margin-bottom: 1.5%;">
-                Worked closely with other departments to deliver a finished, quality segment the network desired in time for air. Many times resolving issues that involved team work 
-                and communication with other departments.
-            </li>
-            <li style="margin-bottom: 1.5%;"> 
-                Solving technical issues, be it with software, rendering or with the shots themselves and how best to achieve and implement the 3D work needed. 
-            </li>
-            <li style="margin-bottom: 1.5%;"> 
-                Lead artist for television shows C.S.I., Las Vegas and Clubhouse.  Award-nominated for latter two.
-            </li>
-            <li style="margin-bottom: 1.5%;">
-                Learning proprietary/new software that the studio acquired in a timely fashion and to implement them in your workflow. 
-            </li>
-            <li style="margin-bottom: 1.5%;">
-                Teamwork within 3D department was common. Helping each other resolve issues, find solutions to a problem or just the best way on how to handle a specific situation 
-                with a shot was a regular occurrence. 
-            </li>
-        </ul>
-        </div>
-        <br>
-        <a href="#Nothing">Work Reel</a> 
-        <hr>
-        <div style="padding: 3px; border: 0px solid black;">
-        <h3 style="margin-bottom: -.5%; margin-top: 1%; background-color: rgb(224, 232, 243);">- 1999 to 2003 -</h3>
-        <h4 style="margin-bottom: -1.3%;">COLLEGE FOR CREATIVE STUDIES, Detroit, MI</h4> 	
-        <h4>Student (1999 to 2003)</h4> 
-        <p style="margin-left: 2%; margin-right: 2%;">
-            Proctored in college computer labs. Provided help to students who had questions or problems with software/hardware. Also helped in problem solving within the software on 
-            how to go about implementing an idea. Basics would be shown and handed off to the student for them to work and expand upon.
-        </p>
-        <ul>
-            <li style="margin-bottom: 1.5%;">
-                Able to do and receive constructive critiquing for conveying, providing and receiving helpful ideas to improve upon my and others work. 
-            </li>
-            <li style="margin-bottom: 1.5%;">
-                Graduated top of the department class, with the school purchasing my senior project, a short animated 3D film titled “The Legend of Farmer Jenkins”. 
-            </li>
-        </ul>
-        </div>
-        <hr>
-        <h1>EDUCATION</h1> 
-        <p style="margin-bottom: -1.3%; font-weight: 600;">COLLEGE FOR CREATIVE STUDIES, Detroit, MI</p> 
-        <p style="margin-bottom: -1.3%;">BS in Fine Arts - Concentration in 3D design, 2003</p> 
-        <p>Graduated top 10% of class</p>
-
-    </section>  
-</div>
-
+            </div>
+            <hr>
+            <h1>EDUCATION</h1> 
+            <p style="margin-bottom: -1.3%; font-weight: 600;">COLLEGE FOR CREATIVE STUDIES, Detroit, MI</p> 
+            <p style="margin-bottom: -1.3%;">BS in Fine Arts - Concentration in 3D design, 2003</p> 
+            <p>Graduated top 10% of class</p>
+        </section>
+        <footer style="margin-left: 1%; margin-right: 1%; margin-top: 2%; text-align: center; color: #182c4b;">
+            <hr style= "height: 3px; border-style: double; border-color: #182c4b;">
+            <cite style="padding-left: 10px;"><small>
+                <span>&copy;Mike Tonder</span><br>
+                <span style="padding-left: 10px;">All content developed and created by me.</span>
+                </small></cite>
+            <hr style= "height: 3px; border-style: double; border-color: #182c4b;">
+          </footer>
+    </div>
+</article>
 <script>
 function navFunction() {
   var x = document.getElementById("myTopnav");
