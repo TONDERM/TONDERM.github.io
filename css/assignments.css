@@ -1,0 +1,371 @@
+
+
+body
+{  
+    font-family: 'Niramit', sans-serif;
+    letter-spacing: 2px;
+}
+
+li /*links*/
+{
+   line-height: 22px;
+    text-align: center; 
+}
+
+h1 /*CIT 180 Text*/
+{
+    font-family: test;
+    
+    font-size: 50px;
+    color: oldlace;
+    text-shadow: 1px 1px 1px navy;
+    text-align: center;
+}
+
+footer
+{
+    margin-top:38%;
+    color: white;
+    font-size: 10px;
+}
+
+
+
+/*------------------------------------------[Nav Menus]----------------------------------------------------*/
+
+nav 
+{ 
+    font-family: test2;
+	text-align: center;
+    background-color: rgba(86, 131, 182, 0.6);   
+    padding-right: 3px;
+
+}
+
+nav ul 
+{
+    border: rgba(182, 244, 255, 0.8) solid 2px;
+	box-shadow: 6px 6px 6px rgba(0,0,0,0.15);
+	padding: 0px 0px; 
+	list-style: none;
+	position: relative;
+	font-weight:900;
+	width:100%;
+	display:table;
+    
+    
+}
+
+/* assignment buttons */
+nav ul li a 
+{
+	display: inline-table;
+    padding-top: 10px;
+    padding-bottom: 10px;
+	color:white; 
+    /* text-shadow: -1px 0 navy, 0 1px navy, 0 -1px navy; */
+	text-decoration: none;
+    width:100%;
+}
+
+/* BG color change */
+nav ul li:hover 
+{
+    background-color:rgb(75, 212, 137, 0.5);
+    border: rgb(255, 255, 255) solid 2px;  
+    
+    z-index: 10; 
+    font-size: 18px;
+}
+
+/* ----------------------------------[first dropdown submenu]-------------------------------------------- */
+
+/* Lessons dropdown menu */
+nav ul li:hover > ul 
+{
+	display:flex;   
+	flex-direction:column;
+	width:100%; 
+    
+    
+}
+
+/* dropdown menu BG*/
+nav ul ul 
+{
+	display: none;
+    border: 1px solid black;
+    border-top: 1px solid white;
+    background: linear-gradient(rgba(48, 152, 177, 0.8),rgba(0, 127, 97,0.8));
+	border-radius: 20px;
+    margin-top: 2px; 
+	position: absolute; 
+    animation: spin 0.3s ease-out 1;
+    
+    
+}
+
+/* dropdown menu border*/
+nav ul ul li 
+{
+	display:block; 
+	border-bottom: 1px solid darkseagreen; 
+	position: relative;	
+    perspective: 800px;
+    /* perspective-origin: top; */
+} 
+
+/* first submenu text */
+
+nav ul ul li a 
+{	
+	color: white;
+    
+}	
+ 
+nav ul ul li a:hover 
+{
+    background-color: rgb(0, 226, 158);
+    color: aliceblue;
+    text-shadow: 1px 1px 1px navy;
+    font-size: 20px;
+}
+
+/* --------------------[second dropdown submenu]-------------------- */
+
+.dropdown-content 
+{
+
+    display: none;
+    position: absolute;
+    left:62%;
+    /* background-color:lightseagreen; */
+    background: linear-gradient(90deg,rgb(30, 156, 150)40%, lightseagreen);
+    border: rgb(41, 80, 126) solid 2px;
+    opacity: 1.0;
+    width: 100%;
+    margin-top: -10px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 20;
+    text-align: center;
+    animation-duration: 0.15s;
+    animation-name: slideInL;
+    animation-timing-function: ease-out;
+    transform-style: preserve-3d; 
+    transform: rotateY(-20deg);
+    /* transform: skewY(-5deg); */
+    /* perspective: 2500px;
+    transform-style: preserve-3d; */
+}
+
+.dropdown a:hover 
+{
+    background-color: rgb(0, 226, 158);
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.dropdown a:active
+{
+    color: lightcoral;  
+    font-size: 18px;  
+    background-color: rgba(255, 202, 190);
+}
+
+.dropdown-content a 
+{
+    border-bottom: rgb(41, 80, 126) dashed 1px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    
+}
+
+.dropdown-content a:hover 
+{
+    background-color: rgba(255, 202, 190);
+    color: aliceblue;
+}
+
+.dropdown-content a:visited
+{
+    background-color: rgba(255, 202, 190);
+    color: aliceblue;
+    /* color: rgb(51, 65, 255);     */
+}
+
+.dropdown-content a:active
+{
+    color: lightcoral;  
+    font-size: 18px;  
+}
+
+.dropdown:hover .dropdown-content 
+{
+    display:block;
+}
+
+/*------------------------------------------[Bottom Icon Bar]----------------------------------------------------*/
+
+.icon-bar 
+{
+    width: 100%;
+    overflow: auto; 
+}
+
+.icon-bar a 
+{
+    float: left;
+    text-align: center;
+    width: 20%; 
+    padding: 12px 0; 
+    transition: all 0.3s ease; 
+    color: rgb(41, 80, 126); 
+    font-size: 36px; 
+    background: linear-gradient(90deg,rgba(255, 0, 0, 0) 0.2%, rgb(0, 226, 158, 0.85) 0.3%, rgb(0, 226, 158, 0.85) 99.7%, rgba(255, 0, 0, 0) 99.8%);
+}
+
+.icon-bar a:hover 
+{
+    background: linear-gradient(90deg,rgba(255, 0, 0, 0) 0.2%, rgba(255, 202, 190) 0.3%, rgba(255, 202, 190) 99.7%, rgba(255, 0, 0, 0) 99.8%);
+}
+
+/*------------------------------------------[Animations]----------------------------------------------------*/
+
+/* from left */
+#slideInL 
+{
+    animation-duration: 1.0s;
+    animation-name: slideInL;
+    animation-timing-function: ease-out;
+}
+
+/* from right */
+#slideInR 
+{
+    animation-duration: 1.0s;
+    animation-name: slideInR;
+    animation-timing-function: ease-out;
+}
+
+#white
+{
+    animation: white 6s infinite;
+    animation-direction:alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+#slideInTop
+{
+    animation-duration: 1.0s;
+    animation-name: slideInTop;
+    animation-timing-function: ease-out;
+}
+
+@keyframes white
+{
+    0%  {color: rgb(41, 80, 126); }
+    25% {color: rgb(41, 80, 126); }
+    50% {color: white; }
+    75% {color: rgb(41, 80, 126); }
+    100% {color: rgb(41, 80, 126); }
+}
+
+@keyframes slideInL 
+{
+    from 
+    {
+        margin-left:-100%;
+        opacity: 0;
+    }
+
+    to 
+    {
+        margin-left: 0%;
+        opacity: 1;
+    }
+
+    0% {transform: matrix(1, 0, -0.1, 1, 0, 0);}
+    90% {transform: matrix(1, 0, -0.1, 1, 0, 0);}   
+    95% {transform: matrix(1, 0, 0.1, 1, 0, 0);}
+    97% {transform: matrix(1, 0, -0.1, 1, 0, 0);}
+    100% {transform: matrix(1, 0, 0, 1, 0, 0);}
+}
+
+@keyframes slideInR 
+{
+from 
+    {
+        margin-left:100%;
+        opacity: 0;
+    }
+    
+to 
+    {
+        margin-left: 0%;
+        opacity: 1;
+    }
+
+    0% {transform: matrix(1, 0, 0.1, 1, 0, 0);}
+    90% {transform: matrix(1, 0, 0.1, 1, 0, 0);}   
+    95% {transform: matrix(1, 0, -0.1, 1, 0, 0);}
+    97% {transform: matrix(1, 0, 0.1, 1, 0, 0);}
+    100% {transform: matrix(1, 0, 0, 1, 0, 0);}
+}
+
+@keyframes slideInTop
+{
+    from 
+    {
+        transform:scale(0,0);
+        margin-top:-100%;
+    }
+
+    to 
+    {
+        transform:scale(1,1);
+        margin-top: 0%;
+    }
+
+    0% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+
+@keyframes spin
+{
+    from{opacity:0; transform: rotateY(90deg);}
+    to{opacity:1; transform: rotateY(360deg); }
+} 
+/*------------------------------------------[Link States]----------------------------------------------------*/
+
+/* 
+a:link
+{
+    color: aliceblue;
+    font-size: 15px;  
+    text-shadow: -1px 0 rgb(24, 31, 94, 0.3), 0 1px rgb(24, 31, 94, 0.3), 0 -1px rgb(24, 31, 94, 0.3);
+    text-decoration: none;
+} */
+
+/* a:visited
+{
+    color: rgb(16, 18, 139);
+    text-decoration: none;
+} 
+
+/* a:hover
+{
+    font-size: 15px;
+    color: yellow;
+    text-decoration: underline;
+} */
+
+/* a:active
+{
+    color: yellow;
+    font-size: 14px;
+    text-decoration: underline;
+}   */
