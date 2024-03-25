@@ -166,3 +166,25 @@ th.descending:after {
 	background-repeat: no-repeat;
 	background-position: 60px 1px;
 	font-size: 90%;}
+
+.backB{
+  font-family: info;
+  color: white;
+  border: 1px white solid; 
+  border-radius: 5px; 
+  padding-left: 10px; 
+  padding-right: 10px; 
+  padding-top: 3px; 
+  padding-bottom: 3px; 
+  background-color:rgba(0, 0, 0, 0.37); 
+  text-decoration: none;
+}
+
+.backB:hover{
+  background-color:rgba(52, 93, 170, 0.8);
+  text-shadow: -1px 0 black, 0 1px black, 0 -1px black, 1px 1px black; 
+}
+
+.backB:visited{
+  color: white;
+}

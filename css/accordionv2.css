@@ -33,7 +33,9 @@ img
   border-style: double;
   margin: 0;
   padding: 0;
-  overflow: auto;}
+  overflow: auto;
+
+}
 
 .accordion-control {
   font-family: fancy;
@@ -47,9 +49,39 @@ img
   margin: 0;
   border-top: 1px solid rgb(94, 116, 60);
   width:100%;
+  cursor: pointer;
  }
+
+.accordion-control:hover{
+  background-color: #344126;
+}
+
 .accordion-panel {
   display: none;
+  }
+
+  a:visited
+  {
+    color:white;
+    text-decoration:none;
+  }
+  
+  .backB{
+    background-color: #242c1a;
+    border: black 1px solid;
+    
+    padding-left: 10px; 
+    padding-right: 10px; 
+    padding-top: 3px; 
+    padding-bottom: 3px; 
+    text-decoration: none;
+  }
+
+  a:hover
+  {
+    color:white;
+    background-color: #5d693f;
+    text-decoration:none;
   }
 h1{
 	text-align:center;

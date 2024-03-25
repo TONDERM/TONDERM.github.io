@@ -249,7 +249,7 @@ footer
 
 @keyframes BGscroll
 {
-    100% { background-position: -5000px 5000px;} 
+    100% { background-position: -1280px 1280px;} 
 }
 
 @keyframes fadeIn 
@@ -318,5 +318,13 @@ a:link
 
 a:visited
 {
-    color: rgb(211, 159, 207);
+	color:white;
+	text-decoration:none;
+}
+
+a:hover
+{
+	color:white;
+    text-shadow: -2px 0 rgb(51, 16, 0), 0 2px rgb(51, 16, 0), 0 -2px rgb(51, 16, 0);
+	text-decoration:none;
 }

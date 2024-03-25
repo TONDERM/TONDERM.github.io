@@ -182,3 +182,29 @@ input[type='submit']
   border-right: 1px solid black;
   border-radius: 0px;
 }
+
+.backB{
+  font-family: gruesome;
+  color: black;
+  border: rgb(71, 0, 0) 3px double;
+  text-shadow: 0px 0 black, 0 0px black, 0 0px black, 0px 0px black; 
+  padding-left: 10px; 
+  padding-right: 10px; 
+  padding-top: 3px; 
+  padding-bottom: 3px; 
+  background-image: url('../media_Top5Horror/oldBG_01.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-decoration: none;
+}
+
+.backB:hover{
+  text-shadow:1px 1px darkred; 
+  background-image: url('../media_Top5Horror/oldBG_02.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.backB:visited{
+  color: black;
+}
