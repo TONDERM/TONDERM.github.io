@@ -115,6 +115,11 @@ function playGame()
   
 }
 
+function goBack()
+{
+  window.location.href = 'index.html';  
+}
+
 document.getElementById("left").addEventListener("mouseover", mouseOverLeft);
 document.getElementById("left").addEventListener("mouseout", mouseOutLeft);
 document.getElementById("left").addEventListener("mousedown", mouseDownLeft);
@@ -130,6 +135,10 @@ document.getElementById("right").addEventListener("mouseout", mouseOutRight);
 document.getElementById("right").addEventListener("mousedown", mouseDownRight);
 document.getElementById("right").addEventListener("mouseup", mouseUpRight);
 
+document.getElementById("back").addEventListener("mouseover", mouseOverBack);
+document.getElementById("back").addEventListener("mouseout", mouseOutBack);
+document.getElementById("back").addEventListener("mousedown", mouseDownBack);
+document.getElementById("back").addEventListener("mouseup", mouseUpBack);
 //-----------------------------------------------------------------------------------------------------------------------
 
 function mouseDownLeft() 
@@ -194,4 +203,26 @@ function mouseOverRight()
 function mouseOutRight() 
 {
   document.getElementById("right").style.boxShadow = "0px 0px 0px red, 0px 0px 0px red, 0px 0px 0px red";
+}
+
+//-----------------------------------------------------------------------------------------------------------------------
+
+function mouseDownBack() 
+{
+  document.getElementById("back").style.fontSize = "15px";
+}
+
+function mouseUpBack() 
+{
+  document.getElementById("back").style.fontSize = "17px";
+}
+
+function mouseOverBack() 
+{
+  document.getElementById("back").style.boxShadow = "-1px 1px 5px rgb(52, 174, 255), -1px 1px 5px rgb(52, 174, 255), 1px -1px 5px rgb(52, 174, 255)";
+}
+
+function mouseOutBack() 
+{
+  document.getElementById("back").style.boxShadow = "0px 0px 0px rgb(52, 174, 255), 0px 0px 0px rgb(52, 174, 255), 0px 0px 0px rgb(52, 174, 255)";
 }
