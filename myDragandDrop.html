@@ -8,23 +8,41 @@
   box-sizing: border-box;
 }
 
+body{
+   background-color:black;
+
+   /* display: flex;
+   justify-content: center; */
+
+}
+
+main{
+   width: 100%;
+ 
+   background-color: black;
+}
+
 article
 {
 	display: flex; 
 	flex-wrap: wrap; 
 	justify-content: center; 
+   align-items: center;
 	position: relative; 
+   
 	margin-top: 5px;
 	background-image: url('media_MarioDragDrop/blueBrickBG.jpg');
 	background-repeat: repeat;
 	background-size: contain;
+   padding-top: 7px;
+   padding-bottom: 10px;
 }
 
-section
+/* section
 {
   display:flex;
   flex-wrap:wrap;  
-}
+} */
 
 .grid-container 
 {
@@ -65,7 +83,20 @@ section
 .snapground
 {
    height: 32px;
-   width: 806px;
+   width: 794px;
+}
+
+a:visited
+{
+	color:white;
+
+}
+
+a:hover
+{
+	color:white;
+   text-shadow: -1px 0 black, 0 1px black, 0 -1px black, 2px 2px black;
+	text-decoration:none;
 }
 
 
@@ -74,13 +105,14 @@ section
    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"><script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+   <script>
       $(function()
         {
-            $("#castleBig").draggable({ revert: "invalid", revertDuration: 100,snap: ".snaptarget", stack: ".snaptarget" });
+            $("#castleBig").draggable({ revert: "invalid", revertDuration: 100,snap: ".snaptarget", snapTolerance: 4, stack: ".snaptarget" });
             
-            $("#castleSmall-1").draggable({ revert: "invalid",revertDuration: 100, snap: ".snaptarget", stack: ".snaptarget", scroll: true });
-            $("#castleSmall-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", stack: ".snaptarget" });
+            $("#castleSmall-1").draggable({ revert: "invalid",revertDuration: 100, snap: ".snaptarget", snapTolerance: 4, stack: ".snaptarget", scroll: true });
+            $("#castleSmall-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 4, stack: ".snaptarget" });
 
             $("#pipeVertical-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
             $("#pipeVertical-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
@@ -111,10 +143,10 @@ section
             $("#pipeRight-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
             $("#pipeRight-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
 
-            $("#pipeLipTop-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
-            $("#pipeLipTop-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
-            $("#pipeLipTop-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
-            $("#pipeLipTop-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#pipeLipTop-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 0, stack: ".snaptarget" });
+            $("#pipeLipTop-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 0, stack: ".snaptarget" });
+            $("#pipeLipTop-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 0, stack: ".snaptarget" });
+            $("#pipeLipTop-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 0, stack: ".snaptarget" });
 
             $("#pipeLipLeft-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
             $("#pipeLipLeft-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
@@ -144,15 +176,15 @@ section
             $("#smallCloud-2").draggable({ revert: "invalid", revertDuration: 100 });
             $("#smallCloud-3").draggable({ revert: "invalid", revertDuration: 100 });
 
-            $("#bigHill-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
-            $("#bigHill-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
-            $("#bigHill-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
-            $("#bigHill-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#bigHill-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 4, stack: ".snaptarget" });
+            $("#bigHill-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 4, stack: ".snaptarget" });
+            $("#bigHill-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 4, stack: ".snaptarget" });
+            $("#bigHill-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 4, stack: ".snaptarget" });
 
-            $("#smallHill-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
-            $("#smallHill-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
-            $("#smallHill-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
-            $("#smallHill-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#smallHill-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 4, stack: ".snaptarget" });
+            $("#smallHill-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 4, stack: ".snaptarget" });
+            $("#smallHill-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 4, stack: ".snaptarget" });
+            $("#smallHill-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 4, stack: ".snaptarget" });
 
             $("#bigBush-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
             $("#bigBush-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
@@ -181,10 +213,10 @@ section
             $("#blockBrick-14").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
             $("#blockBrick-15").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
 
-            $("#blockBlock-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
-            $("#blockBlock-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
-            $("#blockBlock-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
-            $("#blockBlock-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
+            $("#blockBlock-1").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 10, stack: ".snaptarget" });
+            $("#blockBlock-2").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 10, stack: ".snaptarget" });
+            $("#blockBlock-3").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 10, stack: ".snaptarget" });
+            $("#blockBlock-4").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 10, stack: ".snaptarget" });
             $("#blockBlock-5").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
             $("#blockBlock-6").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
             $("#blockBlock-7").draggable({ revert: "invalid", revertDuration: 100, snap: ".snaptarget", snapTolerance: 2, stack: ".snaptarget" });
@@ -249,17 +281,17 @@ section
 
 </head>
 
-<body style="background-color: black;">
-	<main style="width: 100%;">
-   <header style="display: flex; justify-content: center; background-image: url('media_MarioDragDrop/titleBG.jpg');background-repeat: no-repeat; background-size: cover;">
+<body>
+	<main>
+   <header style="display: flex; justify-content: center; background-image: url('media_MarioDragDrop/titleBG.jpg');background-repeat: no-repeat; background-size: cover; height:268px;">
       <p style="font-size: 20px; text-align: center;"><img style="width: 100%;" src="media_MarioDragDrop/marioTitle.jpg"/></p>  
    </header>
 
    <article>
       
-      <div style="width: 800px; height: 500px; margin-left: -2%; margin: 1%;  box-shadow: 5px 5px rgba(0, 0, 0, 0.4);">
-         <section id="droppable" style="background-image: url(media_MarioDragDrop/marioBG.jpg); width: 800px; height: 500px;  border: black 3px solid">
-            <span style="width: 806px; height: 32px; margin-top: 468px;"  class="snaptarget"></span>    
+      <div style="width: 800px; height: 500px;  box-shadow: 5px 5px rgba(0, 0, 0, 0); margin-right: 5px;">
+         <section id="droppable" style="background-image: url(media_MarioDragDrop/marioBG.jpg); width: 800px; height: 500px;  border:black 3px groove;">
+            <span style="width: 794px; height: 32px; margin-top: 468px; position: absolute;"  class="snaptarget"></span>    
          </section>
          <!-- <button onclick="takeshot()">
             Take Screenshot
@@ -272,8 +304,7 @@ section
       
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
-      <section class="grid-container" style="width: 1000px; padding-left: 5px; margin-right: -2%; margin-top: .5%; background-color:cornflowerblue; border: black 3px solid; 
-                     box-shadow: 5px 5px rgba(0, 0, 0, 0.4);">
+      <section class="grid-container" style="width: 1000px; padding-left: 5px; background-color:cornflowerblue; border: black 3px groove; box-shadow: 5px 5px rgba(0, 0, 0, 0); margin-left: 5px;">
          <div class="column1" style="margin-bottom: -5%;">
             <p  style="height: 352px; width: 325px; margin-top: 2%;"><img src="media_MarioDragDrop/bigCastle.png"  id="castleBig" style="z-index:9;" class="snaptarget"/></p> 
  
@@ -469,8 +500,10 @@ section
          </div>
       </section>
    </article>
-
-   <footer style="background-color: cornflowerblue;">  
+   <p style="text-align: center; margin-top: .7%; margin-bottom: .7%;"><a href="index.html" style="border: 2px white solid; border-radius: 20px; padding-left: 10px; padding-right: 10px; padding-top: 3px; padding-bottom: 3px; 
+   background-color:red; text-decoration: none;">Back to Main</a></p>
+   <footer style="background-color: cornflowerblue;"> 
+       
       <hr style="height: 3px; border-style: double; border-color: white; background-color: rgb(163, 54, 21);">         
          <cite style="padding-left: 10px;"><small>sources:<br>
          <a style="padding-left: 10px;" href="https://mfgg.net/index.php?act=resdb&param=02&c=1&id=19120"target="_blank">Font Type</a>
@@ -480,7 +513,7 @@ section
       <hr style="height: 3px; border-style: double; border-color: white; background-color: rgb(163, 54, 21);">
    </footer>
 
-      <p style="background-color: rgba(255, 255, 255, 0); color: white; text-align: center; margin-bottom: -2%;">&copy;Mike Tonder</p>  
+      <p style="background-color: rgba(255, 255, 255, 0); color: white; text-align: center; margin-bottom: 0%; margin-top: 0%;">&copy;Mike Tonder</p>  
 
 	</main>
 </body>

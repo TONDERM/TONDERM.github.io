@@ -72,6 +72,7 @@ article
 	display: flex;
   flex-wrap:wrap;
   justify-content: center;
+  margin-bottom: -2%;
 }
 
 
@@ -156,6 +157,22 @@ h1
   margin-top: -0.05%;
 }
 
+a:visited
+{
+	color:black;
+	text-decoration:none;
+}
+
+a:hover
+{
+	color:white;
+	text-decoration:none;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 
 @media only screen and (max-width: 700px) and (min-width:200px)
@@ -196,11 +213,12 @@ h1
 
 
 </head>
-<header>
-    <h1 style="font-size: 3em; text-align: center;">Super Happy Fun Time With Homer Simpson!</h1>
-</header>
+
 <body>
-  <hr style="height: 3px; border-style: double; border-color: black; background-color: rgb(255,217,15);">
+  <header style=" background-color: rgba(255, 255, 255, 0.6); border-top: 2px black solid; border-bottom: 2px black solid;">
+    <h1 style="font-size: 3em; text-align: center; margin-top: 0%; margin-bottom: 0%;">Super Happy Fun Time With Homer Simpson!</h1>
+</header>
+  <!-- <hr style="height: 3px; border-style: double; border-color: black; background-color: rgb(255,217,15);"> -->
   <article style="margin-top: 2%;">
     <section id="quoteBox" style="background: rgb(255,217,15);"></section>      
 
@@ -400,17 +418,21 @@ h1
 		  document.getElementById("homerQuoting").style.filter = "hue-rotate(0deg)";	
     } 	
     </script>
-  </article>   
-    <br>
-    <footer>
-        
-        <hr style="height: 3px; border-style: double; border-color: black; background-color: rgb(255,217,15);">         
-        <cite style="padding-left: 10px;"><small>sources<br>
-        <a style="padding-left: 10px;" href="https://kidadl.com/articles/homer-simpson-quotes-from-the-lovable-doh-ball-dad"target="_blank">kidadl.com</a><br>
-        <span style="padding-left: 10px;">THE SIMPSONS is a trademark and brand of Twentieth Century Fox Film Corporation.</span>
-        </small></cite>
-        <hr style="height: 3px; border-style: double; border-color: black; background-color: rgb(255,217,15);">
-        <p style="background-color: rgba(255, 255, 255, 0); color: white; text-align: center;">&copy;Mike Tonder</p>      
+  </article>
+<br>
+  <p style="text-align: center;">
+   <a href="index.html" style="border: 2px black solid; border-radius: 20px; padding-left: 10px; padding-right: 10px; padding-top: 3px; 
+    padding-bottom: 3px; background-color:rgb(255,217,15); text-decoration: none; font-family: dimbo; font-size: 20px;">Back to Main</a>
+  </p>
+  <footer style="background-color: rgba(255, 255, 255, 0.6);">      
+      <hr style="height: 3px; border-style: double; border-color: black; background-color: rgb(255,217,15);">         
+      <cite style="padding-left: 10px;"><small>sources<br>
+      <a style="padding-left: 10px;" href="https://kidadl.com/articles/homer-simpson-quotes-from-the-lovable-doh-ball-dad"target="_blank">kidadl.com</a><br>
+      <span style="padding-left: 10px;">THE SIMPSONS is a trademark and brand of Twentieth Century Fox Film Corporation.</span>
+      </small></cite>
+      <hr style="height: 3px; border-style: double; border-color: black; background-color: rgb(255,217,15);">
+            
     </footer>
+    <p style="background-color: rgba(255, 255, 255, 0); color:white; text-align: center;">&copy;Mike Tonder</p>  
 </body>
 

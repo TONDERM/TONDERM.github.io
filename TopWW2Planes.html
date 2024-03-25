@@ -14,12 +14,36 @@ body
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.backB{
+  font-family: info;
+  color: black;
+  border: 1px black solid; 
+  padding-left: 10px; 
+  padding-right: 10px; 
+  padding-top: 3px; 
+  padding-bottom: 3px; 
+  background-color:rgba(255,255,255, 0.8);
+  text-decoration: none;
+}
+
+.backB:hover{
+  background-color:rgba(255, 255, 255, 0.5);
+  text-shadow:1px 1px white; 
+}
+
+.backB:visited{
+  color: black;
+}
 </style>
 <body>
 <div style="background-color:white;opacity:.8; width:50%;padding:1%;">
 <h1 style="color:darkorange; font-weight:900; text-decoration: underline;">Top 8 aircraft of World War II</h1>
 <p id="content"></p>
 </div>
+<hr>
+<p style="text-align: center;"><a href="index.html" class="backB">Back to Main</a></p>
+<hr>
 <script>
 var xhr = new XMLHttpRequest(); 
 xhr.onload = function() {                       

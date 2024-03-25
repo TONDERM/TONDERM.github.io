@@ -5,6 +5,12 @@
 <title>Memeber Join Form</title>
 <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Jost&display=swap" rel="stylesheet">
 <style type="text/css">
+@font-face
+{
+  font-family: rocks;
+  src: url(fonts/Ablaze.ttf);
+}
+
 #page-wrap
 {
     width: 700px;
@@ -207,6 +213,29 @@ figure
 
 }
 
+.backB{
+    font-weight: 700;
+    font-size:14pt;
+    font-family: 'Jost', sans-serif;
+  color: black;
+  border: 2px black solid; 
+  padding-left: 10px; 
+  padding-right: 10px; 
+  padding-top: 3px; 
+  padding-bottom: 3px; 
+  background-color:white; 
+  text-decoration: none;
+}
+
+.backB:hover{
+
+  background-color:rgba(247, 237, 255, 0.8);
+  text-shadow: -1px 0 white, 0 1px white, 0 -1px white, 1px 1px rgb(255, 255, 255); 
+}
+
+.backB:visited{
+  color: black;
+}
 </style>
 </head>
 
@@ -299,7 +328,6 @@ figure
         </article>
       
         <h1>Rock Club Membership </h1>
-   
         <fieldset id="FormBG_01">
         <div style="display: block">
         <p><label>First Name</label>
@@ -403,4 +431,6 @@ figure
         </div>
     </form>
     </div>
+    <hr>
+    <p style="text-align: center;"><a href="index.html" class="backB">Back to Main</a></p>
 </body>
