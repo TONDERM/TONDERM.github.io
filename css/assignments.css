@@ -31,6 +31,7 @@ footer
 
 
 
+
 /*------------------------------------------[Nav Menus]----------------------------------------------------*/
 
 nav 
@@ -131,6 +132,30 @@ nav ul ul li a:hover
     font-size: 20px;
 }
 
+.backB{
+    font-family: test2;
+    font-size: 15px;
+    color: white;
+    border:  rgba(182, 244, 255, 0.8) solid 2px;
+    border-radius: 20px; 
+    padding-left: 10px; 
+    padding-right: 10px; 
+    padding-top: 3px; 
+    padding-bottom: 3px; 
+    background-color: rgba(86, 131, 182, 0.6);  
+    text-decoration: none;
+  }
+  
+  .backB:hover{
+    background-color:rgb(75, 212, 137, 0.5);
+    text-shadow: 1px 1px 1px navy;
+  }
+  
+  .backB:visited{
+    color: white;
+  }
+  
+
 /* --------------------[second dropdown submenu]-------------------- */
 
 .dropdown-content 
@@ -228,6 +253,29 @@ nav ul ul li a:hover
 .icon-bar a:hover 
 {
     background: linear-gradient(90deg,rgba(255, 0, 0, 0) 0.2%, rgba(255, 202, 190) 0.3%, rgba(255, 202, 190) 99.7%, rgba(255, 0, 0, 0) 99.8%);
+}
+
+.banner
+{
+    background-image: radial-gradient(rgba(255, 202, 190, 0.5),rgb(0, 226, 158, 0.2), rgba(255, 202, 190, 0.5)),
+                      linear-gradient(to right, rgba(255, 202, 190, 0.2),rgb(0, 226, 158, 0.5), rgba(255, 202, 190, 0.2));
+
+}
+
+.column 
+{
+  float: left;
+  width: 20%;
+  /* padding: 30px; */
+  min-width:240px;
+}
+
+.row:after 
+{
+  content:"";
+  display:inline-table;
+  clear: both;
+  
 }
 
 /*------------------------------------------[Animations]----------------------------------------------------*/
